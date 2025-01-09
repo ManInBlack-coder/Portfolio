@@ -29,8 +29,7 @@ function prevImage() {
 
 // Update the carousel's position
 function updateCarouselPosition() {
-    const imageHeight = images[0].clientHeight;
-    carousel.style.transform = `translateY(-${currentIndex * imageHeight}px)`;
+    carousel.style.transform = `translateX(-${currentIndex * 610}px)`; // Move horizontally, including space between images
 }
 
 // Event listeners for the buttons

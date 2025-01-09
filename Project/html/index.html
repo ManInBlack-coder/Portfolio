@@ -3,67 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="index.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        .carousel-container {
-            width: 600px;
-            height: 300px;
-            overflow: hidden;
-            background-color: #ccc; /* Gray background box */
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel img {
-            width: 600px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .prev,
-        .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 30px;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-    </style>
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="carousel-container">
@@ -80,47 +21,6 @@
         <button class="next">&#10095;</button>
     </div>
 
-    <script>
-        let currentIndex = 0;
-
-        const images = document.querySelectorAll('.carousel img');
-        const totalImages = images.length;
-
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        const carousel = document.querySelector('.carousel');
-
-        // Function to move to the next image
-        function nextImage() {
-            if (currentIndex < totalImages - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Loop back to the first image
-            }
-            updateCarouselPosition();
-        }
-
-        // Function to move to the previous image
-        function prevImage() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalImages - 1; // Loop back to the last image
-            }
-            updateCarouselPosition();
-        }
-
-        // Update the carousel's position
-        function updateCarouselPosition() {
-            carousel.style.transform = `translateX(-${currentIndex * 600}px)`; // Move horizontally
-        }
-
-        // Event listeners for the buttons
-        nextButton.addEventListener('click', nextImage);
-        prevButton.addEventListener('click', prevImage);
-
-        // Auto-slide every 3 seconds
-        setInterval(nextImage, 3000);
-    </script>
+    <script src="javascript/index.js"></script>
 </body>
 </html>

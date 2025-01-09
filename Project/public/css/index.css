@@ -1,0 +1,59 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Carousel container styles */
+.carousel-container {
+    width: 100%;
+    max-width: 100%; /* Make it span full width */
+    height: 300px;
+    overflow: hidden;
+    background-color: #ccc; /* Gray background box */
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto; /* Center the carousel horizontally */
+    padding: 10px 0; /* Space on top and bottom */
+}
+
+/* Carousel images wrapper */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px; /* Add space between images */
+}
+
+/* Button styles */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
