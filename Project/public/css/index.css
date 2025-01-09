@@ -5,6 +5,46 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
 /* Carousel container styles */
 .carousel-container {
     width: 100%;
@@ -14,7 +54,7 @@ body {
     background-color: #ccc; /* Gray background box */
     border-radius: 10px;
     position: relative;
-    margin: 0 auto; /* Center the carousel horizontally */
+    margin: 20px auto; /* Center the carousel horizontally */
     padding: 10px 0; /* Space on top and bottom */
 }
 
