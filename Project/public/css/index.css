@@ -12,6 +12,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
+    flex-wrap: wrap; /* Wrap content for smaller screens */
 }
 
 .navbar .logo {
@@ -19,7 +20,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     padding-left: 20px;
-    margin-right: auto; /* Pushes the logo to the left */
+    margin-right: auto;
 }
 
 .navbar ul {
@@ -27,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .navbar ul li {
@@ -47,29 +49,28 @@ body {
 
 /* Carousel container styles */
 .carousel-container {
-    width: 100%;
-    max-width: 100%; /* Make it span full width */
-    height: 300px;
+    width: 100%; /* Stretch to full width */
     overflow: hidden;
-    background-color: #ccc; /* Gray background box */
-    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 20px 0;
     position: relative;
-    margin: 20px auto; /* Center the carousel horizontally */
-    padding: 10px 0; /* Space on top and bottom */
 }
 
-/* Carousel images wrapper */
+/* Carousel wrapper */
 .carousel {
     display: flex;
-    transition: transform 0.5s ease;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 10px;
 }
 
+/* Carousel images */
 .carousel img {
-    width: 600px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 10px; /* Add space between images */
+    width: calc(100% / 3); /* Three images fit in the viewport */
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Button styles */
@@ -84,6 +85,12 @@ body {
     border: none;
     cursor: pointer;
     z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .prev {
@@ -96,4 +103,97 @@ body {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Intro section styles */
+#intro {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+}
+
+#self_intro_txt {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pilt {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pilt img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust carousel images for tablets and smaller screens */
+    .carousel img {
+        width: calc(100% / 2); /* Two images fit in the viewport */
+    }
+
+    /* Adjust intro section for smaller screens */
+    #intro {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    #self_intro_txt, #pilt {
+        flex: 1; /* Equal width for both elements */
+    }
+
+    #self_intro_txt {
+        margin-bottom: 20px;
+    }
+
+    /* Adjust navbar for smaller screens */
+    .navbar ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust carousel images for mobile devices */
+    .carousel img {
+        width: 100%; /* One image fits in the viewport */
+    }
+
+    /* Reduce padding and gap for better fit on smaller screens */
+    .carousel-container {
+        padding: 10px 0;
+    }
+
+    #intro {
+        gap: 20px;
+    }
+
+    #self_intro_txt {
+        padding: 10px;
+    }
+
+    .prev, .next {
+        width: 30px; /* Smaller buttons */
+        height: 30px;
+        font-size: 20px;
+    }
 }
