@@ -1,5 +1,4 @@
 let currentIndex = 0;
-
 const images = document.querySelectorAll('.carousel img');
 const totalImages = images.length;
 
@@ -29,7 +28,8 @@ function prevImage() {
 
 // Update the carousel's position
 function updateCarouselPosition() {
-    carousel.style.transform = `translateX(-${currentIndex * 610}px)`; // Move horizontally, including space between images
+    // Adjust the translateX value to properly position the images
+    carousel.style.transform = `translateX(-${currentIndex * 610}px)`; // 610px is the width of each image (including gap)
 }
 
 // Event listeners for the buttons
@@ -38,3 +38,15 @@ prevButton.addEventListener('click', prevImage);
 
 // Auto-slide every 3 seconds
 setInterval(nextImage, 3000);
+
+// Mobile menu toggle logic
+const navbar = document.querySelector('.navbar');
+const menuButton = document.querySelector('.menu-icon');
+
+// Function to toggle the mobile menu
+function toggleMenu() {
+    navbar.classList.toggle('open'); // Toggle 'open' class to show/hide the menu
+}
+
+// Event listener to handle menu button click
+menuButton.addEventListener('click', toggleMenu);
