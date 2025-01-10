@@ -24,7 +24,9 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+    margin-right: auto; /* See liigutab logo alati vasakule */
 }
+
 
 /* Menu button (hamburger) styling */
 .menu-icon {
@@ -226,6 +228,7 @@ body {
         width: 30px;
         cursor: pointer;
         z-index: 10; /* Ensure it's above other content */
+        margin-left: auto;
     }
 
     .navbar .menu-icon div {
