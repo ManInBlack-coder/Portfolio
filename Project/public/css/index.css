@@ -7,11 +7,12 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: #333;
-    overflow: hidden;
     display: flex;
+    justify-content: space-between; /* Ensures the logo and the menu are spaced */
     align-items: center;
-    padding: 10px 20px; /* Add padding to avoid buttons being too close to the edge */
+    padding: 0 20px; /* Add padding to the left and right */
+    background-color: #333;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,52 +20,49 @@ body {
     z-index: 1000;
 }
 
+/* Logo styling */
 .navbar .logo {
-    color: white;
     font-size: 24px;
     font-weight: bold;
-    margin-right: auto;
 }
 
-/* Hamburger menu */
+/* Menu button (hamburger) styling */
 .menu-icon {
-    display: none;
+    display: none; /* Hidden by default, shown on mobile */
     flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-    width: 30px;
     cursor: pointer;
 }
 
-.menu-icon div {
-    height: 4px;
-    width: 100%;
+.menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
     background-color: white;
 }
 
-/* Navbar links */
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Navbar links styling */
+.navbar-links {
+    list-style: none;
     display: flex;
-    margin-left: auto; /* Align menu items to the right */
+    gap: 30px;
+    margin-right: 20px; /* Lisatud õige külje marginaal */
+    padding: 0;  /* Eemaldatud padding, et mitte topeltmarginaali saada */
 }
 
-.navbar ul li {
-    display: inline;
+
+.navbar-links li {
+    padding: 10px;
 }
 
-.navbar ul li a {
-    display: inline-block;
-    padding: 14px 20px;
-    color: white;
+/* Navbar link styling */
+.navbar-links a {
     text-decoration: none;
-    text-align: center;
+    color: white;
 }
 
-.navbar ul li a:hover {
-    background-color: #575757;
+/* Toggle the menu in mobile view */
+.navbar-links.open {
+    display: block; /* Show the links when the 'open' class is added */
 }
 
 /* Add spacing to content to prevent it from being hidden behind the fixed navbar */
@@ -72,46 +70,34 @@ body {
     margin-top: 60px;
 }
 
-/* Mobile view */
-@media (max-width: 768px) {
-    /* Show hamburger menu */
-    .menu-icon {
-        display: flex;
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 15px; /* Add padding for smaller screens */
     }
 
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        background-color: #333;
+    .navbar-links {
+        display: none; /* Hide links by default */
         position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    .navbar ul li {
+        top: 60px; /* Position it below the navbar */
+        right: 0;
+        background-color: #333;
         width: 100%;
-    }
-
-    .navbar ul li a {
-        padding: 12px;
         text-align: center;
     }
 
-    .navbar ul li a:hover {
-        background-color: #575757;
+    .navbar-links li {
+        padding: 15px 0;
+    }
+
+    .menu-icon {
+        display: flex; /* Show the hamburger menu on mobile */
+        margin-right: 20px; /* Add space between the toggle button and the right edge */
     }
 
     /* Ensure the navbar opens when 'open' class is added */
-    .navbar.open ul {
-        display: flex; /* Show the menu when 'open' class is added */
-    }
-
-    /* Optional: You can customize this behavior if necessary */
-    .navbar.active {
-        background-color: #444; /* Example: Change the background when active */
+    .navbar-links.open {
+        display: block;
     }
 }
 
@@ -215,7 +201,7 @@ body {
         padding: 10px;
     }
 
-    .navbar ul {
+    .navbar-links {
         display: none; /* Hide menu by default */
         flex-direction: column;
         width: 100%;
@@ -228,8 +214,8 @@ body {
         transition: all 0.3s ease-in-out;
     }
 
-    .navbar.open ul {
-        display: flex; /* Show menu when 'open' class is added */
+    .navbar-links.open {
+        display: block; /* Show menu when 'open' class is added */
     }
 
     .navbar .menu-icon {
@@ -328,5 +314,19 @@ body {
     /* Carousel buttons for smaller screens */
     .prev, .next {
         font-size: 18px; /* Smaller font size */
+    }
+}
+
+/* Adjustments for screens 991px and below */
+@media screen and (max-width: 991px) {
+    .carousel img {
+        width: 50%;  /* Display 2 images at a time */
+    }
+
+    /* Navigation buttons for carousel */
+    .prev, .next {
+        width: 35px; /* Smaller buttons */
+        height: 35px;
+        font-size: 24px; /* Slightly smaller font size for buttons */
     }
 }

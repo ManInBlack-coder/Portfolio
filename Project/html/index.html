@@ -8,25 +8,25 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">A</div>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"> </div>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <nav class="navbar">
+            <div class="logo">A</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-links" id="myLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    
 
-    <div id="intro" style="display: flex; gap: 40px; margin-top: 50px; padding: 20px;">
+    <div id="intro">
         <div id="self_intro_txt"> 
             <h3>Hello! I am Aleksander</h3>
-            <p>Ambitious and with an innovative attitude Software development student from Tartu Vocational College. With 3+ years of experience in the IT sector. My purpose is to develop software and do it in a more innovative way.</p>
+            <p>Ambitious and with an innovative attitude Software development student from Tartu Vocational College...</p>
         </div>
         <div id="pilt">
             <img src="images/dic.webp" style="width: 300px; height: 300px; object-fit: cover;">
@@ -49,13 +49,5 @@
     </div>
 
     <script src="javascript/index.js"></script>
-    <script>
-       // JavaScript (index.js)
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
-    </script>
 </body>
 </html>
