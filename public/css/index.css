@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     position: relative; /* Lisage see, et muuta keha konteineriks */
     color: #e0e0e0; /* Hele tekst */
-    background-color:#333;
+    background-color:#1e1e1e;
 }
 
 /* Pilt välja keha piirest */
@@ -18,13 +18,11 @@ body::before {
     width: 200%; /* Suurendage pildi ulatust */
     height: 100%;
     background-image:  url('../images/vaike2.jpg');
+    filter: brightness(0.5);
     background-size: cover;
     background-position: center;
     z-index: -1; /* Tagasi taustal */
 }
-
-
-
 
 /* Navbar */
 .navbar {
@@ -32,7 +30,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; /* Tumedam navbar */
+    background-color: #1e1e1e; /* Tumedam navbar */
     color: white;
     position: sticky;
     top: 0;
@@ -207,12 +205,45 @@ body::before {
 
 /* Footer */
 #footer {
-    background-color: #333;
+    background-color: #1e1e1e;
     color: white;
     text-align: center;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+}
+
+
+/* Default style for the container */
+#to_project_link_prnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px; /* Compact horizontal padding, bigger vertical padding */
+    background-color: #333;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    width: auto; /* Auto width to fit content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light floating shadow */
+    transform: translateY(-3px); /* Slight floating effect */
+}
+
+/* Style for the inner content */
+#to_project_link_chld {
+    color: #e0e0e0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Hover effect */
+#to_project_link_prnt:hover {
+    background-color: #B04D4D; /* Custom hover color */
+    transform: translateY(-6px); /* More lift on hover */
+}
+
+#to_project_link_prnt:hover #to_project_link_chld {
+    color: white; /* Change text color on hover */
 }
 
 /* Intro Section */
