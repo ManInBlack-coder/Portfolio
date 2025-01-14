@@ -4,9 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: relative; /* Lisage see, et muuta keha konteineriks */
-    color: #e0e0e0; /* Hele tekst */
-    background-color:#1e1e1e;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure body takes up the full viewport height */
+    width: 100%;
+    color: #e0e0e0; 
+    background-color: #1e1e1e;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Pilt välja keha piirest */
@@ -14,14 +19,22 @@ body::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -50%; /* Asetage pilt vasakule, et see ulatuks väljapoole */
-    width: 200%; /* Suurendage pildi ulatust */
+    left: 50%; /* Adjust to ensure it stays centered horizontally */
+    width: 200%; 
     height: 100%;
-    background-image:  url('../images/vaike2.jpg');
+    background-image: url('../images/vaike2.jpg');
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Tagasi taustal */
+    z-index: -1;
+    transform: translateX(-50%); /* Keep the image centered */
+}
+
+/* Container Styles for Navbar, Self-Intro, Carousel */
+#to_project_link_prnt, .carousel-container, .navbar {
+    width: 100%;
+    max-width: 100%; /* Prevent child elements from stretching beyond the screen */
+    box-sizing: border-box;
 }
 
 /* Navbar */
@@ -30,7 +43,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #1e1e1e; /* Tumedam navbar */
+    background-color: #1e1e1e;
     color: white;
     position: sticky;
     top: 0;
@@ -39,6 +52,7 @@ body::before {
     box-sizing: border-box;
 }
 
+/* Navbar Links */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
@@ -61,7 +75,7 @@ body::before {
 }
 
 .navbar-links li a:hover {
-    color: #4CAF50; /* Heleroheline hover */
+    color: #4CAF50; 
 }
 
 /* Menu Icon for Mobile */
@@ -96,6 +110,7 @@ body::before {
     display: flex;
 }
 
+/* Self Intro Section */
 #self_intro_txt {
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +118,7 @@ body::before {
     justify-content: space-between;
     margin: 20px auto;
     padding: 20px;
-    background-color: #1e1e1e; /* Tume taust */
+    background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     max-width: 800px;
@@ -119,14 +134,14 @@ body::before {
 #self_intro_txt h2 {
     margin: 0 0 10px 0;
     font-size: 24px;
-    color: #e0e0e0; /* Hele tekst */
+    color: #e0e0e0;
 }
 
 #self_intro_txt p {
     margin: 0;
     line-height: 1.6;
     font-size: 18px;
-    color: #bbb; /* Hele tekst */
+    color: #bbb;
 }
 
 #pilt {
@@ -152,7 +167,7 @@ body::before {
     overflow: hidden;
     width: 100%;
     margin: 20px auto;
-    background-color: #1e1e1e; /* Tume taust */
+    background-color: #1e1e1e;
     border: 1px solid #444;
     border-radius: 10px;
     padding: 10px;
@@ -169,7 +184,7 @@ body::before {
     max-height: 400px;
     object-fit: cover;
     border-radius: 20px;
-    border: 3px solid #ffffff3f; /* Hele piir */
+    border: 3px solid #ffffff3f;
     filter: brightness(0.9)
 }
 
@@ -205,28 +220,31 @@ body::before {
 
 /* Footer */
 #footer {
-    background-color: #1e1e1e;
+    background-color: #9b2b2b;
     color: white;
     text-align: center;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
 }
-
 
 /* Default style for the container */
 #to_project_link_prnt {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 25px; /* Compact horizontal padding, bigger vertical padding */
+    padding: 12px 25px;
     background-color: #333;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    width: auto; /* Auto width to fit content */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light floating shadow */
-    transform: translateY(-3px); /* Slight floating effect */
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 /* Style for the inner content */
@@ -238,12 +256,12 @@ body::before {
 
 /* Hover effect */
 #to_project_link_prnt:hover {
-    background-color: #B04D4D; /* Custom hover color */
-    transform: translateY(-6px); /* More lift on hover */
+    background-color: #B04D4D;
+    transform: translateY(-6px);
 }
 
 #to_project_link_prnt:hover #to_project_link_chld {
-    color: white; /* Change text color on hover */
+    color: white;
 }
 
 /* Intro Section */
@@ -260,7 +278,7 @@ body::before {
     flex: 1;
     font-size: 18px;
     line-height: 1.6;
-    color: #bbb; /* Hele tekst */
+    color: #bbb;
 }
 
 /* Responsive Design */
@@ -299,5 +317,18 @@ body::before {
 
     .carousel img {
         max-height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+    }
+
+    .carousel img {
+        max-height: 300px;
+        border-radius: 10px;
     }
 }
