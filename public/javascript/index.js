@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.querySelector('.menu-icon');
     const navbarLinks = document.getElementById('myLinks');
 
-    // Function to toggle the mobile menu
     function toggleMenu() {
-        navbarLinks.classList.toggle('open'); // Toggle 'open' class to show/hide the menu
+        const myLinks = document.getElementById('myLinks');
+        myLinks.classList.toggle('open');
     }
-
+    
     // Event listener to handle menu button click
     menuButton.addEventListener('click', toggleMenu);
 
