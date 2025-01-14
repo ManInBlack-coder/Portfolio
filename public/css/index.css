@@ -176,7 +176,7 @@ body::before {
 .carousel {
     display: flex;
     gap: 10px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .carousel img {
@@ -220,7 +220,7 @@ body::before {
 
 /* Footer */
 #footer {
-    background-color: #9b2b2b;
+    background-color: #1e1e1e;
     color: white;
     text-align: center;
     padding: 20px;
@@ -306,8 +306,13 @@ body::before {
     }
 
     #pilt {
-        width: 100%;
-        height: auto;
+        width: 120px; /* Väiksem laius */
+        height: 120px; /* Väiksem kõrgus */
+        border-radius: 10px; /* Ümarad nurgad, aga mitte täielikult ümmargune */
+    }
+
+    #pilt img {
+        border-radius: 10px; /* Ümarad nurgad, mitte ümmargune pilt */
     }
 
     .prev, .next {
@@ -315,8 +320,18 @@ body::before {
         padding: 8px;
     }
 
+    .carousel-wrapper {
+        display: flex;
+        animation: moveCarousel 20s linear infinite; /* 20s aeglane animatsioon, saab muuta vastavalt soovile */
+    }
+    
     .carousel img {
         max-height: 300px;
+    }
+
+    /* Ensure the footer stays at the bottom */
+    #footer {
+        position: relative;
     }
 }
 
