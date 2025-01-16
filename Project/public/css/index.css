@@ -30,13 +30,6 @@ body::before {
     transform: translateX(-50%); /* Keep the image centered */
 }
 
-/* Container Styles for Navbar, Self-Intro, Carousel */
-#to_project_link_prnt, .carousel-container, .navbar {
-    width: 100%;
-    max-width: 100%; /* Prevent child elements from stretching beyond the screen */
-    box-sizing: border-box;
-}
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -110,6 +103,14 @@ body::before {
     display: flex;
 }
 
+/* About Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 /* Self Intro Section */
 #self_intro_txt {
     display: flex;
@@ -130,11 +131,11 @@ body::before {
     flex-direction: column;
     flex: 1;
 }
-
 #self_intro_txt h2 {
     margin: 0 0 10px 0;
     font-size: 24px;
     color: #e0e0e0;
+    text-decoration: none; /* Eemalda allajoonimine */
 }
 
 #self_intro_txt p {
@@ -142,7 +143,15 @@ body::before {
     line-height: 1.6;
     font-size: 18px;
     color: #bbb;
+    text-decoration: none; /* Eemalda allajoonimine */
 }
+
+/* Veendu, et lingi stiilid ei rakenduks pealkirjadele ja lõikudele */
+#self_intro_txt a {
+    text-decoration: none; /* Eemalda lingi allajoonimine */
+    color: inherit; /* Kasuta sama värvi nagu ümbritseval elemendil */
+}
+    
 
 #pilt {
     width: 150px;
@@ -232,55 +241,6 @@ body::before {
     margin-top: auto;
 }
 
-/* Default style for the container */
-#to_project_link_prnt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 25px;
-    background-color: #333;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    width: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
-}
-
-/* Style for the inner content */
-#to_project_link_chld {
-    color: #e0e0e0;
-    font-size: 16px;
-    text-align: center;
-}
-
-/* Hover effect */
-#to_project_link_prnt:hover {
-    background-color: #B04D4D;
-    transform: translateY(-6px);
-}
-
-#to_project_link_prnt:hover #to_project_link_chld {
-    color: white;
-}
-
-/* Intro Section */
-#intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-#intro-text {
-    flex: 1;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #bbb;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-icon {
@@ -301,9 +261,24 @@ body::before {
     }
 
     #self_intro_txt {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        padding: 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: 2px solid #388E3C; /* Darker green border */
+        border-radius: 10px; /* Rounded corners */
+        transition: transform 0.2s, background-color 0.2s; /* Hover animation */
+        cursor: pointer; /* Pointer cursor on hover */
+        z-index: 1; /* Ensure it's on top */
     }
+    
+    #self_intro_txt:hover {
+        background-color: #45a049; /* Slightly darker green */
+        transform: scale(1.05); /* Slight zoom effect */
+    }
+    
 
     #pilt {
         width: 120px; /* Väiksem laius */
