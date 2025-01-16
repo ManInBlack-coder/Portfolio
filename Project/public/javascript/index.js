@@ -3,63 +3,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.querySelector('.menu-icon');
     const navbarLinks = document.getElementById('myLinks');
 
-    // Function to toggle the mobile menu
     function toggleMenu() {
-        navbarLinks.classList.toggle('open'); // Toggle 'open' class to show/hide the menu
+        navbarLinks.classList.toggle('open');
     }
 
-    // Event listener to handle menu button click
     menuButton.addEventListener('click', toggleMenu);
 
     // Carousel logic
-    let currentIndex = 1; // Start from the second image (index 1) to show the first image
     const images = document.querySelectorAll('.carousel img');
-    const totalImages = images.length - 1; // Exclude the duplicate image for total count
-
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+    const totalImages = images.length; // Include all images in the total count
     const carousel = document.querySelector('.carousel');
 
-    // Function to move to the next image
-    function nextImage() {
-        if (currentIndex < totalImages) {
-            currentIndex++;
-        } else {
-            // When reaching the last image, jump to the second image (skip the duplicate)
-            currentIndex = 1;
-            carousel.style.transition = 'none'; // Disable transition during reset
-            updateCarouselPosition();
-            setTimeout(() => {
-                carousel.style.transition = 'transform 0.5s ease'; // Re-enable smooth transition
-            }, 50);
+    // Create a wrapper for the carousel images
+    const carouselWrapper = document.createElement('div');
+    carouselWrapper.classList.add('carousel-wrapper');
+    carouselWrapper.style.display = 'flex';
+
+    // Append the images to the wrapper
+    images.forEach(image => {
+        carouselWrapper.appendChild(image);  // Add original image
+    });
+
+    // Add the wrapper to the carousel
+    carousel.appendChild(carouselWrapper);
+
+    // CSS animatsioon, et liikumine oleks pidev
+    carouselWrapper.style.animation = `moveCarousel ${totalImages * 30}s linear infinite`;
+
+    // CSS animatsiooni määramine
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes moveCarousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-${totalImages * 100}%) }
         }
-        updateCarouselPosition();
-    }
-
-    // Function to move to the previous image
-    function prevImage() {
-        if (currentIndex > 1) {
-            currentIndex--;
-        } else {
-            // When reaching the first image, jump to the second to continue the loop
-            currentIndex = totalImages - 1;
-            carousel.style.transition = 'none'; // Disable transition during reset
-            updateCarouselPosition();
-            setTimeout(() => {
-                carousel.style.transition = 'transform 0.5s ease'; // Re-enable smooth transition
-            }, 50);
-        }
-        updateCarouselPosition();
-    }
-
-    // Update the carousel's position
-    function updateCarouselPosition() {
-        carousel.style.transform = `translateX(-${currentIndex * 35}%)`;
-    }
-
-    prevButton.addEventListener('click', prevImage);
-    nextButton.addEventListener('click', nextImage);
-
-    // Auto-slide every 3 seconds
-    setInterval(nextImage, 1000);
+    `;
+    document.head.appendChild(style);
 });

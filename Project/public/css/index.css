@@ -1,161 +1,213 @@
-/* Global styles */
-html, body {
-    height: 100%; /* Ensure the page uses full height */
-    margin: 0;
-}
-
+/* General Styles */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    min-height: 100vh;  /* Ensure body takes up the full viewport height */
+    width: 100%;
+    color: #e0e0e0; 
+    background-color: #1e1e1e;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Navbar styles */
+/* Pilt välja keha piirest */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Adjust to ensure it stays centered horizontally */
+    width: 200%; 
+    height: 100%;
+    background-image: url('../images/vaike2.jpg');
+    filter: brightness(0.5);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateX(-50%); /* Keep the image centered */
+}
+
+/* Container Styles for Navbar, Self-Intro, Carousel */
+#to_project_link_prnt, .carousel-container, .navbar {
+    width: 100%;
+    max-width: 100%; /* Prevent child elements from stretching beyond the screen */
+    box-sizing: border-box;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Ensures the logo and the menu are spaced */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Add padding to the left and right */
-    background-color: #333;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
     color: white;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Logo styling */
+/* Navbar Links */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-right: auto; /* Pushes the logo to the left */
+    color: #e0e0e0;
 }
 
-/* Menu button (hamburger) styling */
-.menu-icon {
-    display: none; /* Hidden by default, shown on mobile */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-icon .bar {
-    width: 30px;
-    height: 3px;
-    margin: 5px 0;
-    background-color: white;
-}
-
-/* Navbar links styling */
 .navbar-links {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin-right: 20px; /* Add margin on the right */
+    gap: 20px;
+    margin: 0;
     padding: 0;
 }
 
-/* Navbar link styling */
-.navbar-links a {
+.navbar-links li a {
     text-decoration: none;
-    color: white;
+    color: #e0e0e0;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-/* Toggle the menu in mobile view */
-.navbar-links.open {
-    display: block; /* Show the links when the 'open' class is added */
+.navbar-links li a:hover {
+    color: #4CAF50; 
 }
 
-/* Add spacing to content to prevent it from being hidden behind the fixed navbar */
-body {
-    margin-top: 60px;
+/* Menu Icon for Mobile */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end;
 }
 
-
-
-#content_div {
-    height: 100%; /* Teeb divi sama kõrgeks kui vaateaken */
-    overflow-y: auto; /* Lisab vertikaalse kerimisvõimaluse */
-    box-sizing: border-box; /* Väldib paddingu mõju laius-kõrguse arvutamisel */
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
 }
 
-/* Mobile view adjustments */
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 0 15px;
-    }
-
-    .navbar-links {
-        display: none; /* Hide links by default */
-        position: absolute;
-        top: 60px; /* Position it below the navbar */
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-links li {
-        padding: 15px 0;
-    }
-
-    .menu-icon {
-        display: flex; /* Show the hamburger menu on mobile */
-        margin-right: 20px;
-    }
-
-    .navbar-links.open {
-        display: block;
-    }
-}
-
-/* Karusselli container - tagame, et sellel oleks piisavalt ruumi ja ei jääks footeri alla */
-.carousel-container {
+#myLinks {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
     width: 100%;
-    overflow: hidden;
-    background-color: #f0f0f0;
-    padding: 20px 0;
-    position: relative;
-    margin-bottom: 100px; /* Lisa suurem margin, et tagada ruum footeri jaoks */
+    padding: 10px;
+    z-index: 1000;
 }
 
-/* Karusselli wrapper, et vältida liiga väikest ruumi */
+#myLinks.open {
+    display: flex;
+}
+
+/* Self Intro Section */
+#self_intro_txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    gap: 20px;
+}
+
+#self_intro_txt .text-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#self_intro_txt h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+#self_intro_txt p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #bbb;
+}
+
+#pilt {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#pilt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .carousel {
     display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-    padding: 0 10px;
-    margin-bottom: 80px; /* Lisame suurema ruumi karusselli ja footeri vahele */
+    gap: 10px;
+    transition: transform 0.5s ease;
 }
 
-/* Carousel images */
 .carousel img {
-    width: calc(100% / 3);
-    height: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ffffff3f;
+    filter: brightness(0.9)
 }
 
-/* Button styles */
+/* Prev and Next Buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 30px;
-    padding: 10px;
     border: none;
+    font-size: 24px;
+    padding: 15px;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .prev {
@@ -166,169 +218,132 @@ body {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Intro section styles */
-#intro {
-    display: flex;
-    gap: 40px;
-    margin-top: 50px;
+/* Footer */
+#footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
     padding: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
 }
 
-#self_intro_txt {
-    flex: 2;
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#pilt {
-    flex: 1;
+/* Default style for the container */
+#to_project_link_prnt {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px 25px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
-#pilt img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+/* Style for the inner content */
+#to_project_link_chld {
+    color: #e0e0e0;
+    font-size: 16px;
+    text-align: center;
 }
 
+/* Hover effect */
+#to_project_link_prnt:hover {
+    background-color: #B04D4D;
+    transform: translateY(-6px);
+}
 
-/* Mobile view adjustments - will apply for screens below 768px */
-@media (min-width: 767px) {
-  
+#to_project_link_prnt:hover #to_project_link_chld {
+    color: white;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#intro-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .menu-icon {
-        display: none; /* Hide the hamburger menu on desktop */
-    }
-    
-    .navbar {
-        padding: 0 15px;
+        display: flex;
     }
 
     .navbar-links {
-        display: none; /* Hide links by default */
-        position: absolute;
-        top: 60px; /* Position it below the navbar */
-        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
         width: 100%;
+        padding: 10px 0;
+    }
+
+    #self_intro_txt {
+        flex-direction: column;
         text-align: center;
     }
 
-    .navbar-links li {
-        padding: 15px 0;
-    }
-
-    .menu-icon {
-        display: flex; /* Show the hamburger menu on mobile */
-        margin-right: 40px; /* Increase the margin to move it farther from the edge */
-    }
-
-    .navbar-links.open {
-        display: block;
-    }
-}
-
-    .carousel img {
-        width: calc(100% / 3);
-    }
-
-    .carousel-container {
-        padding: 20px;
-    }
-
-    .carousel {
-        display: flex;
-        gap: 20px;
-    }
-
-    #intro {
-        flex-direction: row;
-    }
-    
-    #self_intro_txt {
-        padding: 20px;
+    #pilt {
+        width: 120px; /* Väiksem laius */
+        height: 120px; /* Väiksem kõrgus */
+        border-radius: 10px; /* Ümarad nurgad, aga mitte täielikult ümmargune */
     }
 
     #pilt img {
-        width: 150px;
-        height: 150px;
+        border-radius: 10px; /* Ümarad nurgad, mitte ümmargune pilt */
     }
 
-
-/* Footer styles */
-#footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-}
-
-/* Footer content */
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Footer links */
-.footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.footer-links li {
-    padding: 5px 10px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-
-/* Mobile view footer adjustments */
-@media screen and (max-width: 768px) {
-   
-    .menu-icon {
-        display: flex; /* Show the hamburger menu on mobile */
+    .prev, .next {
+        font-size: 16px;
+        padding: 8px;
     }
 
+    .carousel-wrapper {
+        display: flex;
+        animation: moveCarousel 20s linear infinite; /* 20s aeglane animatsioon, saab muuta vastavalt soovile */
+    }
+    
+    .carousel img {
+        max-height: 300px;
+    }
+
+    /* Ensure the footer stays at the bottom */
     #footer {
-        padding: 15px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links li {
-        margin: 5px 0;
+        position: relative;
     }
 }
 
-/* Main content section */
-.main-content {
-    flex: 1; /* Takes remaining space */
-    padding-bottom: 60px; /* Space for footer */
+@media (min-width: 1024px) {
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+    }
+
+    .carousel img {
+        max-height: 300px;
+        border-radius: 10px;
+    }
 }
