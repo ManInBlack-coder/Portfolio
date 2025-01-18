@@ -22,7 +22,7 @@ body::before {
     left: 50%; /* Adjust to ensure it stays centered horizontally */
     width: 200%; 
     height: 100%;
-    background-image: url('../images/vaike2.jpg');
+    background-image: url('./images/vaike2.jpg');
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;
