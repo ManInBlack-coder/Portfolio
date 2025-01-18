@@ -109,6 +109,35 @@ body::before {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    border-radius: 10px; /* Kerged ümardatud nurgad */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* Hover Animation */
+#about:hover {
+    animation: gentleWobble 1.5s infinite ease-in-out; /* Vertikaalne kõikumine */
+    background-color: #1e1e1e79;
+}
+
+/* Keyframes for Vertical Gentle Wobble Effect */
+@keyframes gentleWobble {
+    0%, 100% {
+        transform: translateY(0); /* Algus ja lõpp positsioon */
+    }
+    50% {
+        transform: translateY(-10px); /* Liigub kergelt üles */
+    }
+}
+
+
+#about a {
+    text-decoration: none;
+    color: inherit; /* Keep text color consistent */
+}
+
+#about a:hover {
+    text-decoration: underline; /* Add underline to the link on hover */
 }
 
 /* Self Intro Section */
@@ -119,7 +148,7 @@ body::before {
     justify-content: space-between;
     margin: 20px auto;
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #07374f;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     max-width: 800px;
