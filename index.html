@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="index.css">
 
     
 </head>
 <body>
-   <!--NAVBAR-->
-    <div class="navbar">
-        <nav class="navbar">
-            <div class="logo">A</div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="navbar-links" id="myLinks">
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Developer Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<!--NAVBAR-->
+<div class="navbar">
+    <nav class="navbar">
+        <div class="logo">A</div>
+        <!-- Remove the inline onclick here -->
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+       
+        <!--Navbar links-->
+        <ul class="navbar-links" id="myLinks">
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Developer Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
 
 
 
@@ -32,7 +36,7 @@
 Introduction content     
 -->
 <div id="about">
-    <a href="html/about.html" id="intro">
+    <a href="about.html" id="intro">
         <div id="self_intro_txt">
             <div class="text-container">
                 <h2>Hello! I am Aleksander</h2>
@@ -96,7 +100,7 @@ Footer
     </div>
    
    
-    <script src="javascript/index.js"></script>
+    <script src="index.js"></script>
 
 </body>
 </html>

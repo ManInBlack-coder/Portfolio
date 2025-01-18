@@ -5,11 +5,11 @@ const app = express();
 const PORT = 3012;
 
 // Serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '')));
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'index.html'));
+    res.sendFile(path.join(__dirname, '/'));
 });
 
 // Log incoming requests to static files
