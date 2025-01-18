@@ -1,42 +1,48 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle logic
-    const menuButton = document.querySelector('.menu-icon');
-    const navbarLinks = document.getElementById('myLinks');
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbarLinks = document.querySelector('.navbar-links');
 
+    // Define the toggleMenu function
     function toggleMenu() {
-        navbarLinks.classList.toggle('open');
+        navbarLinks.classList.toggle('visible');
     }
 
-    menuButton.addEventListener('click', toggleMenu);
+    // Add event listener to the menu icon
+    menuIcon.addEventListener('click', toggleMenu);
 
-    // Carousel logic
+    // Carousel logic (if any) stays here...
+
+
+    // Carousel logic remains the same
     const images = document.querySelectorAll('.carousel img');
     const totalImages = images.length; // Include all images in the total count
     const carousel = document.querySelector('.carousel');
 
-    // Create a wrapper for the carousel images
-    const carouselWrapper = document.createElement('div');
-    carouselWrapper.classList.add('carousel-wrapper');
-    carouselWrapper.style.display = 'flex';
+    if (carousel) {
+        // Create a wrapper for the carousel images
+        const carouselWrapper = document.createElement('div');
+        carouselWrapper.classList.add('carousel-wrapper');
+        carouselWrapper.style.display = 'flex';
+        
+        // Append the images to the wrapper
+        images.forEach(image => {
+            carouselWrapper.appendChild(image);  // Add original image
+        });
 
-    // Append the images to the wrapper
-    images.forEach(image => {
-        carouselWrapper.appendChild(image);  // Add original image
-    });
+        // Add the wrapper to the carousel
+        carousel.appendChild(carouselWrapper);
 
-    // Add the wrapper to the carousel
-    carousel.appendChild(carouselWrapper);
+        // CSS animation for continuous movement
+        carouselWrapper.style.animation = `moveCarousel ${totalImages * 30}s linear infinite`;
 
-    // CSS animatsioon, et liikumine oleks pidev
-    carouselWrapper.style.animation = `moveCarousel ${totalImages * 30}s linear infinite`;
-
-    // CSS animatsiooni määramine
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes moveCarousel {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-${totalImages * 100}%) }
-        }
-    `;
-    document.head.appendChild(style);
+        // Add the animation style to the document
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes moveCarousel {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-${totalImages * 100}%) }
+            }
+        `;
+        document.head.appendChild(style);
+    }
 });

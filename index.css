@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Pilt välja keha piirest */
+/* Background Image */
 body::before {
     content: '';
     position: absolute;
@@ -45,22 +45,42 @@ body::before {
     box-sizing: border-box;
 }
 
-/* Navbar Links */
+/* Navbar Logo */
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
     color: #e0e0e0;
 }
 
+/* Navbar Links */
 .navbar-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
     margin: 0;
     padding: 0;
 }
 
+/* Show navbar links only on large screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .navbar-links {
+        display: flex; /* Show links when screen is wider than 768px */
+    }
+}
+
+/* Hide menu by default for small screens */
+.navbar-links.hidden {
+    display: none;
+}
+
+/* Show menu for small screens when visible */
+.navbar-links.visible {
+    display: flex;
+}
+
 .navbar-links li a {
+    display: flex;
     text-decoration: none;
     color: #e0e0e0;
     font-size: 18px;
@@ -86,6 +106,7 @@ body::before {
     margin: 4px 0;
 }
 
+/* Mobile Menu */
 #myLinks {
     display: none;
     flex-direction: column;
@@ -100,7 +121,7 @@ body::before {
 }
 
 #myLinks.open {
-    display: flex;
+    display: block;
 }
 
 /* About Section */
@@ -109,27 +130,25 @@ body::before {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 10px; /* Kerged ümardatud nurgad */
+    border-radius: 10px; /* Rounded corners */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
 }
 
-/* Hover Animation */
+/* Hover Animation for About */
 #about:hover {
-    animation: gentleWobble 1.5s infinite ease-in-out; /* Vertikaalne kõikumine */
+    animation: gentleWobble 1.5s infinite ease-in-out; /* Gentle vertical wobble */
     background-color: #1e1e1e79;
 }
 
 /* Keyframes for Vertical Gentle Wobble Effect */
 @keyframes gentleWobble {
     0%, 100% {
-        transform: translateY(0); /* Algus ja lõpp positsioon */
+        transform: translateY(0); /* Initial and final position */
     }
     50% {
-        transform: translateY(-10px); /* Liigub kergelt üles */
+        transform: translateY(-10px); /* Slight upward movement */
     }
 }
-
 
 #about a {
     text-decoration: none;
@@ -155,16 +174,22 @@ body::before {
     gap: 20px;
 }
 
+/* Hover Effect on Self Intro Section */
+#self_intro_txt:hover {
+    background-color: #0d587e;
+    transition: background-color 0.5s ease;
+}
+
 #self_intro_txt .text-container {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
+
 #self_intro_txt h2 {
     margin: 0 0 10px 0;
     font-size: 24px;
     color: #e0e0e0;
-    text-decoration: none; /* Eemalda allajoonimine */
 }
 
 #self_intro_txt p {
@@ -172,16 +197,14 @@ body::before {
     line-height: 1.6;
     font-size: 18px;
     color: #bbb;
-    text-decoration: none; /* Eemalda allajoonimine */
 }
 
-/* Veendu, et lingi stiilid ei rakenduks pealkirjadele ja lõikudele */
 #self_intro_txt a {
-    text-decoration: none; /* Eemalda lingi allajoonimine */
-    color: inherit; /* Kasuta sama värvi nagu ümbritseval elemendil */
+    text-decoration: none;
+    color: inherit;
 }
-    
 
+/* Profile Image */
 #pilt {
     width: 150px;
     height: 150px;
@@ -223,7 +246,7 @@ body::before {
     object-fit: cover;
     border-radius: 20px;
     border: 3px solid #ffffff3f;
-    filter: brightness(0.9)
+    filter: brightness(0.9);
 }
 
 /* Prev and Next Buttons */
@@ -294,29 +317,26 @@ body::before {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        background-color: #4CAF50; /* Green background */
-        color: white; /* White text */
-        border: 2px solid #388E3C; /* Darker green border */
-        border-radius: 10px; /* Rounded corners */
-        transition: transform 0.2s, background-color 0.2s; /* Hover animation */
-        cursor: pointer; /* Pointer cursor on hover */
-        z-index: 1; /* Ensure it's on top */
+        background-color: #07374f;
+        color: white;
+        border-radius: 10px;
+        transition: transform 0.2s, background-color 0.2s;
+        cursor: pointer;
+        z-index: 1;
     }
-    
+
     #self_intro_txt:hover {
-        background-color: #45a049; /* Slightly darker green */
-        transform: scale(1.05); /* Slight zoom effect */
+        background-color: #0d587e;
     }
-    
 
     #pilt {
-        width: 120px; /* Väiksem laius */
-        height: 120px; /* Väiksem kõrgus */
-        border-radius: 10px; /* Ümarad nurgad, aga mitte täielikult ümmargune */
+        width: 120px; /* Smaller width */
+        height: 120px; /* Smaller height */
+        border-radius: 10px;
     }
 
     #pilt img {
-        border-radius: 10px; /* Ümarad nurgad, mitte ümmargune pilt */
+        border-radius: 10px; /* Rounded corners */
     }
 
     .prev, .next {
@@ -326,9 +346,9 @@ body::before {
 
     .carousel-wrapper {
         display: flex;
-        animation: moveCarousel 20s linear infinite; /* 20s aeglane animatsioon, saab muuta vastavalt soovile */
+        animation: moveCarousel 20s linear infinite;
     }
-    
+
     .carousel img {
         max-height: 300px;
     }
@@ -336,18 +356,24 @@ body::before {
     /* Ensure the footer stays at the bottom */
     #footer {
         position: relative;
+        margin-top: 20px;
     }
 }
 
-@media (min-width: 1024px) {
-    .carousel-container {
-        width: 100%;
-        max-width: 100%;
-        margin: 30px auto;
-    }
+/* Navigation Menu for Small Screens */
+#myLinks {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
 
-    .carousel img {
-        max-height: 300px;
-        border-radius: 10px;
-    }
+#myLinks.open {
+    display: block;
 }
