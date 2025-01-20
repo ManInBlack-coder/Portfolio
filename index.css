@@ -13,6 +13,7 @@
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
+
 }
 
 body {
@@ -27,6 +28,8 @@ body {
     color: #e0e0e0; 
     background-color: #1e1e1e;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: 1.6; /* Improves readability by adding line spacing */
+
 }
 
 
@@ -208,13 +211,14 @@ body::before {
     justify-content: center;
     align-items: center;
     margin: 50px auto;
+    margin-top: 5%;
 }
 
 /* Link styling */
 #to_project_link_btn {
     text-decoration: none;
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +228,10 @@ body::before {
     transition: all 0.3s ease;
     font-size: 20px;
     font-weight: bold;
-    color: #fff; /* White text */
+    color: inherit; /* Keep text color consistent */   
+    border: solid rgb(123, 123, 123) 3px;
+
+
 }
 
 /* Child container inside the button */
@@ -234,11 +241,15 @@ body::before {
 
 /* Hover effect */
 #to_project_link_btn:hover {
-    background-color: #07374f; /* Blue button */
+    background-color: #07374f0f; /* Blue button */
 
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     animation: gentleWobble 1.5s infinite ease-in-out; 
+    color: white;
+    background-color: #07374f; /* Slightly darker blue on hover */
+    border: solid rgb(255, 255, 255) 3px;
+
 }
 
 /* Footer */
@@ -313,6 +324,16 @@ body::before {
 
     .carousel img {
         max-height: 300px;
+    }
+
+    #to_project_link_btn {
+        width: 200px; /* Button takes up 90% of the screen width */
+        height: 80px; /* Reduced height for smaller screens */
+        font-size: 16px; /* Smaller font size for better fit */
+    }
+
+    #to_project_link_prnt {
+        margin-top: 10%; /* Adjust top margin for better spacing */
     }
 
     /* Ensure the footer stays at the bottom */
