@@ -1,51 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    const menuIcon = document.querySelector('.menu-icon');
-    const navbarLinks = document.getElementById('myLinks');
-
-    // Attach the event listener to the menu icon
-    menuIcon.addEventListener('click', toggleMenu);
-
-    // Define the toggleMenu function
-    function toggleMenu() {
-        navbarLinks.classList.toggle('visible');
-    }
-
-
-    
-    // Carousel logic (if any) stays here...
-
-
-    // Carousel logic remains the same
-    const images = document.querySelectorAll('.carousel img');
-    const totalImages = images.length; // Include all images in the total count
     const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    const totalImages = images.length;
+    let currentIndex = 0;  // Start at the first image
 
-    if (carousel) {
-        // Create a wrapper for the carousel images
-        const carouselWrapper = document.createElement('div');
-        carouselWrapper.classList.add('carousel-wrapper');
-        carouselWrapper.style.display = 'flex';
-        
-        // Append the images to the wrapper
-        images.forEach(image => {
-            carouselWrapper.appendChild(image);  // Add original image
-        });
+    // Set up the event listeners for prev/next buttons
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
 
-        // Add the wrapper to the carousel
-        carousel.appendChild(carouselWrapper);
-
-        // CSS animation for continuous movement
-        carouselWrapper.style.animation = `moveCarousel ${totalImages * 30}s linear infinite`;
-
-        // Add the animation style to the document
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes moveCarousel {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-${totalImages * 100}%) }
-            }
-        `;
-        document.head.appendChild(style);
+    // Function to show the current image
+    function updateCarousel() {
+        const offset = -currentIndex * 100;  // Calculate the offset based on the current index
+        carousel.style.transition = 'transform 0.5s ease'; // Smooth transition
+        carousel.style.transform = `translateX(${offset}%)`;
     }
+
+    // Move to the next image (continually loop forward)
+    nextButton.addEventListener('click', function() {
+        if (currentIndex === totalImages - 1) {
+            // If last image, jump back to the first one after a short delay
+            setTimeout(() => {
+                carousel.style.transition = 'none';  // Disable transition temporarily
+                currentIndex = 0;
+                updateCarousel();  // Immediately jump to first image
+                // Re-enable smooth transition after a short delay
+                setTimeout(() => carousel.style.transition = 'transform 0.5s ease', 20);
+            }, 500);  // Wait for the last image to finish the move
+        } else {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    // Move to the previous image (continually loop backward)
+    prevButton.addEventListener('click', function() {
+        if (currentIndex === 0) {
+            // If first image, jump to the last one after a short delay
+            setTimeout(() => {
+                carousel.style.transition = 'none';  // Disable transition temporarily
+                currentIndex = totalImages - 1;
+                updateCarousel();  // Immediately jump to last image
+                // Re-enable smooth transition after a short delay
+                setTimeout(() => carousel.style.transition = 'transform 0.5s ease', 20);
+            }, 500);  // Wait for the first image to finish the move
+        } else {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    // Initialize carousel with the first image
+    updateCarousel();
 });

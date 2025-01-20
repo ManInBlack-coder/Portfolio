@@ -150,63 +150,6 @@ body::before {
 }
 
 
-/* Carousel */
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 20px auto;
-    background-color: #1e1e1e;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 5%;
-}
-
-.carousel {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
-}
-
-.carousel img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid #ffffff3f;
-    filter: brightness(0.9);
-}
-
-/* Prev and Next Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 1);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
 
 
 /* Parent container styling */
@@ -321,14 +264,34 @@ body::before {
         padding: 8px;
     }
 
-    .carousel-wrapper {
-        display: flex;
-        animation: moveCarousel 20s linear infinite;
-    }
+
+
+/*Vajalikud karusselli muudatused mobiilivaate jaoks*/
 
     .carousel img {
-        max-height: 300px;
+        max-height: 200px; /* Vähendab piltide kõrgust väiksematel ekraanidel */
+        flex: 0 0 auto; /* Tagab, et iga pilt on omaette nähtaval */
+        width: 100%; /* Laius sobib ekraanile */
+        scroll-snap-align: start; 
+        animation: none; /* Eemaldab fade-animatsiooni */
+
     }
+
+    .carousel {
+        animation: none; /* Väikestel ekraanidel animatsioon võib eemalduda */
+        flex-wrap: nowrap; /* Kõik pildid jäävad ühe rea peale */
+        display: flex;
+        overflow-x: scroll; /* Võimaldab horisontaalselt kerida */
+        scroll-snap-type: x mandatory;
+        
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none; /* Peidab kerimisriba */
+    }
+
+
+
 
     #to_project_link_btn {
         width: 200px; /* Button takes up 90% of the screen width */
@@ -347,3 +310,34 @@ body::before {
     }
 }
 
+@media (max-width: 1330px) { 
+
+
+
+/*Vajalikud karusselli muudatused mobiilivaate jaoks*/
+
+.carousel img {
+    max-height: auto; /* Säilitage määratud kõrgus */
+    flex: 0 0 auto; /* Tagab, et iga pilt on omaette nähtaval */
+    width: 100%; /* Laius sobib ekraanile */
+    scroll-snap-align: start; 
+    animation: none; /* Eemaldab fade-animatsiooni */
+
+}
+
+.carousel {
+    animation: none; /* Väikestel ekraanidel animatsioon võib eemalduda */
+    flex-wrap: nowrap; /* Kõik pildid jäävad ühe rea peale */
+    display: flex;
+    overflow-x: scroll; /* Võimaldab horisontaalselt kerida */
+    scroll-snap-type: x mandatory;
+    
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Peidab kerimisriba */
+}
+
+
+
+}

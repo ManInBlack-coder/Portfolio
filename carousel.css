@@ -1,0 +1,94 @@
+
+
+/* CSS muutujad */
+:root {
+    --quantity: 7; /* Piltide koguarv */
+    --duration: 22s; /* Kogu animatsiooni kestus */
+}
+
+/* Carousel konteiner */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+
+/* Karussell ise */
+.carousel {
+    display: flex;
+    animation: slide var(--duration) infinite linear, fade-out var(--duration) infinite linear;
+}
+
+/* Karusselli pildid */
+.carousel img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ffffff3f;
+    filter: brightness(0.9);
+
+    /* Iga pildi animatsioon */
+    animation: fade var(--duration) infinite linear;
+    animation-delay: calc( (var(--duration) / var(--quantity)) * var(--position) );
+}
+
+/* Animatsiooni võtmeframe'id */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / var(--quantity) * var(--quantity)));
+    }
+}
+
+/* Fade-out animatsioon lõpus */
+@keyframes fade-out {
+    0%, 90% {
+        opacity: 1; /* Täielikult nähtav */
+    }
+    100% {
+        opacity: 0; /* Fade lõpus */
+    }
+}
+
+
+@media (max-width: 1330px) { 
+
+
+
+    /*Vajalikud karusselli muudatused mobiilivaate jaoks*/
+    
+    .carousel img {
+        max-height: auto; /* Säilitage määratud kõrgus */
+        flex: 0 0 auto; /* Tagab, et iga pilt on omaette nähtaval */
+        width: 100%; /* Laius sobib ekraanile */
+        scroll-snap-align: start; 
+        animation: none; /* Eemaldab fade-animatsiooni */
+    
+    }
+    
+    .carousel {
+        animation: none; /* Väikestel ekraanidel animatsioon võib eemalduda */
+        flex-wrap: nowrap; /* Kõik pildid jäävad ühe rea peale */
+        display: flex;
+        overflow-x: scroll; /* Võimaldab horisontaalselt kerida */
+        scroll-snap-type: x mandatory;
+        
+    }
+    
+    .carousel::-webkit-scrollbar {
+        display: none; /* Peidab kerimisriba */
+    }
+    
+    
+    
+    }
+    
