@@ -1,4 +1,3 @@
-/* General Styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html {
@@ -6,8 +5,9 @@ html {
     font-family: "Roboto", serif;
 
 }
-
+/* General Styles */
 body {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +29,7 @@ body::before {
     left: 50%; /* Adjust to ensure it stays centered horizontally */
     width: 200%; 
     height: 100%;
-    background-image: url('./images/vaike2.jpg');
+    background-image: url('../images/vaike2.jpg');
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;
@@ -59,6 +59,7 @@ body::before {
     color: #e0e0e0;
     text-decoration: none; /* Remove the underline */
 }
+
 
 /* Navbar Links */
 .navbar-links {
@@ -133,102 +134,6 @@ body::before {
 }
 
 
-/* Carousel */
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 20px auto;
-    background-color: #1e1e1e;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 5%;
-}
-
-.carousel {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
-}
-
-.carousel img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 3px solid #ffffff3f;
-    filter: brightness(0.9);
-}
-
-/* Prev and Next Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 1);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-
-/* Parent container styling */
-#to_project_link_prnt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
-}
-
-/* Link styling */
-#to_project_link_btn {
-    text-decoration: none;
-    width: 300px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #07374f; /* Blue button */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff; /* White text */
-}
-
-/* Child container inside the button */
-#to_project_link_chld {
-    text-align: center;
-}
-
-/* Hover effect */
-#to_project_link_btn:hover {
-    background-color: #0d587e; /* Darker blue */
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-    animation: gentleWobble 1.5s infinite ease-in-out; 
-}
 
 /* Footer */
 #footer {
@@ -243,6 +148,7 @@ body::before {
     left: 0;
     margin-top: auto;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -263,55 +169,13 @@ body::before {
         padding: 10px 0;
     }
 
-    #self_intro_txt {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        background-color: #07374f;
-        color: white;
-        border-radius: 10px;
-        transition: transform 0.2s, background-color 0.2s;
-        cursor: pointer;
-        z-index: 1;
-    }
-
-    #self_intro_txt:hover {
-        background-color: #0d587e;
-    }
-
-    #pilt {
-        width: 120px; /* Smaller width */
-        height: 120px; /* Smaller height */
-        border-radius: 10px;
-    }
-
-    #pilt img {
-        border-radius: 10px; /* Rounded corners */
-    }
-
-    .prev, .next {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .carousel-wrapper {
-        display: flex;
-        animation: moveCarousel 20s linear infinite;
-    }
-
-    .carousel img {
-        max-height: 300px;
-    }
-
-
     /* Ensure the footer stays at the bottom */
     #footer {
         position: relative;
         margin-top: 20px;
     }
-}
 
+}
 /* Navigation Menu for Small Screens */
 #myLinks {
     display: none;
@@ -329,5 +193,3 @@ body::before {
 #myLinks.open {
     display: block;
 }
-
-

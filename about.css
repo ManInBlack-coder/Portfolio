@@ -1,0 +1,205 @@
+/* About Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5%;
+}
+
+/* Hover Animation for About */
+#about:hover {
+    animation: gentleWobble 1.5s infinite ease-in-out; /* Gentle vertical wobble */
+    background-color: #1e1e1e79;
+}
+
+/* Keyframes for Vertical Gentle Wobble Effect */
+@keyframes gentleWobble {
+    0%, 100% {
+        transform: translateY(0); /* Initial and final position */
+    }
+    50% {
+        transform: translateY(-10px); /* Slight upward movement */
+    }
+}
+
+#about a {
+    text-decoration: none;
+    color: inherit; /* Keep text color consistent */
+}
+
+#about a:hover {
+    text-decoration: underline; /* Add underline to the link on hover */
+}
+
+/* Self Intro Section */
+#self_intro_txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #07374f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    gap: 20px;
+}
+
+/* Hover Effect on Self Intro Section */
+#self_intro_txt:hover {
+    background-color: #0d587e;
+    transition: background-color 0.5s ease;
+}
+
+#self_intro_txt .text-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#self_intro_txt h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+#self_intro_txt p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #bbb;
+}
+
+#self_intro_txt a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Profile Image */
+#pilt {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#pilt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* About Myself Section */
+#about_myself {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 40px 20px; /* Add more padding */
+    background: linear-gradient(135deg, #0d587e, #068a9e); /* Gradient background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 80%; /* Make the section smaller */
+    max-width: 900px; /* Set a max width to limit its size */
+    margin: 0 auto; /* Center the entire div horizontally */
+    margin-top: 8%;
+    margin-bottom: 10%;
+    border-radius: 10px; /* Rounded corners for the section */
+    overflow: hidden; /* Prevents content overflow */
+    position: relative;
+}
+
+#about_myself_text {
+    width: 60%; /* Adjust width of the text section */
+    padding: 20px;
+    color: white;
+}
+
+#about_myself_text h2 {
+    font-size: 32px; /* Increase font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for text */
+}
+
+#about_myself_text p {
+    font-size: 18px; /* Slightly larger font for paragraph */
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+#about_myself_image {
+    width: 30%; /* Adjust width of the image section */
+    padding: 15px;
+}
+
+#about_myself_image img {
+    width: 100%; /* Make the image responsive */
+    height: 300px; /* Fixed height to ensure consistency */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 0%; /* Round image to make it a circle */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition on hover */
+}
+
+#about_myself_image img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+@media (max-width: 768px) {
+    #about_myself {
+        flex-direction: column; /* Stack the text and image vertically */
+        width: 90%; /* Make the section slightly narrower on smaller screens */
+        padding: 20px;
+        margin: 0 auto;
+    }
+    
+    #about_myself_text {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    #about_myself_image {
+        width: 70%;
+        margin-top: 20px;
+    }
+    
+    #about_myself_image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about_myself {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #about_myself_text h2 {
+        font-size: 24px; /* Make the heading smaller on very small screens */
+    }
+
+    #about_myself_text p {
+        font-size: 16px; /* Adjust the paragraph font size */
+    }
+
+    #about_myself_image {
+        width: 80%;
+        margin-top: 15px;
+    }
+
+    #about_myself_image img {
+        width: 150px;
+        height: 150px;
+    }
+}
