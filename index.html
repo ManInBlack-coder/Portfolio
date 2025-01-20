@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
-
-    
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
 <!--NAVBAR-->
 <div class="navbar">
     <nav class="navbar">
-        <div class="logo">A</div>
+        <a href="index.html" class="logo">A</a>
         <!-- Remove the inline onclick here -->
         <div class="menu-icon">
             <div class="bar"></div>
@@ -29,14 +28,9 @@
     </nav>
 </div>
 
-
-
-
-<!--
-Introduction content     
--->
+<!-- Introduction content -->
 <div id="about">
-    <a href="about.html" id="intro">
+    <a href="#about_myself" id="intro">
         <div id="self_intro_txt">
             <div class="text-container">
                 <h2>Hello! I am Aleksander</h2>
@@ -49,58 +43,47 @@ Introduction content
     </a>
 </div>
 
-        
-
-<!--
-Karussell    
--->
-
-
-    <div class="carousel-container">
-        <div class="carousel">
-            <img class="carousel_img" src="images/Tstock.png" alt="Image 1">
-            <img class="carousel_img" src="images/ai.png" alt="Image 2">
-            <img class="carousel_img" src="images/Internhub.png" alt="Image 1">
-            <img class="carousel_img" src="images/YOUTUBE.png" alt="Image 3">
-            <img class="carousel_img" src="images/Callast.png" alt="Image 4">
-            <img class="carousel_img" src="images/auto24.png" alt="Image 1">
-           
- 
-           
-        </div>
-        
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+<!-- Carousel -->
+<div class="carousel-container">
+    <div class="carousel">
+        <img class="carousel_img" src="images/Tstock.png" alt="Image 1">
+        <img class="carousel_img" src="images/ai.png" alt="Image 2">
+        <img class="carousel_img" src="images/Internhub.png" alt="Image 1">
+        <img class="carousel_img" src="images/YOUTUBE.png" alt="Image 3">
+        <img class="carousel_img" src="images/Callast.png" alt="Image 4">
+        <img class="carousel_img" src="images/auto24.png" alt="Image 1">
     </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
 
-
-<!--
-Projektidesse link    
--->
-    
-    <!-- <div id="to_project_link_prnt">
+<!-- Link to projects -->
+<div id="to_project_link_prnt">
+    <a href="projects.html" id="to_project_link_btn">
         <div id="to_project_link_chld">
-            Siia tuleb link projektidesse 
+            Vaata Projekte
         </div>
+    </a>
+</div>
+
+<!-- About Myself Section -->
+<div id="about_myself">
+    <div id="about_myself_text">
+        <h2>About myself</h2>
+        <p>Currently living in Tartu.</p>
     </div>
+    <div id="about_myself_image">
+        <img src="images/Aleksander.jpg" alt="Aleksander's photo">
     </div>
- 
+</div> 
 
 
-<div id="events_prnt_div">
-    Sündmused 
-</div> -->
+<!-- Footer -->
+<div id="footer">
+    <p>&copy; 2025 Aleksander | All Rights Reserved</p>
+</div>
 
-     
-<!--
-Footer
--->
-    <div id="footer">
-            <p>&copy; 2025 Aleksander | All Rights Reserved</p>
-    </div>
-   
-   
-    <script src="index.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
