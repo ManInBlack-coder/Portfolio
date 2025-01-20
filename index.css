@@ -132,6 +132,7 @@ body::before {
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5%;
 }
 
 /* Hover Animation for About */
@@ -222,6 +223,8 @@ body::before {
     border-radius: 50%;
 }
 
+
+
 /* Carousel */
 .carousel-container {
     position: relative;
@@ -232,6 +235,7 @@ body::before {
     border: 1px solid #444;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 15%;
 }
 
 .carousel {
