@@ -6,26 +6,32 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    
 </head>
 <body>
-<!-- NAVBAR -->
-<div class="navbar">
-    <nav class="navbar">
-        <a href="index.html" class="logo">A</a>
-        <div class="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
 
-        <!-- Navbar links -->
-        <ul class="navbar-links" id="myLinks">
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Developer Blog</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<!--NAVBAR-->
+<div class="navbar">
+    <a href="index.html" class="logo">A</a>
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+   
+    <!--Navbar links-->
+    <ul class="navbar-links" id="myLinks">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Developer Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </div>
+
+
 
 
 <!-- Introduction content -->
@@ -46,15 +52,16 @@
 <!-- Carousel -->
 <div class="carousel-container">
     <div class="carousel">
-        <img class="carousel_img" src="images/Tstock.png" alt="Image 1">
-        <img class="carousel_img" src="images/ai.png" alt="Image 2">
-        <img class="carousel_img" src="images/Internhub.png" alt="Image 1">
-        <img class="carousel_img" src="images/YOUTUBE.png" alt="Image 3">
-        <img class="carousel_img" src="images/Callast.png" alt="Image 4">
-        <img class="carousel_img" src="images/auto24.png" alt="Image 1">
+        <img class="carousel_img" src="images/Tstock.png" alt="Image 1" style="--position: 0;" >
+        <img class="carousel_img" src="images/ai.png" alt="Image 2" style="--position: 1;">
+        <img class="carousel_img" src="images/Internhub.png" alt="Image 3" style="--position: 2;">
+        <img class="carousel_img" src="images/YOUTUBE.png" alt="Image 4" style="--position: 3;">
+        <img class="carousel_img" src="images/estparty.jpg" alt="Image 5" style="--position: 4;">
+        <img class="carousel_img" src="images/Callast.png" alt="Image 6" style="--position: 5;">
+        <img class="carousel_img" src="images/auto24.png" alt="Image 7" style="--position: 6;">
+
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+   
 </div>
 
 
@@ -64,7 +71,7 @@
 <div id="to_project_link_prnt">
     <a href="projects.html" id="to_project_link_btn">
         <div id="to_project_link_chld">
-            <h3>            Check for projects
+            <h3>            View all projects
             </h3>
         </div>
     </a>
@@ -79,7 +86,7 @@
         <p>I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.</p>
     </div>
     <div id="about_myself_image">
-        <img src="images/Aleksander.jpg" alt="Aleksander's photo">
+        <img src="../images/Aleksander.jpg" alt="Aleksander's photo">
     </div>
 </div> 
 

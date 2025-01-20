@@ -1,0 +1,73 @@
+
+
+/* Projektide konteiner */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10%;
+}
+
+/* Iga projekti kast */
+.project-box {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Kolm kasti reas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover-efekt */
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Piltide paigutus iga projektikasti sees */
+.project-box img {
+    width: 100%;  /* Täidab kogu kasti laiuse */
+    height: auto; /* Kõrgus kohandub automaatselt */
+    border-radius: 10px;  /* Ümarad nurgad */
+    margin-bottom: 15px;
+}
+
+/* Projekti pealkirja stiil */
+.project-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    align-items: left;
+}
+
+/* Projekti kirjelduse stiil */
+.project-description {
+    font-size: 1em;
+    color: #ddd;
+    text-align: center;
+}
+
+
+
+
+/* Adjust for medium screens (2x2 layout) */
+@media (max-width: 1024px) {
+    .project-box {
+        width: calc(50% - 20px); /* Two boxes per row */
+    }
+}
+
+/* Adjust for smaller screens (1x1 layout) */
+@media (max-width: 768px) {
+    .project-box {
+        width: 100%; /* One box per row on small screens */
+    }
+}
