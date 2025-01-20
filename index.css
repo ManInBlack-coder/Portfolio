@@ -1,6 +1,15 @@
 /* General Styles */
-
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure smooth scrolling and prevent horizontal overflow */
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
@@ -19,7 +28,11 @@ body {
     color: #e0e0e0; 
     background-color: #1e1e1e;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: 1.3; /* Improves readability by adding line spacing */
+
 }
+
+
 
 /* Background Image */
 body::before {
@@ -29,7 +42,8 @@ body::before {
     left: 50%; /* Adjust to ensure it stays centered horizontally */
     width: 200%; 
     height: 100%;
-    background-image: url('./images/vaike2.jpg');
+    background-image: url('../images/kivid.jpg');
+
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;
@@ -198,23 +212,27 @@ body::before {
     justify-content: center;
     align-items: center;
     margin: 50px auto;
+    margin-top: 5%;
 }
 
 /* Link styling */
 #to_project_link_btn {
     text-decoration: none;
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #07374f; /* Blue button */
-    border-radius: 10px;
+    background-color: #0d587e; /* Darker blue */
+    border-radius: 30px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     font-size: 20px;
     font-weight: bold;
-    color: #fff; /* White text */
+    color: inherit; /* Keep text color consistent */   
+    border: solid rgb(123, 123, 123) 3px;
+
+
 }
 
 /* Child container inside the button */
@@ -224,10 +242,15 @@ body::before {
 
 /* Hover effect */
 #to_project_link_btn:hover {
-    background-color: #0d587e; /* Darker blue */
+    background-color: #07374f0f; /* Blue button */
+
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     animation: gentleWobble 1.5s infinite ease-in-out; 
+    color: white;
+    background-color: #07374f; /* Slightly darker blue on hover */
+    border: solid rgb(255, 255, 255) 3px;
+
 }
 
 /* Footer */
@@ -304,6 +327,15 @@ body::before {
         max-height: 300px;
     }
 
+    #to_project_link_btn {
+        width: 200px; /* Button takes up 90% of the screen width */
+        height: 80px; /* Reduced height for smaller screens */
+        font-size: 16px; /* Smaller font size for better fit */
+    }
+
+    #to_project_link_prnt {
+        margin-top: 10%; /* Adjust top margin for better spacing */
+    }
 
     /* Ensure the footer stays at the bottom */
     #footer {
@@ -311,23 +343,4 @@ body::before {
         margin-top: 20px;
     }
 }
-
-/* Navigation Menu for Small Screens */
-#myLinks {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 10px;
-    z-index: 1000;
-}
-
-#myLinks.open {
-    display: block;
-}
-
 

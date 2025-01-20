@@ -5,14 +5,15 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 3%;
     margin-bottom: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: none;
 }
 
 /* Hover Animation for About */
 #about:hover {
     animation: gentleWobble 1.5s infinite ease-in-out; /* Gentle vertical wobble */
-    background-color: #1e1e1e79;
 }
 
 /* Keyframes for Vertical Gentle Wobble Effect */
@@ -30,64 +31,62 @@
     color: inherit; /* Keep text color consistent */
 }
 
-#about a:hover {
-    text-decoration: underline; /* Add underline to the link on hover */
-}
-
 /* Self Intro Section */
 #self_intro_txt {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #07374f;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    gap: 20px;
+    margin: 40px auto; /* Increased margin for more spacing */
+    padding: 40px; /* Increased padding for a roomier look */
+    background-color: #0d587e; /* Darker blue */
+    border-radius: 15px; /* More rounded corners */
+    max-width: 1100px; /* Increased width */
+    gap: 30px; /* Larger gap between elements */
+    border: solid 5px #07374f; /* Thicker border for emphasis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    transition: transform 0.3s ease, background-color 0.5s ease;
+    border: solid rgb(123, 123, 123) 3px;
 }
 
-/* Hover Effect on Self Intro Section */
 #self_intro_txt:hover {
-    background-color: #0d587e;
-    transition: background-color 0.5s ease;
+    background-color: #07374f; /* Slightly darker blue on hover */
+    transform: scale(1.02); /* Subtle zoom effect */
+    border: solid rgb(255, 255, 255) 3px;
+
 }
 
+/* Text Content */
 #self_intro_txt .text-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1.5; /* Slightly more space for the text */
 }
 
 #self_intro_txt h2 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    color: #e0e0e0;
+    margin: 0 0 20px 0; /* Added spacing below the heading */
+    font-size: 28px; /* Larger heading */
+    color: #ffffff; /* Brighter color for emphasis */
+    font-weight: bold;
 }
 
 #self_intro_txt p {
     margin: 0;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #bbb;
-}
-
-#self_intro_txt a {
-    text-decoration: none;
-    color: inherit;
+    line-height: 1.8; /* Increased line height for readability */
+    font-size: 20px; /* Larger font size */
+    color: #e0e0e0; /* Softer white for the text */
 }
 
 /* Profile Image */
 #pilt {
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
 }
 
 #pilt img {
@@ -96,6 +95,11 @@
     object-fit: cover;
     border-radius: 50%;
 }
+
+
+
+
+
 
 /* About Myself Section */
 #about_myself {
@@ -113,12 +117,23 @@
     border-radius: 10px; /* Rounded corners for the section */
     overflow: hidden; /* Prevents content overflow */
     position: relative;
+    text-align: center; /* Added text centering */
 }
 
 #about_myself_text {
     width: 60%; /* Adjust width of the text section */
     padding: 20px;
     color: white;
+    border: solid #f0f0f0;
+    border-radius: 8px; /* Slightly rounded corners */
+    margin: 20px auto; /* Center the section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+
+}
+
+#about_myself_text:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #about_myself_text h2 {
@@ -132,6 +147,7 @@
     font-size: 18px; /* Slightly larger font for paragraph */
     line-height: 1.8;
     color: #f0f0f0;
+    margin-bottom: 15px; /* Add space between paragraphs */
 }
 
 #about_myself_image {
@@ -153,36 +169,41 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     #about_myself {
         flex-direction: column; /* Stack the text and image vertically */
         width: 90%; /* Make the section slightly narrower on smaller screens */
         padding: 20px;
         margin: 0 auto;
+        text-align: center; /* Ensure text is centered */
     }
     
     #about_myself_text {
         width: 100%;
         padding: 10px;
-        text-align: center;
     }
     
     #about_myself_image {
         width: 70%;
         margin-top: 20px;
+        text-align: center; /* Center the image */
     }
     
     #about_myself_image img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        margin: 0 auto; /* Ensure the image is centered */
     }
 }
 
-@media screen and (max-width: 480px) {
+/* Adjustments for very small screens */
+@media screen and (max-width: 768px) {
     #about_myself {
         width: 100%;
         padding: 10px;
+        margin-bottom: 10%;
     }
 
     #about_myself_text h2 {
@@ -196,10 +217,12 @@
     #about_myself_image {
         width: 80%;
         margin-top: 15px;
+        text-align: center; /* Center the image */
     }
 
     #about_myself_image img {
         width: 150px;
         height: 150px;
+        margin: 0 auto; /* Center the image */
     }
 }

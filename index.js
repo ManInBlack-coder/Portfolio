@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const menuIcon = document.querySelector('.menu-icon');
-    const navbarLinks = document.querySelector('.navbar-links');
+    const navbarLinks = document.getElementById('myLinks');
+
+    // Attach the event listener to the menu icon
+    menuIcon.addEventListener('click', toggleMenu);
 
     // Define the toggleMenu function
     function toggleMenu() {
         navbarLinks.classList.toggle('visible');
     }
 
-    // Add event listener to the menu icon
-    menuIcon.addEventListener('click', toggleMenu);
 
+    
     // Carousel logic (if any) stays here...
 
 
