@@ -14,9 +14,6 @@ html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-
-
-
 }
 
 body {
@@ -32,11 +29,7 @@ body {
     background-color: #1e1e1e;
     line-height: 1.3; /* Improves readability by adding line spacing */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-
-
 }
-
-
 
 /* Background Image */
 body::before {
@@ -53,104 +46,6 @@ body::before {
     z-index: -1;
     transform: translateX(-50%); /* Keep the image centered */
 }
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Navbar Logo */
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e0e0e0;
-    text-decoration: none; /* Remove the underline */
-}
-
-/* Navbar Links */
-.navbar-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-/* Show navbar links only on large screens (min-width: 768px) */
-@media (min-width: 768px) {
-    .navbar-links {
-        display: flex; /* Show links when screen is wider than 768px */
-    }
-}
-
-/* Hide menu by default for small screens */
-.navbar-links.hidden {
-    display: none;
-}
-
-/* Show menu for small screens when visible */
-.navbar-links.visible {
-    display: flex;
-}
-
-.navbar-links li a {
-    display: flex;
-    text-decoration: none;
-    color: #e0e0e0;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar-links li a:hover {
-    color: #4CAF50; 
-}
-
-/* Menu Icon for Mobile */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    align-items: flex-end;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-/* Mobile Menu */
-#myLinks {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 10px;
-    z-index: 1000;
-}
-
-#myLinks.open {
-    display: block;
-}
-
-
-
 
 /* Parent container styling */
 #to_project_link_prnt {
@@ -177,8 +72,6 @@ body::before {
     font-weight: bold;
     color: inherit; /* Keep text color consistent */   
     border: solid rgb(123, 123, 123) 3px;
-
-
 }
 
 /* Child container inside the button */
@@ -189,14 +82,12 @@ body::before {
 /* Hover effect */
 #to_project_link_btn:hover {
     background-color: #07374f0f; /* Blue button */
-
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     animation: gentleWobble 1.5s infinite ease-in-out; 
     color: white;
     background-color: #07374f; /* Slightly darker blue on hover */
     border: solid rgb(255, 255, 255) 3px;
-
 }
 
 /* Footer */
@@ -215,23 +106,6 @@ body::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-
     #self_intro_txt {
         display: flex;
         flex-direction: column;
@@ -264,34 +138,26 @@ body::before {
         padding: 8px;
     }
 
-
-
-/*Vajalikud karusselli muudatused mobiilivaate jaoks*/
-
+    /* Required carousel adjustments for mobile view */
     .carousel img {
-        max-height: 200px; /* Vähendab piltide kõrgust väiksematel ekraanidel */
-        flex: 0 0 auto; /* Tagab, et iga pilt on omaette nähtaval */
-        width: 100%; /* Laius sobib ekraanile */
+        max-height: 200px; /* Reduces image height on smaller screens */
+        flex: 0 0 auto; /* Ensures each image is on its own visible spot */
+        width: 100%; /* Makes the width fit the screen */
         scroll-snap-align: start; 
-        animation: none; /* Eemaldab fade-animatsiooni */
-
+        animation: none; /* Removes fade animation */
     }
 
     .carousel {
-        animation: none; /* Väikestel ekraanidel animatsioon võib eemalduda */
-        flex-wrap: nowrap; /* Kõik pildid jäävad ühe rea peale */
+        animation: none; /* Small screens may remove animation */
+        flex-wrap: nowrap; /* Keeps all images in a single row */
         display: flex;
-        overflow-x: scroll; /* Võimaldab horisontaalselt kerida */
+        overflow-x: scroll; /* Allows horizontal scrolling */
         scroll-snap-type: x mandatory;
-        
     }
 
     .carousel::-webkit-scrollbar {
-        display: none; /* Peidab kerimisriba */
+        display: none; /* Hides scrollbar */
     }
-
-
-
 
     #to_project_link_btn {
         width: 200px; /* Button takes up 90% of the screen width */
@@ -310,34 +176,25 @@ body::before {
     }
 }
 
-@media (max-width: 1330px) { 
+@media (max-width: 1330px) {
+    /* Required carousel adjustments for mobile view */
+    .carousel img {
+        max-height: auto; /* Maintain specified height */
+        flex: 0 0 auto; /* Ensures each image is on its own visible spot */
+        width: 100%; /* Makes the width fit the screen */
+        scroll-snap-align: start; 
+        animation: none; /* Removes fade animation */
+    }
 
+    .carousel {
+        animation: none; /* Small screens may remove animation */
+        flex-wrap: nowrap; /* Keeps all images in a single row */
+        display: flex;
+        overflow-x: scroll; /* Allows horizontal scrolling */
+        scroll-snap-type: x mandatory;
+    }
 
-
-/*Vajalikud karusselli muudatused mobiilivaate jaoks*/
-
-.carousel img {
-    max-height: auto; /* Säilitage määratud kõrgus */
-    flex: 0 0 auto; /* Tagab, et iga pilt on omaette nähtaval */
-    width: 100%; /* Laius sobib ekraanile */
-    scroll-snap-align: start; 
-    animation: none; /* Eemaldab fade-animatsiooni */
-
-}
-
-.carousel {
-    animation: none; /* Väikestel ekraanidel animatsioon võib eemalduda */
-    flex-wrap: nowrap; /* Kõik pildid jäävad ühe rea peale */
-    display: flex;
-    overflow-x: scroll; /* Võimaldab horisontaalselt kerida */
-    scroll-snap-type: x mandatory;
-    
-}
-
-.carousel::-webkit-scrollbar {
-    display: none; /* Peidab kerimisriba */
-}
-
-
-
+    .carousel::-webkit-scrollbar {
+        display: none; /* Hides scrollbar */
+    }
 }

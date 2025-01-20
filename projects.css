@@ -3,6 +3,8 @@
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
 
 }
 /* General Styles */
@@ -29,7 +31,7 @@ body::before {
     left: 50%; /* Adjust to ensure it stays centered horizontally */
     width: 200%; 
     height: 100%;
-    background-image: url('../images/vaike2.jpg');
+    background-image: url('../images/kivid.jpg');
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;
@@ -37,101 +39,45 @@ body::before {
     transform: translateX(-50%); /* Keep the image centered */
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    box-sizing: border-box;
+
+
+
+
+/* Container for the Projects heading */
+.projects-heading {
+    background-color: #2d2d2d; /* Dark background for the header */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-/* Navbar Logo */
-.navbar .logo {
-    font-size: 24px;
+/* Styling for the heading text */
+.projects-heading h2 {
+    font-size: 36px;
+    color: #fff;
     font-weight: bold;
-    color: #e0e0e0;
-    text-decoration: none; /* Remove the underline */
-}
-
-
-/* Navbar Links */
-.navbar-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    letter-spacing: 2px;
     margin: 0;
-    padding: 0;
 }
 
-/* Show navbar links only on large screens (min-width: 768px) */
-@media (min-width: 768px) {
-    .navbar-links {
-        display: flex; /* Show links when screen is wider than 768px */
-    }
+.projects-heading h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Ruumi joonte ja teksti vahel */
 }
 
-/* Hide menu by default for small screens */
-.navbar-links.hidden {
-    display: none;
-}
-
-/* Show menu for small screens when visible */
-.navbar-links.visible {
-    display: flex;
-}
-
-.navbar-links li a {
-    display: flex;
-    text-decoration: none;
-    color: #e0e0e0;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar-links li a:hover {
-    color: #4CAF50; 
-}
-
-/* Menu Icon for Mobile */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    align-items: flex-end;
-}
-
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-/* Mobile Menu */
-#myLinks {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
+.projects-heading h2::after {
+    content: "";
     position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    z-index: 1000;
+    height: 2px; /* Jooni paksus */
+    background-color: #a1a1a1; /* Joone värv */
 }
 
-#myLinks.open {
-    display: block;
-}
 
 
 
