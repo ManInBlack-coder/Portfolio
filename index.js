@@ -10,5 +10,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener to handle menu button click
     menuButton.addEventListener('click', toggleMenu); 
-
 });
