@@ -12,7 +12,7 @@
 /* Hover Animation for About */
 #about:hover {
     animation: gentleWobble 1.5s infinite ease-in-out; /* Gentle vertical wobble */
-    background-color: #1e1e1e79;
+   /* background-color: #1e1e1e79;*/
 }
 
 /* Keyframes for Vertical Gentle Wobble Effect */
@@ -30,9 +30,6 @@
     color: inherit; /* Keep text color consistent */
 }
 
-#about a:hover {
-    text-decoration: underline; /* Add underline to the link on hover */
-}
 
 /* Self Intro Section */
 #self_intro_txt {
@@ -42,7 +39,7 @@
     justify-content: space-between;
     margin: 20px auto;
     padding: 20px;
-    background-color: #07374f;
+    background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     max-width: 800px;
@@ -51,7 +48,8 @@
 
 /* Hover Effect on Self Intro Section */
 #self_intro_txt:hover {
-    background-color: #0d587e;
+    background-color: #07374f;
+
     transition: background-color 0.5s ease;
 }
 
@@ -97,6 +95,8 @@
     border-radius: 50%;
 }
 
+
+
 /* About Myself Section */
 #about_myself {
     display: flex;
@@ -113,12 +113,23 @@
     border-radius: 10px; /* Rounded corners for the section */
     overflow: hidden; /* Prevents content overflow */
     position: relative;
+    text-align: center; /* Added text centering */
 }
 
 #about_myself_text {
     width: 60%; /* Adjust width of the text section */
     padding: 20px;
     color: white;
+    border: solid #f0f0f0;
+    border-radius: 8px; /* Slightly rounded corners */
+    margin: 20px auto; /* Center the section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+
+}
+
+#about_myself_text:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #about_myself_text h2 {
@@ -132,6 +143,7 @@
     font-size: 18px; /* Slightly larger font for paragraph */
     line-height: 1.8;
     color: #f0f0f0;
+    margin-bottom: 15px; /* Add space between paragraphs */
 }
 
 #about_myself_image {
@@ -153,32 +165,36 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     #about_myself {
         flex-direction: column; /* Stack the text and image vertically */
         width: 90%; /* Make the section slightly narrower on smaller screens */
         padding: 20px;
         margin: 0 auto;
+        text-align: center; /* Ensure text is centered */
     }
     
     #about_myself_text {
         width: 100%;
         padding: 10px;
-        text-align: center;
     }
     
     #about_myself_image {
         width: 70%;
         margin-top: 20px;
+        text-align: center; /* Center the image */
     }
     
     #about_myself_image img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        margin: 0 auto; /* Ensure the image is centered */
     }
 }
 
+/* Adjustments for very small screens */
 @media screen and (max-width: 480px) {
     #about_myself {
         width: 100%;
@@ -196,10 +212,12 @@
     #about_myself_image {
         width: 80%;
         margin-top: 15px;
+        text-align: center; /* Center the image */
     }
 
     #about_myself_image img {
         width: 150px;
         height: 150px;
+        margin: 0 auto; /* Center the image */
     }
 }
