@@ -47,11 +47,13 @@ body::before {
 .projects-heading {
     background-color: #2d2d2d;
     padding: 20px;
-    border-radius: 10px;
+    margin: 80px auto 20px auto; /* Teeme margini automaatseks, et see keskenduks horisontaalselt */
+
+    border-radius: 15px;
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 80px; /* Vajalik tühik navbarist */
+    margin-top: 100px; /* Vajalik tühik navbarist */
     z-index: 10; /* Tagab, et see ei jää navbarile alla */
 }
 

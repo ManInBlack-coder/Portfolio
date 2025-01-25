@@ -1,0 +1,128 @@
+/* Banner container for the 2x3 image grid and button */
+.projects-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* No padding needed, make it edge-to-edge */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow */
+    background: rgba(0, 0, 0, 0.7); /* Darken the banner background */
+    margin-bottom: 50px;
+}
+
+/* Grid layout for 2x3 images */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in each row */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 0; /* Remove space between images */
+    width: 100%;
+    height: 100%; /* Full height */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow outside the grid */
+}
+
+/* Brightness effect on bottom part of images */
+.projects-grid::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Apply effect to bottom half */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* Create brightness filter effect */
+    z-index: 1;
+}
+
+/* Brightness effect on top part of images */
+.projects-grid::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Apply effect to top half */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent); /* Create brightness filter effect */
+    z-index: 1;
+}
+
+/* Each project item */
+.project-item {
+    background-color: #fff; /* Light background for each item */
+    border-radius: 0; /* No border radius for edge-to-edge look */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+    transition: none; /* Remove hover effect */
+    filter: brightness(0.95); /* Apply brightness filter to make the image a little darker */
+}
+
+/* Project image styling */
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container */
+    display: block;
+}
+
+/* Button container */
+.view-all-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    z-index: 10; /* Ensure button is above the images */
+}
+
+/* View All Projects button */
+.view-all-button {
+    background-color: #0d587e; /* Darker blue */
+    color: white;
+    padding: 25px 50px; /* Larger padding for a bigger button */
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 22px; /* Larger font size */
+    font-weight: bold; /* Make the text stand out more */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow for more depth */
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    z-index: 20; /* Ensure button stays above images */
+}
+
+/* Hover effect for the button */
+.view-all-button:hover {
+    background-color: #07374f; /* Blue button */
+    transform: scale(1.1); /* Make the button grow slightly on hover */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    /* Keep 3x2 grid layout but reduce project item size */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    }
+
+    /* Reduce project item size on smaller screens */
+    .project-item {
+        filter: brightness(0.9); /* Make it slightly brighter */
+    }
+
+    /* Adjust the size of the images */
+    .project-image {
+        object-fit: cover; /* Maintain image coverage */
+    }
+
+    /* Adjust the button size */
+    .view-all-button {
+        padding: 15px 30px; /* Reduce padding for smaller screens */
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust the banner height for smaller screens */
+    .projects-banner {
+        height: auto; /* Allow content to fit */
+        padding: 20px 0; /* Add padding to top and bottom for better spacing */
+    }
+}

@@ -6,14 +6,25 @@
     padding: 10px 20px;
     background-color: #1e1e1e;
     color: white;
-    position: fixed;  /* Muuda absolute fixed'iks */
-    top: 0;
+    position: fixed;  /* Fikseerime navbari alguses */
+    top: -80px; /* Peidame algselt navbari üles kerimisel */
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
     height: 80px;
+    transition: top 0.3s ease; /* Sujuv navbari ilmumine ja kadumine */
 }
 
+
+/* Navbar nähtav seisund */
+.navbar.visible {
+    top: 0; /* Näita navbari */
+}
+
+/* Navbar peidetud seisund */
+.navbar.hidden {
+    top: -80px; /* Peida navbar */
+}
 
 /* Navbar Logo */
 .navbar .logo {

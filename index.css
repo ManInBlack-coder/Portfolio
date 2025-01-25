@@ -47,92 +47,63 @@ body::before {
     transform: translateX(-50%); /* Keep the image centered */
 }
 
-/* Parent container styling */
-#to_project_link_prnt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px auto;
-    margin-top: 5%;
-}
-
-/* Link styling */
-#to_project_link_btn {
-    text-decoration: none;
-    width: 400px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d587e; /* Darker blue */
-    border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    font-size: 20px;
-    font-weight: bold;
-    color: inherit; /* Keep text color consistent */   
-    border: solid rgb(123, 123, 123) 3px;
-}
-
-/* Child container inside the button */
-#to_project_link_chld {
-    text-align: center;
-}
-
-/* Hover effect */
-#to_project_link_btn:hover {
-    background-color: #07374f0f; /* Blue button */
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-    animation: gentleWobble 1.5s infinite ease-in-out; 
-    color: white;
-    background-color: #07374f; /* Slightly darker blue on hover */
-    border: solid rgb(255, 255, 255) 3px;
-}
-
 
 #contact_me {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 50px auto;
-    padding: 20px;
-    background-color: #07374f; /* Matches the button hover background */
-    color: #e0e0e0; /* Matches the text color */
+    padding: 30px; /* Suurem padding parema tasakaalu jaoks */
+    background: linear-gradient(135deg, #0d587e, #068a9e); /* Gradient background */
+    color: #e0e0e0; /* Hele tekstivärv */
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-/* Text container */
+/* Teksti konteiner */
 #contact_me_text {
     flex: 1;
     margin-right: 20px;
+
 }
+
 
 #contact_me_text h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #ffffff; /* Bright white for headings */
+    font-size: 32px; /* Suurem font pealkirjade jaoks */
+    margin-bottom: 20px; /* Suurem vahe pealkirja ja teksti vahel */
+    color: #ffffff; /* Ere valge pealkirjade jaoks */
 }
 
+#contact_border {
+    border: solid #f0f0f0;
+    padding: 30px; /* Add more padding */
+
+
+}
+
+
 #contact_me_text p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px; /* Suurem font teksti jaoks */
+    line-height: 2; /* Suurem reavahe */
+    margin-bottom: 20px; /* Suurem vahe lõikude vahel */
+
 }
 
 #contact_me_text a {
-    color: #0d587e; /* Subtle blue for links */
+    color: #ffffff; /* Ere valge linkide jaoks */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #contact_me_text a:hover {
-    color: #ffffff; /* Bright white on hover */
+    color: #07374f; /* Subtiilne sinine hover'i ajal */
 }
 
-/* Image container */
+/* Pildi konteiner */
 #contact_me_image {
     flex: 1;
     display: flex;
@@ -141,10 +112,12 @@ body::before {
 }
 
 #contact_me_image img {
-    max-width: 200px;
-    border-radius: 20px; /* Rounded corners for the image */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 250px; /* Suurem pilt, kui soovitud */
+    border-radius: 10px; /* Pehmemad servad pildile */
 }
+
+
+
 
 
 
@@ -159,7 +132,6 @@ body::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-top: auto;
 }
 
 /* Responsive Design */
