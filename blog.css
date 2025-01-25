@@ -1,15 +1,24 @@
 
+
+/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure smooth scrolling and prevent horizontal overflow */
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-
-
 }
-/* General Styles */
+
 body {
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,10 +29,10 @@ body {
     width: 100%;
     color: #e0e0e0; 
     background-color: #1e1e1e;
+    line-height: 1.3; /* Improves readability by adding line spacing */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/*COMMENT*/
 /* Background Image */
 body::before {
     content: '';
@@ -42,6 +51,22 @@ body::before {
 
 
 
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+
 
 
 .projects-heading {
@@ -56,8 +81,6 @@ body::before {
     margin-top: 100px; /* Vajalik tühik navbarist */
     z-index: 10; /* Tagab, et see ei jää navbarile alla */
 }
-
-
 
 /* Styling for the heading text */
 .projects-heading h2 {
@@ -86,7 +109,6 @@ body::before {
 
 
 
-
 /* Footer */
 #footer {
     background-color: #1e1e1e;
@@ -100,6 +122,10 @@ body::before {
     left: 0;
     margin-top: auto;
 }
+
+
+
+
 
 
 /* Responsive Design */
@@ -127,21 +153,4 @@ body::before {
         margin-top: 20px;
     }
 
-}
-/* Navigation Menu for Small Screens */
-#myLinks {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 10px;
-    z-index: 1000;
-}
-
-#myLinks.open {
-    display: block;
 }

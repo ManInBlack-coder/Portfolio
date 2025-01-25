@@ -6,8 +6,9 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="banner_button.css">
     <link rel="stylesheet" href="navbar.css">
+
 
     
 </head>
@@ -22,12 +23,16 @@
         <div class="bar"></div>
     </div>
    
+    
     <!--Navbar links-->
     <ul class="navbar-links" id="myLinks">
+        <li><a href="index.html#">Home</a></li>
+        <li><a href="index.html#about_myself">About me</a></li>
+
+        <li><a href="#contact_me">Contact</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Developer Blog</a></li>
-        <li><a href="#">Contact</a></li>
+
+        <li><a href="blog.html">Developer Blog</a></li>
     </ul>
 </div>
 
@@ -35,22 +40,26 @@
 
 
 <!-- Introduction content -->
-<div id="about">
-    <a href="#about_myself" id="intro">
-        <div id="self_intro_txt">
-            <div class="text-container">
-                <h2>Hello! I am Aleksander</h2>
-                <p>Ambitious and with an innovative attitude Software development student from Tartu Vocational College...</p>
+<a>
+
+    <div  id="about">
+        <a href="index.html#about_myself" id="intro">
+            <div id="self_intro_txt">
+                <div class="text-container">
+                    <h2>Hello! I am Aleksander</h2>
+                    <p>Ambitious and with an innovative attitude Software development student from Tartu Vocational College<p  style="font-weight: bold; color: #ffffff;">... Read more</p></p>
+                </div>
+                <div id="pilt">
+                    <img src="images/Aleksander.png" alt="Profiilipilt">
+                </div>
             </div>
-            <div id="pilt">
-                <img src="images/Aleksander.png" alt="Profiilipilt">
-            </div>
-        </div>
-    </a>
-</div>
+        </a>
+    </div>
+</a>
+
 
 <!-- Carousel -->
-<div class="carousel-container">
+<!-- <div class="carousel-container">
     <div class="carousel">
         <img class="carousel_img" src="images/Tstock.png" alt="Image 1" style="--position: 0;" >
         <img class="carousel_img" src="images/ai.png" alt="Image 2" style="--position: 1;">
@@ -62,25 +71,52 @@
 
     </div>
    
-</div>
+</div> -->
+
+
+<!-- Banner with 2x3 Image Grid and View All Projects Button -->
+<!-- Banner with 2x3 Image Grid and View All Projects Button -->
+<div class="projects-banner">
+    <!-- Grid layout for 2x3 images -->
+    <div class="projects-grid">
+      <div class="project-item">
+        <img class="project-image" src="images/Tstock.png" alt="Project 1">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/auto24.png" alt="Project 2">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/Internhub.png" alt="Project 3">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/YOUTUBE.png" alt="Project 4">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/estparty.jpg" alt="Project 5">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/Callast.png" alt="Project 6">
+      </div>
+    </div>
+  
+  <!-- View All Projects Button -->
+<a href="projects.html" class="view-all-button-container">
+    <button class="view-all-button">View All Projects</button>
+  </a>
+  
+  </div>
+  
+  
 
 
 
 
-<!-- Link to projects -->
-<div id="to_project_link_prnt">
-    <a href="projects.html" id="to_project_link_btn">
-        <div id="to_project_link_chld">
-            <h3>            View all projects
-            </h3>
-        </div>
-    </a>
-</div>
+
 
 <!-- About Myself Section -->
 <div id="about_myself">
     <div id="about_myself_text">
-        <h2>About myself</h2>
+        <h2>About me</h2>
         <p>My name is Aleksander Potašenkov and I am 18 years old. Currently, my studies are taking place at Tartu Vocational College as a Software Developer student.</p>
     
         <p>I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.</p>
@@ -90,6 +126,24 @@
     </div>
 </div> 
 
+
+<!-- Contact Me Section -->
+<div id="contact_me">
+   
+    <div id="contact_me_text">
+        <div id="contact_border">
+
+            <h2>Contact Me</h2>
+            <p>If you would like to reach out to me, feel free to use the following contact details:</p>
+            <p>Email: <a href="mailto:a.potasenkov@voco.ee">a.potasenkov@voco.ee</a></p>
+            <p>Phone: <a href="tel:+372 5346 4867">+372 5346 4867</a></p>
+            <p>Location: Tartu, Estonia</p>
+        </div>
+    </div>
+    <div id="contact_me_image">
+        <img src="images/contact_me.png" alt="Contact illustration">
+    </div>
+</div>
 
 
 <!-- Footer -->

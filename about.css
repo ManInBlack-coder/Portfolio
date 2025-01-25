@@ -5,8 +5,9 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
-    margin-top: 3%;
+    margin-top: 10px;
     margin-bottom: 5%;
+    margin-top: 10%;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: none;
 }
@@ -115,7 +116,7 @@
     max-width: 1000px; /* Set a larger max width */
     margin: 0 auto; /* Center the entire div horizontally */
     margin-top: 8%;
-    margin-bottom: 8%;
+    margin-bottom: 8px;
     border-radius: 15px; /* More rounded corners */
     overflow: hidden; /* Prevents content overflow */
     text-align: center; /* Center text */
@@ -166,6 +167,8 @@
     height: 50%; /* Säilitab proportsioonid */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Lisab hover-efekti */
+    border-radius: 10px;
+
 }
 
 #about_myself_image img:hover {
