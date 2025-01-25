@@ -6,13 +6,14 @@
     padding: 10px 20px;
     background-color: #1e1e1e;
     color: white;
-    position: sticky;
+    position: fixed;  /* Muuda absolute fixed'iks */
     top: 0;
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
     height: 80px;
 }
+
 
 /* Navbar Logo */
 .navbar .logo {

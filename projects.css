@@ -44,15 +44,18 @@ body::before {
 
 
 
-/* Container for the Projects heading */
 .projects-heading {
-    background-color: #2d2d2d; /* Dark background for the header */
+    background-color: #2d2d2d;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    text-align: center; /* Center the text */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 80px; /* Vajalik tühik navbarist */
+    z-index: 10; /* Tagab, et see ei jää navbarile alla */
 }
+
+
 
 /* Styling for the heading text */
 .projects-heading h2 {
