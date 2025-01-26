@@ -6,10 +6,14 @@
     align-items: center;
     padding: 0; /* No padding needed, make it edge-to-edge */
     width: 100%; /* Full width */
-    height: 100vh; /* Full viewport height */
+    height: 80vh; /* Full viewport height */
     overflow: hidden; /* Prevent overflow */
     background: rgba(0, 0, 0, 0.7); /* Darken the banner background */
     margin-bottom: 50px;
+    border: solid 4px black;
+    box-shadow: 4px 8px 6px rgba(0, 0, 0, 0.1);
+
+
 }
 
 /* Grid layout for 2x3 images */
@@ -22,6 +26,7 @@
     height: 100%; /* Full height */
     position: relative;
     overflow: hidden; /* Ensure no overflow outside the grid */
+
 }
 
 /* Brightness effect on bottom part of images */
@@ -55,7 +60,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
     transition: none; /* Remove hover effect */
-    filter: brightness(0.95); /* Apply brightness filter to make the image a little darker */
+    filter: brightness(0.45); /* Apply brightness filter to make the image a little darker */
 }
 
 /* Project image styling */
@@ -122,7 +127,7 @@
 
     /* Adjust the banner height for smaller screens */
     .projects-banner {
-        height: auto; /* Allow content to fit */
+        height: 100%; /* Allow content to fit */
         padding: 20px 0; /* Add padding to top and bottom for better spacing */
     }
 }

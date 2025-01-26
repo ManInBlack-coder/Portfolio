@@ -1,0 +1,65 @@
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure the overlay stays on top of everything */
+}
+
+.popup-content {
+    margin-top: 4px;
+    display: grid;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh; /* Limit the height to 90% of the viewport height */
+    overflow-y: auto; /* Allows vertical scrolling if content exceeds the max height */
+    position: relative;
+    z-index: 1010; /* Ensure content is above the overlay */
+}
+
+
+
+
+.popup-close {
+    font-size: 30px;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    color: #717171;
+    transition: 0.2s;
+}
+
+#popup-details {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+#popup-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#popup-details img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="project_div.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="popup.css">
 
 
 </head>
@@ -42,46 +43,56 @@
 
 
 <div class="project-container">
-    <div class="project-container">
-        <div class="project-box">
-            <img src="images/Tstock.png" alt="Image 1">
-            <h3 class="project-title">ThousandStock</h3>
-            <p class="project-description">Stock analysis and management platform for better investment decisions.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/ai.png" alt="Image 2">
-            <h3 class="project-title">AI Interview</h3>
-            <p class="project-description">AI-powered solutions to enhance automation and data analysis capabilities.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/Internhub.png" alt="Image 3">
-            <h3 class="project-title">InternHub</h3>
-            <p class="project-description">A platform to connect interns with real-world opportunities in tech companies.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/YOUTUBE.png" alt="Image 4">
-            <h3 class="project-title">YouTube mp4 to Wav <Audio></Audio></h3>
-            <p class="project-description">A clone of YouTube for practicing frontend development skills with video streaming.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/estparty.jpg" alt="Image 5">
-            <h3 class="project-title">Estparty</h3>
-            <p class="project-description">Event management platform for organizing and promoting local parties and events.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/Callast.png" alt="Image 6">
-            <h3 class="project-title">Call Assistent</h3>
-            <p class="project-description">Real-time voice recognition application for converting speech into text.</p>
-        </div>
-        <div class="project-box">
-            <img src="images/auto24.png" alt="Image 7">
-            <h3 class="project-title">Car search database</h3>
-            <p class="project-description">An automotive marketplace platform for buying and selling vehicles.</p>
-        </div>
+    <div class="project-box" onclick="openPopup('internhub')">
+        <img src="images/Internhub.png" alt="Image 3">
+        <h3 class="project-title">InternHub</h3>
+        <p class="project-description">A platform to connect interns with real-world opportunities in tech companies.</p>
     </div>
-    
-
+    <div class="project-box" onclick="openPopup('anyhouseradio')">
+        <img src="images/anyhouseradio.png" alt="Image 8">
+        <h3 class="project-title">Any House Radio</h3>
+        <p class="project-description">House music radio show hosted by DJ/Producer Eurlexa.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('thousandstock')">
+        <img src="images/Tstock.png" alt="Image 1">
+        <h3 class="project-title">ThousandStock</h3>
+        <p class="project-description">Stock analysis and management platform for better investment decisions.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('callassistant')">
+        <img  src="images/Callast.png" alt="Image 6">
+        <h3 class="project-title">Call Assistent</h3>
+        <p class="project-description">Real-time voice recognition application for converting speech into text.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('estparty')">
+        <img src="images/estparty.jpg" alt="Image 5">
+        <h3 class="project-title">Estparty</h3>
+        <p class="project-description">Event management platform for organizing and promoting local parties and events.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('youtube')">
+        <img src="images/YOUTUBE.png" alt="Image 4">
+        <h3 class="project-title">YouTube mp4 to Wav</h3>
+        <p class="project-description">A clone of YouTube for practicing frontend development skills with video streaming.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('carsearch')">
+        <img src="images/auto24.png" alt="Image 7">
+        <h3 class="project-title">Car search database</h3>
+        <p class="project-description">An automotive marketplace platform for buying and selling vehicles.</p>
+    </div>
+    <div class="project-box" onclick="openPopup('aiinterview')">
+        <img src="images/ai.png" alt="Image 2">
+        <h3 class="project-title">AI Interview</h3>
+        <p class="project-description">AI-powered solutions to enhance automation and data analysis capabilities.</p>
+    </div>
 </div>
+
+<!-- Popup Content -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">x</span>
+        <div id="popup-details"></div>
+    </div>
+</div>
+
 
 
 
@@ -93,6 +104,6 @@ Footer
 </div>
 
 <script src="index.js"></script>
-
+<script src="projects.js"></script>
 </body>
 </html>
