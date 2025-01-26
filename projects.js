@@ -49,12 +49,12 @@ function openPopup(projectId) {
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'estparty') {
         Private = 'false';
-        projectName = 'Estparty';
+        projectName = 'EstpartyPool';
         projectImage = 'images/estparty.jpg';
         projectDescription1 = 'Estparty is an event management platform designed to help users organize and promote local parties and events. From creating event listings to selling tickets, Estparty provides all the tools you need for a successful event.';
         projectDescription2 = 'With features like guest list management, ticket tracking, and event promotion tools, Estparty is the ultimate solution for event organizers looking to streamline their event planning and increase attendance.';
         projectLink = 'https://aleksanderita22.ikt.khk.ee/Veebiarendus/Mitmeleheline/project/Index.html';
-        githubLink = 'https://github.com/your-username/estparty'; // Example GitHub link
+        githubLink = 'https://github.com/ManInBlack-coder/estparty_nostalgiline_essa_veebisait'; // Example GitHub link
         githubLogo = 'images/githublogo.png'; // GitHub logo for public projects
     } else if (projectId === 'youtube') {
         Private = 'true';
@@ -71,11 +71,11 @@ function openPopup(projectId) {
         projectDescription1 = 'Car Search Database is an automotive marketplace platform where users can search for cars, buy and sell vehicles, and compare prices from various sellers. The platform provides detailed car listings, search filters, and price comparisons.';
         projectDescription2 = 'Whether you\'re buying your first car or selling a vehicle, Car Search Database makes it easier to find the perfect deal with comprehensive details about each listing and access to a wide selection of vehicles.';
         projectLink = '#';
-        githubLink = 'https://github.com/your-username/carsearch'; // Example GitHub link
+        githubLink = 'https://github.com/ManInBlack-coder/auto24_PHP'; // Example GitHub link
         githubLogo = 'images/githublogo.png'; // GitHub logo for public projects
     } else if (projectId === 'aiinterview') {
         Private = 'true';
-        projectName = 'AI Interview';
+        projectName = 'AI Interview Simulator';
         projectImage = 'images/ai.png';
         projectDescription1 = 'AI Interview leverages AI-powered solutions to enhance automation and data analysis capabilities. It is designed to simulate real interview scenarios and assess candidates based on their responses, helping employers make more informed hiring decisions.';
         projectDescription2 = 'The system evaluates candidate responses using natural language processing and provides feedback on areas such as communication skills, problem-solving, and technical knowledge.';
