@@ -1,35 +1,33 @@
+
 /* About Section */
 #about {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    margin-top: 10px;
-    margin-bottom: 5%;
+    border-radius: 10px;
     margin-top: 10%;
+    margin-bottom: 5%;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: none;
 }
 
-/* Hover Animation for About */
 #about:hover {
-    animation: gentleWobble 1.5s infinite ease-in-out; /* Gentle vertical wobble */
+    animation: gentleWobble 1.5s infinite ease-in-out;
 }
 
-/* Keyframes for Vertical Gentle Wobble Effect */
 @keyframes gentleWobble {
     0%, 100% {
-        transform: translateY(0); /* Initial and final position */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Slight upward movement */
+        transform: translateY(-10px);
     }
 }
 
 #about a {
     text-decoration: none;
-    color: inherit; /* Keep text color consistent */
+    color: inherit;
 }
 
 /* Self Intro Section */
@@ -38,57 +36,53 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 40px auto; /* Increased margin for more spacing */
-    padding: 40px; /* Increased padding for a roomier look */
-    background-color: #0d587e; /* Darker blue */
-    border-radius: 15px; /* More rounded corners */
-    max-width: 1000px; /* Increased width */
-    gap: 30px; /* Larger gap between elements */
-    border: solid 5px #07374f; /* Thicker border for emphasis */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #0d587e;
+    border-radius: 15px;
+    max-width: 1000px;
+    gap: 30px;
+    border: solid 3px rgb(123, 123, 123);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.5s ease;
-    border: solid rgb(123, 123, 123) 3px;
 }
 
 #self_intro_txt:hover {
-    background-color: #07374f; /* Slightly darker blue on hover */
-    transform: scale(1.02); /* Subtle zoom effect */
-    border: solid rgb(255, 255, 255) 3px;
-
+    background-color: #07374f;
+    transform: scale(1.02);
+    border: solid 3px rgb(255, 255, 255);
 }
 
-/* Text Content */
 #self_intro_txt .text-container {
     display: flex;
     flex-direction: column;
-    flex: 1.5; /* Slightly more space for the text */
+    flex: 1.5;
 }
 
 #self_intro_txt h2 {
-    margin: 0 0 20px 0; /* Added spacing below the heading */
-    font-size: 28px; /* Larger heading */
-    color: #ffffff; /* Brighter color for emphasis */
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: #ffffff;
     font-weight: bold;
 }
 
 #self_intro_txt p {
     margin: 0;
-    line-height: 1.8; /* Increased line height for readability */
-    font-size: 20px; /* Larger font size */
-    color: #e0e0e0; /* Softer white for the text */
-    size: 12px;
+    line-height: 1.8;
+    font-size: 20px;
+    color: #e0e0e0;
 }
 
 /* Profile Image */
 #pilt {
-    width: 200px; /* Increased width */
-    height: 200px; /* Increased height */
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #pilt img {
@@ -98,92 +92,78 @@
     border-radius: 50%;
 }
 
-
-
-
-
-
 /* About Myself Section */
 #about_myself {
     display: flex;
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-    justify-content: space-between; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    padding: 60px 30px; /* Add more padding */
-    background: linear-gradient(135deg, #0d587e, #068a9e); /* Gradient background */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    width: 90%; /* Increase overall width */
-    max-width: 1000px; /* Set a larger max width */
-    margin: 0 auto; /* Center the entire div horizontally */
-    margin-top: 8%;
-    margin-bottom: 8px;
-    border-radius: 15px; /* More rounded corners */
-    overflow: hidden; /* Prevents content overflow */
-    text-align: center; /* Center text */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #0d587e, #068a9e);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1000px;
+    margin: 8% auto;
+    border-radius: 15px;
+    text-align: center;
 }
 
-/* Text Section */
 #about_myself_text {
-    width: 60%; /* Increase text section width */
-    padding: 30px; /* Add more padding */
+    width: 60%;
+    padding: 30px;
     color: white;
     border: solid #f0f0f0;
-    border-radius: 10px; /* Slightly more rounded corners */
-    margin: 30px auto; /* Center the text section */
-    font-size: 1.2rem; /* Increase font size for better readability */
-    line-height: 1.8; /* Add line height for better spacing */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    text-align: left; /* Joondab teksti vasakule */
-
+    border-radius: 10px;
+    margin: 30px auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
-
 #about_myself_text:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #about_myself_text h2 {
-    font-size: 32px; /* Increase font size */
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #about_myself_text p {
-    font-size: 18px; /* Slightly larger font for paragraph */
+    font-size: 18px;
     line-height: 1.8;
     color: #f0f0f0;
-    margin-bottom: 15px; /* Add space between paragraphs */
+    margin-bottom: 15px;
 }
 
 #about_myself_image {
-    width: 35%; /* Pilt võtab 35% sektsioonist */
+    width: 35%;
     padding: 20px;
 }
 
 #about_myself_image img {
-    width: 100%; /* Muudab pildi responsiivseks */
-    height: 50%; /* Säilitab proportsioonid */
+    width: 100%;
+    height: auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Lisab hover-efekti */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
-
 }
 
 #about_myself_image img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Adjustments for smaller screens */
+/* Media Queries */
 @media (max-width: 768px) {
     #about_myself {
-        flex-direction: column; /* Stack the text and image vertically */
-        width: 90%; /* Make the section slightly narrower on smaller screens */
+        flex-direction: column;
+        width: 90%;
         padding: 20px;
-        margin: 0 auto;
-        text-align: center; /* Ensure text is centered */
     }
 
     #about_myself_text {
@@ -194,44 +174,31 @@
     #about_myself_image {
         width: 80%;
         margin-top: 15px;
-        text-align: center; /* Center the image */
     }
 
     #about_myself_image img {
         width: 150px;
         height: 150px;
-        object-fit: cover; /* Ensure the image covers the area */
-
-        margin: 0 auto; /* Center the image */
+        object-fit: cover;
     }
 }
 
-/* Adjustments for very small screens */
-@media screen and (max-width: 480px) {
-    #about_myself {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10%;
-    }
-
+@media (max-width: 480px) {
     #about_myself_text h2 {
-        font-size: 20px; /* Make the heading smaller on very small screens */
-        text-align: center;
+        font-size: 20px;
     }
 
     #about_myself_text p {
-        font-size: 14px; /* Adjust the paragraph font size */
+        font-size: 14px;
     }
 
     #about_myself_image {
         width: 80%;
         margin-top: 15px;
-        text-align: center; /* Center the image */
     }
 
     #about_myself_image img {
         width: 150px;
         height: 150px;
-        margin: 0 auto; /* Center the image */
     }
 }
