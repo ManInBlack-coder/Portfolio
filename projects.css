@@ -19,7 +19,7 @@ body {
     min-height: 100vh;  /* Ensure body takes up the full viewport height */
     width: 100%;
     color: #e0e0e0; 
-    background-color: #1e1e1e;
+    background: radial-gradient(circle, rgb(0, 0, 0), rgb(0, 0, 0), rgb(14, 60, 111));
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -32,7 +32,7 @@ body::before {
     left: 50%; /* Adjust to ensure it stays centered horizontally */
     width: 200%; 
     height: 100%;
-    background-image: url('images/kivid.jpg');
+    /*background-image: url('images/kivid.jpg');*/
     filter: brightness(0.5);
     background-size: cover;
     background-position: center;

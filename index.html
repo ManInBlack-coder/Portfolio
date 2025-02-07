@@ -32,7 +32,6 @@
         <li><a href="#contact_me">Contact</a></li>
         <li><a href="projects.html">Projects</a></li>
 
-        <li><a href="blog.html">Developer Blog</a></li>
     </ul>
 </div>
 
@@ -116,15 +115,37 @@
  <div id="about_me_backgr">
 
     <div id="about_myself">
-        <div id="about_myself_text">
-            <h2>About me</h2>
-            <p>My name is Aleksander Potašenkov and I am 18 years old. Currently, my studies are taking place at Tartu Vocational College as a Software Developer student.</p>
-        
-            <p>I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.</p>
+        <div id="about_myself_text" onclick="toggleText()">
+         
+            <div id="mainText">
+                <h2>About me</h2>
+                <p>My name is Aleksander Potašenkov and I am 18 years old. Currently, my studies are taking place at Tartu Vocational College as a Software Developer student.</p>
+
+                <p>I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.</p>
+
+            </div>
+
+            <div id="altText" style="display: none;">
+                <h2>Hobbies</h2>
+             
+             
+                <p> <h3>Boxing</h3>
+                    I've been been in boxing sport since 2019. My greatest achivement is my gold medal from national championships of Estonia. Since 2024 I'm doing part time coaching at my boxing club as assistent coach</p>
+
+                <p><h3>Music & Any House Radio</h3>
+                    Since 2023 I've been producing house music and now I'm currently hosting radio podcast show Any House Radio. 
+                 </p>
+
+            </div>
+
+          
+
         </div>
+      
         <div id="about_myself_image">
             <img src="images/Aleksander.png" alt="Aleksander's photo">
         </div>
+     
     </div>  
  </div>
 
@@ -155,6 +176,7 @@
 </div>
 
 <script src="index.js"></script>
+<script src="about_me.js"></script>
 
 </body>
 </html>
