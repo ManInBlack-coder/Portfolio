@@ -30,7 +30,6 @@
     color: inherit;
 }
 
-/* Self Intro Section */
 #self_intro_txt {
     display: flex;
     flex-wrap: wrap;
@@ -38,20 +37,25 @@
     justify-content: space-between;
     margin: 40px auto;
     padding: 40px;
-    background-color: #0d587e;
+    background: linear-gradient(180deg, #215c7a, #111b34);
     border-radius: 15px;
     max-width: 1000px;
     gap: 30px;
-    border: solid 3px rgb(123, 123, 123);
+    /* border: solid 3px rgb(123, 123, 123); */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.5s ease;
+    
+    border: solid 3px rgb(161, 161, 161);
+
+    /* Ühtne transition kõigi efektide jaoks */
+    transition: transform 0.4s ease-in-out, background 0.8s ease-in-out, border 0.4s ease-in-out;
 }
 
 #self_intro_txt:hover {
-    background-color: #07374f;
+    background: linear-gradient(180deg, #215c7a, #111b3445);
     transform: scale(1.02);
-    border: solid 3px rgb(255, 255, 255);
+    border: solid 3px rgb(123, 123, 123);
 }
+
 
 #self_intro_txt .text-container {
     display: flex;
@@ -99,7 +103,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 60px 30px;
-    background: linear-gradient(135deg, #0d587e, #068a9e);
+    background: linear-gradient(180deg, #0d587e, #201e1e);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 1000px;

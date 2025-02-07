@@ -37,7 +37,7 @@
     left: 0;
     width: 100%;
     height: 50%; /* Apply effect to bottom half */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* Create brightness filter effect */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.773), transparent); /* Create brightness filter effect */
     z-index: 1;
 }
 
@@ -49,7 +49,7 @@
     left: 0;
     width: 100%;
     height: 50%; /* Apply effect to top half */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent); /* Create brightness filter effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.764), transparent); /* Create brightness filter effect */
     z-index: 1;
 }
 
@@ -60,7 +60,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
     transition: none; /* Remove hover effect */
-    filter: brightness(0.45); /* Apply brightness filter to make the image a little darker */
+    filter: brightness(0.65) ; /* Apply brightness filter to make the image a little darker */
 }
 
 /* Project image styling */
@@ -90,7 +90,7 @@
     cursor: pointer;
     font-size: 22px; /* Larger font size */
     font-weight: bold; /* Make the text stand out more */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow for more depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.273); /* Larger shadow for more depth */
     transition: background-color 0.3s, transform 0.3s ease-in-out; /* Smooth transition for hover effect */
     z-index: 20; /* Ensure button stays above images */
 }
