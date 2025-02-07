@@ -44,7 +44,7 @@
     /* border: solid 3px rgb(123, 123, 123); */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     
-    border: solid 3px rgb(161, 161, 161);
+    border: solid 1px rgb(161, 161, 161);
 
     /* Ühtne transition kõigi efektide jaoks */
     transition: transform 0.4s ease-in-out, background 0.8s ease-in-out, border 0.4s ease-in-out;
@@ -110,6 +110,8 @@
     margin: 8% auto;
     border-radius: 15px;
     text-align: center;
+    border: solid 3px rgb(48, 48, 48);
+
 }
 
 #about_myself_text {

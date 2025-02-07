@@ -44,6 +44,7 @@ body::before {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    
     transform: translateX(-50%); /* Keep the image centered */
 }
 
@@ -61,12 +62,21 @@ body::before {
     max-width: 800px;
     margin-top: 100px;
     margin-bottom: 100px;
+    border: solid 3px rgb(48, 48, 48);
+
 }
 
 /* Teksti konteiner */
 #contact_me_text {
     flex: 1;
     margin-right: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+#contact_me_text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -100,7 +110,7 @@ body::before {
 }
 
 #contact_me_text a:hover {
-    color: #07374f; /* Subtiilne sinine hover'i ajal */
+    color: #127aae; /* Subtiilne sinine hover'i ajal */
 }
 
 /* Pildi konteiner */
