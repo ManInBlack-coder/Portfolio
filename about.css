@@ -145,6 +145,11 @@
     color: #f0f0f0;
     margin-bottom: 15px;
 }
+#mainText p, #altText p {
+    font-size: 18px; /* Või vali sobiv suurus */
+    line-height: 1.8;
+}
+
 
 #about_myself_image {
     width: 35%;
@@ -191,7 +196,7 @@
 
 @media (max-width: 480px) {
     #about_myself_text h2 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     #about_myself_text p {
