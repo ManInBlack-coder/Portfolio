@@ -17,7 +17,7 @@ function openPopup(projectId) {
     if (projectId === 'internhub') {
         Private = 'true';
         projectName = 'InternHub';
-        projectImage = 'images/Internhub.png';
+        projectImage = 'images/Internhub.webp';
         projectDescription1 = 'A platform to connect interns with real-world opportunities in tech companies. It offers an easy-to-use interface for both companies and interns to create profiles, search for opportunities, and apply for jobs.';
         projectDescription2 = 'With features like job notifications, detailed company profiles, and an application tracker, InternHub helps bridge the gap between talent and tech companies. It\'s a powerful tool for interns to kickstart their careers in the tech industry.';
         projectLink = 'https://internhub.arendusekoobas.ee/';
@@ -25,16 +25,16 @@ function openPopup(projectId) {
     } else if (projectId === 'anyhouseradio') {
         Private = 'false';
         projectName = 'Any House Radio';
-        projectImage = 'images/anyhouseradio.png';
+        projectImage = 'images/anyhouseradio.webp';
         projectDescription1 = 'House music radio show hosted by DJ/Producer Eurlexa. The show features live mixes, guest appearances, and the best in house and electronic music. Tune in for a non-stop party vibe.';
         projectDescription2 = 'Any House Radio offers an immersive listening experience, allowing fans to discover fresh tracks, legendary classics, and interviews with top DJs and producers. It\'s the ultimate destination for house music lovers.';
         projectLink = 'https://anyhouseradio.com';
         githubLink = 'https://github.com/ManInBlack-coder/any_house_radio'; // Example GitHub link
-        githubLogo = 'images/githublogo.png'; // GitHub logo for public projects
+        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
     } else if (projectId === 'thousandstock') {
         Private = 'true';
         projectName = 'ThousandStock';
-        projectImage = 'images/Tstock.png';
+        projectImage = 'images/Tstock.webp';
         projectDescription1 = 'ThousandStock is a stock analysis and management platform designed to help investors make better decisions. The platform tracks stock trends, provides analysis on potential investments, and offers tools for portfolio management.';
         projectDescription2 = 'By analyzing real-time data and providing insightful metrics, ThousandStock helps users identify profitable opportunities and manage their investments with ease. Whether you\'re a novice or an experienced investor, ThousandStock can guide you to smarter financial decisions.';
         projectLink = '#';
@@ -42,7 +42,7 @@ function openPopup(projectId) {
     } else if (projectId === 'callassistant') {
         Private = 'true';
         projectName = 'Call Assistent';
-        projectImage = 'images/Callast.png';
+        projectImage = 'images/Callast.webp';
         projectDescription1 = 'Call Assistent is a real-time voice recognition application designed to convert speech into text. Ideal for professionals, students, and anyone in need of hands-free note-taking, this app ensures accuracy and efficiency.';
         projectDescription2 = 'The app utilizes advanced speech-to-text technology to transcribe conversations, meetings, or lectures in real-time. Users can easily save, edit, and share the transcriptions for later use.';
         projectLink = '#';
@@ -50,16 +50,16 @@ function openPopup(projectId) {
     } else if (projectId === 'estparty') {
         Private = 'false';
         projectName = 'EstpartyPool';
-        projectImage = 'images/estparty.jpg';
+        projectImage = 'images/estparty.webp';
         projectDescription1 = 'Estparty is an event management platform designed to help users organize and promote local parties and events. From creating event listings to selling tickets, Estparty provides all the tools you need for a successful event.';
         projectDescription2 = 'With features like guest list management, ticket tracking, and event promotion tools, Estparty is the ultimate solution for event organizers looking to streamline their event planning and increase attendance.';
         projectLink = 'https://aleksanderita22.ikt.khk.ee/Veebiarendus/Mitmeleheline/project/Index.html';
         githubLink = 'https://github.com/ManInBlack-coder/estparty_nostalgiline_essa_veebisait'; // Example GitHub link
-        githubLogo = 'images/githublogo.png'; // GitHub logo for public projects
+        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
     } else if (projectId === 'youtube') {
         Private = 'true';
         projectName = 'YouTube mp4 to Wav';
-        projectImage = 'images/YOUTUBE.png';
+        projectImage = 'images/YOUTUBE.webp';
         projectDescription1 = 'This project is a clone of YouTube designed to practice frontend development skills. The app allows users to view videos, listen to music, and convert YouTube mp4 videos to wav audio format for offline listening.';
         projectDescription2 = 'Incorporating video streaming, playlist creation, and audio conversion functionality, this project demonstrates the power of frontend technologies for building interactive and useful web applications.';
         projectLink = '#';
@@ -67,16 +67,16 @@ function openPopup(projectId) {
     } else if (projectId === 'carsearch') {
         Private = 'false';
         projectName = 'Car search database';
-        projectImage = 'images/auto24.png';
+        projectImage = 'images/auto24.webp';
         projectDescription1 = 'Car Search Database is an automotive marketplace platform where users can search for cars, buy and sell vehicles, and compare prices from various sellers. The platform provides detailed car listings, search filters, and price comparisons.';
         projectDescription2 = 'Whether you\'re buying your first car or selling a vehicle, Car Search Database makes it easier to find the perfect deal with comprehensive details about each listing and access to a wide selection of vehicles.';
         projectLink = '#';
         githubLink = 'https://github.com/ManInBlack-coder/auto24_PHP'; // Example GitHub link
-        githubLogo = 'images/githublogo.png'; // GitHub logo for public projects
+        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
     } else if (projectId === 'aiinterview') {
         Private = 'true';
         projectName = 'AI Interview Simulator';
-        projectImage = 'images/ai.png';
+        projectImage = 'images/ai.webp';
         projectDescription1 = 'AI Interview leverages AI-powered solutions to enhance automation and data analysis capabilities. It is designed to simulate real interview scenarios and assess candidates based on their responses, helping employers make more informed hiring decisions.';
         projectDescription2 = 'The system evaluates candidate responses using natural language processing and provides feedback on areas such as communication skills, problem-solving, and technical knowledge.';
         projectLink = '#';
