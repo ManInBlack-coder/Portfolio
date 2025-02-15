@@ -132,3 +132,31 @@ document.getElementById('popup').addEventListener('click', function(event) {
         closePopup();
     }
 });
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".fade-in");
+
+    const options = {
+        root: null, // jälgib vaateakent
+        rootMargin: "0px",
+        threshold: 0.2, // 20% elemendist peab olema nähtav
+    };
+
+    const fadeInObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Peale ilmumist ei jälgi enam
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        fadeInObserver.observe(section);
+    });
+});
