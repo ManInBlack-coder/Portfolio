@@ -340,9 +340,6 @@ body::before {
 
 }
 
-.dot.active.move-right {
-    transform: translateX(100px); /* Muuda vastavalt vajadusele */
-}
 
 
 #about_myself {
