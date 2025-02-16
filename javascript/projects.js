@@ -1,7 +1,9 @@
 function openPopup(projectId) {
     const popup = document.getElementById('popup');
     const details = document.getElementById('popup-details');
-    
+    //*idk kirjutasin midagi 
+    //idk 
+    //idk
     // Default project data
     let projectName = '';
     let projectImage = '';
