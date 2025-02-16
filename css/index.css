@@ -1,11 +1,7 @@
-/*writing somethin here
-
-styles
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*
+
 *,
 *::before,
 *::after {
@@ -13,7 +9,7 @@ styles
     margin: 0;
     padding: 0;
     
-}*/
+}
 
 /* Ensure smooth scrolling and prevent horizontal overflow */
 html {
@@ -23,9 +19,6 @@ html {
 }
 
 body {
-
-    
-    /*font-family: 'Arial Narrow Bold', sans-serif;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
