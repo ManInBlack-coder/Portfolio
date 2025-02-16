@@ -6,8 +6,9 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
+    
+    margin-top: 15%;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: none;
 }
@@ -96,6 +97,21 @@
     border-radius: 50%;
 }
 
+#about_me_backgr {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Arvestame navbari kõrgusega */
+#about_me_backgr:target {
+    scroll-margin-top: 100px;  /* Asenda väärtust vastavalt navbari kõrgusele */
+}
+
+
 /* About Myself Section */
 #about_myself {
     display: flex;
@@ -111,6 +127,7 @@
     border-radius: 15px;
     text-align: center;
     border: solid 3px rgb(48, 48, 48);
+
 
 }
 

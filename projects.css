@@ -1,5 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
@@ -19,7 +22,7 @@ body {
     min-height: 100vh;  /* Ensure body takes up the full viewport height */
     width: 100%;
     color: #e0e0e0; 
-    background: radial-gradient(circle, rgb(0, 0, 0), rgb(0, 0, 0), rgb(14, 60, 111));
+    background: radial-gradient(circle, rgb(0, 0, 0), rgb(0, 0, 0), rgb(6, 25, 46));
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -145,3 +148,6 @@ body::before {
 #myLinks.open {
     display: block;
 }
+
+
+

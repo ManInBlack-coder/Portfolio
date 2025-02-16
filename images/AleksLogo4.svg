@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 259" width="600" height="543">
+	<title>Uus Projekt</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 150px;fill: #ffffff;font-weight: 600;font-family: "EncodeSansSemiExpanded-SemiBold", "Encode Sans SemiExpanded SmBold" } 
+	</style>
+	<text id="A" style="transform: matrix(1,0,0,1,80,54)" >
+		<tspan x="0" y="121.2" class="t0">A</tspan><tspan  y="121.2" class="t0">
+</tspan>
+	</text>
+</svg>
