@@ -320,6 +320,8 @@ body::before {
 #pagination-dots {
     text-align: center;
     margin-top: 10px;
+    justify-content: flex-start; /* Asetab punktid vasakule */
+
 }
 .dot {
     height: 12px;
@@ -334,7 +336,14 @@ body::before {
 
 .dot.active {
     background-color: #fff; /* Valge täpp */
+    transform: translateX(0); /* Alguspunkt */
+
 }
+
+.dot.active.move-right {
+    transform: translateX(100px); /* Muuda vastavalt vajadusele */
+}
+
 
 #about_myself {
     display: flex;
