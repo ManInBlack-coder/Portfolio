@@ -1,5 +1,6 @@
-/* General Styles */
+
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 *,
 *::before,
@@ -320,6 +321,8 @@ body::before {
 #pagination-dots {
     text-align: center;
     margin-top: 10px;
+    justify-content: flex-start; /* Asetab punktid vasakule */
+
 }
 .dot {
     height: 12px;
@@ -334,7 +337,11 @@ body::before {
 
 .dot.active {
     background-color: #fff; /* Valge täpp */
+    transform: translateX(0); /* Alguspunkt */
+
 }
+
+
 
 #about_myself {
     display: flex;

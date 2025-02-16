@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -12,7 +11,7 @@ html {
 }
 /* General Styles */
 body {
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /*  font-family: 'Arial Narrow Bold', sans-serif;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,7 +50,6 @@ body::before {
     background-color: #2d2d2d;
     padding: 20px;
     margin: 80px auto 20px auto; /* Teeme margini automaatseks, et see keskenduks horisontaalselt */
-
     border-radius: 15px;
     margin-bottom: 20px;
     text-align: center;

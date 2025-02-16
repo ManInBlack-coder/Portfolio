@@ -102,6 +102,8 @@
 .view-all-button:hover {
     background-color: #07374f; /* Blue button */
     transform: scale(1.1); /* Make the button grow slightly on hover */
+    animation: gentleWobble 1.5s infinite ease-in-out;
+
 }
 
 /* Responsive adjustments for mobile */
