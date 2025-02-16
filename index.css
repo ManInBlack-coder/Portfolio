@@ -314,3 +314,43 @@ body::before {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+#pagination-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #8d8c8c;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff; /* Valge täpp */
+}
+
+#about_myself {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about_myself_text {
+    flex: 1;
+    cursor: pointer;
+}
+
+#about_myself_image img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+
