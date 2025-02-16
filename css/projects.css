@@ -51,7 +51,6 @@ body::before {
     background-color: #2d2d2d;
     padding: 20px;
     margin: 80px auto 20px auto; /* Teeme margini automaatseks, et see keskenduks horisontaalselt */
-
     border-radius: 15px;
     margin-bottom: 20px;
     text-align: center;

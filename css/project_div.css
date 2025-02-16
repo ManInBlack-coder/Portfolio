@@ -67,6 +67,7 @@ html {
 /* Projekti pealkirja stiil */
 .project-title {
     font-size: 1.2em;
+    text-align: center;
     font-weight: bold;
     color: #fff;
     margin-bottom: 10px;
