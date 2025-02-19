@@ -1,4 +1,6 @@
 
+
+
 /* About Section */
 #about {
     display: flex;
@@ -97,6 +99,9 @@
     border-radius: 50%;
 }
 
+
+
+
 #about_me_backgr {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -162,10 +167,20 @@
     color: #f0f0f0;
     margin-bottom: 15px;
 }
-#mainText p, #altText p {
-    font-size: 18px; /* Või vali sobiv suurus */
-    line-height: 1.8;
+
+#mainText, #altText {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-in-out, visibility 0.5s ease-out;
 }
+
+#mainText.active, #altText.active {
+    max-height: 500px; /* Piisavalt suur väärtus, et tekst mahuks */
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-in-out, visibility 0.5s ease-out;
+
+}
+
 
 
 #about_myself_image {
@@ -230,3 +245,8 @@
         height: 150px;
     }
 }
+
+
+
+
+

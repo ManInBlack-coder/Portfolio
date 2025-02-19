@@ -226,9 +226,14 @@ body::before {
     }
 
     #contact_me_image img {
+        margin-top: 10px;
         max-width: 150px; /* Smaller image size for mobile */
     }
-
+    #contact_me_text:hover {
+        transform: none;
+        box-shadow: none;
+    
+    }
 
 
 

@@ -44,14 +44,13 @@ function showText(index) {
     const dots = document.querySelectorAll(".dot");
 
     if (index === 0) {
-        mainText.style.display = "block";
-        altText.style.display = "none";
-        dots[0].classList.add("active");
-        dots[1].classList.remove("active");
+        mainText.classList.add("active");
+        altText.classList.remove("active");
     } else {
-        mainText.style.display = "none";
-        altText.style.display = "block";
-        dots[1].classList.add("active");
-        dots[0].classList.remove("active");
+        mainText.classList.remove("active");
+        altText.classList.add("active");
     }
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
 }
