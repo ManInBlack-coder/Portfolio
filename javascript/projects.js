@@ -52,6 +52,16 @@ function openPopup(projectId) {
         projectLink = 'https://anyhouseradio.com';
         githubLink = 'https://github.com/ManInBlack-coder/any_house_radio'; // Example GitHub link
         githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
+    } else if (projectId === 'furniture') {
+        Private = 'false';
+        projectName = 'Furniture App';
+        projectImage = 'images/furniture.webp';
+        projectDescription1 = 'Moodne mööbli e-poe rakendus, mis võimaldab kasutajatel sirvida ja osta mööblit.';
+        projectDescription2 = 'Rakendus sisaldab otsingu funktsionaalsust, toodete filtreerimist, ostukorvi haldamist ja kasutajate autentimist. Kasutajaliides on loodud kasutades modernset disaini ja UX põhimõtteid.';
+        usedStack = `${react_icon} ${typescript_icon} ${tailwind_icon} ${supabase_icon}`
+        projectLink = '#';
+        githubLink = 'https://github.com/ManInBlack-coder/furniture-app';
+        githubLogo = 'images/githublogo.webp';
     } else if (projectId === 'thousandstock') {
         Private = 'true';
         projectName = 'ThousandStock';
@@ -105,7 +115,9 @@ function openPopup(projectId) {
     // Common HTML structure for the popup content
     let commonStyle = `
         <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">${projectName}</h2>
-        <img src="${projectImage}" alt="${projectName}" style="width: 100%; max-width: 1000px; height: auto; margin: 20px 0; display: block; margin-left: auto; margin-right: auto;">
+        <div style="width: 100%; max-width: 1000px; height: 500px; margin: 20px auto; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+            <img src="${projectImage}" alt="${projectName}" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription1}</p>
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription2}</p>
 
