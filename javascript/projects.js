@@ -28,6 +28,7 @@ function openPopup(projectId) {
     tailwind_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/tailwind.png" alt="Tailwind CSS Logo" class="stack-icon">'
     html_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/html.svg" alt="html Logo" class="stack-icon"'
     jest_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/jestpng.png" alt="html Logo" class="stack-icon"'
+    java_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/java.png" alt="java Logo" class="stack-icon"'
     
 
 
@@ -42,6 +43,17 @@ function openPopup(projectId) {
         projectDescription2 = 'InternHub startup was founded by me and my classmates since we won II place at EdTech Hackaton 2024. By myself in this project now I am responsible of platforms AI powered interview simulator developement and supporting other frontend components developement.';
         projectLink = 'https://internhub.arendusekoobas.ee/';
         githubLink = ''; // No GitHub link for private projects
+    } else if (projectId === 'it-akadeemia') {
+        Private = 'false';
+        projectName = 'VOCO IT-Kooli leht';
+        projectImage = 'images/itkool.webp';
+        projectDescription1 = 'IT-Akadeemia is Estonian vocational school that offers vocational education and training in various fields.';
+        projectDescription2 = 'This project was created for practicing my frontend skills and creating a simple website for IT-Akadeemia.';
+        usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon}`
+        projectLink = 'https://itakadeemia.kalleriit.ee';
+        githubLink = 'https://github.com/ManInBlack-coder/IT-Akadeemia-Koduleht-KSK'; // Example GitHub link
+        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
+    
     } else if (projectId === 'anyhouseradio') {
         Private = 'false';
         projectName = 'Any House Radio';
@@ -52,16 +64,18 @@ function openPopup(projectId) {
         projectLink = 'https://anyhouseradio.com';
         githubLink = 'https://github.com/ManInBlack-coder/any_house_radio'; // Example GitHub link
         githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
+   
     } else if (projectId === 'furniture') {
         Private = 'false';
         projectName = 'Furniture App';
         projectImage = 'images/furniture.webp';
         projectDescription1 = 'Moodne mööbli e-poe rakendus, mis võimaldab kasutajatel sirvida ja osta mööblit.';
         projectDescription2 = 'Rakendus sisaldab otsingu funktsionaalsust, toodete filtreerimist, ostukorvi haldamist ja kasutajate autentimist. Kasutajaliides on loodud kasutades modernset disaini ja UX põhimõtteid.';
-        usedStack = `${react_icon} ${typescript_icon} ${tailwind_icon} ${supabase_icon}`
+        usedStack = `${react_icon} ${typescript_icon}  ${supabase_icon} ${java_icon}`
         projectLink = '#';
-        githubLink = 'https://github.com/ManInBlack-coder/furniture-app';
+        githubLink = 'https://github.com/ManInBlack-coder/phone-app';
         githubLogo = 'images/githublogo.webp';
+        
     } else if (projectId === 'thousandstock') {
         Private = 'true';
         projectName = 'ThousandStock';
@@ -112,15 +126,21 @@ function openPopup(projectId) {
         linkText = "Visit the project page";
     }
 
+    // Function to check if project has vertical image
+    const verticalProjects = ['furniture']; // Lisa siia projektide ID-d, kus on vertikaalsed pildid
+
+    const imageStyle = verticalProjects.includes(projectId) 
+        ? `<div style="width: 100%; max-width: 500px; height: 600px; margin: 20px auto; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+            <img src="${projectImage}" alt="${projectName}" style="width: 100%; height: 100%; object-fit: contain; max-height: 600px;">
+           </div>`
+        : `<img src="${projectImage}" alt="${projectName}" style="width: 100%; max-width: 1000px; height: auto; margin: 20px 0; display: block; margin-left: auto; margin-right: auto;">`;
+
     // Common HTML structure for the popup content
     let commonStyle = `
         <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">${projectName}</h2>
-        <div style="width: 100%; max-width: 1000px; height: 500px; margin: 20px auto; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-            <img src="${projectImage}" alt="${projectName}" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
+        ${imageStyle}
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription1}</p>
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription2}</p>
-
 
 <style>
     @media (max-width: 768px) {

@@ -1,17 +1,10 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 
 html {
     scroll-behavior: smooth;
     font-family: "Roboto", serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-
-
 }
-
 
 /* Projektide konteiner */
 .project-container {
@@ -22,7 +15,6 @@ html {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 10%;
-
 }
 
 /* Iga projekti kast */
@@ -48,7 +40,8 @@ html {
 /* Piltide paigutus iga projektikasti sees */
 .project-box img {
     width: 100%;  /* Täidab kogu kasti laiuse */
-    height: auto; /* Kõrgus kohandub automaatselt */
+    height: 250px; /* Fikseeritud kõrgus */
+    object-fit: cover; /* Pilt täidab konteineri säilitades proportsioonid */
     border-radius: 10px;  /* Ümarad nurgad */
     margin-bottom: 15px;
 }
@@ -80,9 +73,6 @@ html {
     color: #ddd;
     text-align: center;
 }
-
-
-
 
 /* Adjust for medium screens (2x2 layout) */
 @media (max-width: 1024px) {
