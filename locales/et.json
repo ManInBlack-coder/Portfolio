@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "Portfoolio"
+  },
+  "nav": {
+    "home": "Avaleht",
+    "projects": "Projektid",
+    "aboutMe": "Minust",
+    "experience": "Kogemus",
+    "contact": "Kontakt"
+  },
+  "intro": {
+    "heading": "Tere! Mina olen Aleksander",
+    "body": "Ambitsioonikas ja innovaatilise hoiakuga tarkvaraarenduse õpilane Tartu Kutsehariduskeskusest",
+    "readMore": "... Loe edasi",
+    "profileAlt": "Profiilipilt"
+  },
+  "about": {
+    "heading": "Minust",
+    "paragraph1": "Minu nimi on Aleksander Potašenkov, full-stack tarkvaraarendaja Tartust, Eestist. Lõpetan tarkvaraarenduse õpinguid Tartu Kutsehariduskeskuses, töötades samal ajal kaasasutaja ja arendajana ettevõttes Arendusekoobas OÜ.",
+    "paragraph2": "Valisin tarkvaraarenduse, kuna mind köidab kirg luua probleemilahendusi, mis parandavad inimeste elu. Need uued väljakutsed on minu peamine põhjus ja motivatsioon kasvatada oma teadmisi ja oskusi selles valdkonnas.",
+    "photoAlt": "Aleksandri foto"
+  },
+  "hobbies": {
+    "heading": "Hobid",
+    "boxingTitle": "Poks",
+    "boxingText": "Olen tegelenud poksiga alates 2019. aastast. Minu suurim saavutus on kuldmedal Eesti meistrivõistlustelt. Alates 2024. aastast treenin osalise koormusega oma poksiklubis abitreenerina.",
+    "musicTitle": "Muusika & Any House Radio",
+    "musicText": "Alates 2023. aastast olen tootnud house-muusikat ja praegu juhin raadiosaadet Any House Radio."
+  },
+  "experience": {
+    "heading": "Töökogemus",
+    "jobs": {
+      "arendusekoobas": {
+        "title": "Full-Stack arendaja · Kaasasutaja",
+        "badge": "Praegune",
+        "company": "Arendusekoobas OÜ",
+        "dates": "2024 — Praeguseni",
+        "description": "Alates 2024. aasta detsembrist — pärast TalTechi EdTech Hackathonil saadud 2. kohta — olen arendanud InternKitti, Arendusekoobase värbamisprotsesside automatiseerimise platvormi. Minu vastutusalas on serveri- ja kliendipoolsete põhifunktsioonide kavandamine ja rakendamine, kliendipoolse kasutajaliidese kvaliteediauditite ja refaktoreerimise juhtimine ning monoliitrakenduse äriloogika jaoks mikroteenuste ehitamine."
+      },
+      "gotoandplay": {
+        "title": "Full-Stack arendaja (praktika)",
+        "company": "GoToAndPlay OÜ",
+        "dates": "2025 — 2026",
+        "description": "Kuue kuu pikkune praktika veebiarendusagentuuris, töötades nelja kliendiprojekti kallal:",
+        "highlights": {
+          "ehl": "Eesti Hambaarstide Liit — vana funktsionaalsuse refaktoreerimine ja uuendamine",
+          "crystalSpace": "Crystal Space — visuaalsete vigade parandamine reaalkeskkonnas töötaval lehel",
+          "emailSignature": "Sisemine e-posti allkirja tööriist — rakendus töötajate kohandatud e-posti allkirjade loomiseks, koos teise praktikandiga",
+          "avalah": "Avalah — kliendi veebilehe ehitamine algusest peale, koos teise uue praktikandiga"
+        }
+      },
+      "praktikal": {
+        "title": "Full-Stack arendaja (praktika)",
+        "company": "Praktikal Education OÜ",
+        "dates": "2024",
+        "description": "Kolme kuu pikkune praktika — esimene kord, kui töötasin suure, juba väljakujunenud rakenduse arhitektuuriga — kus tegin mitmesuguseid kliendipoolseid visuaalseid ja funktsionaalseid muudatusi."
+      }
+    }
+  },
+  "achievements": {
+    "heading": "Saavutused",
+    "items": {
+      "developerOfYear": {
+        "title": "Aastategija Tarkvaraarendaja",
+        "native": "",
+        "place": "1. koht",
+        "meta": "VOCO · aprill 2025"
+      },
+      "youngMaster": {
+        "title": "Noormeister Tarkvaraarendaja 2026",
+        "native": "",
+        "place": "5. koht",
+        "meta": "Ida-Virumaa Kutsehariduskeskus · veebruar 2026"
+      },
+      "edtechHackathon": {
+        "title": "EdTech Hackathon 2024 — Kutseõppe eriauhind",
+        "place": "2. koht (InternKit)",
+        "meta": "TalTech · november 2024"
+      }
+    }
+  },
+  "projectsBanner": {
+    "heading": "Projektid",
+    "viewAllButton": "Vaata kõiki projekte",
+    "imageAlts": {
+      "thousandstock": "ThousandStock projekti eelvaade",
+      "anyhouseradio": "Any House Radio projekti eelvaade",
+      "internhub": "InternHub projekti eelvaade",
+      "youtube": "YouTube allalaadija projekti eelvaade",
+      "itkool": "VOCO IT-Kooli projekti eelvaade",
+      "callassistant": "Call Assistant projekti eelvaade"
+    }
+  },
+  "contact": {
+    "heading": "Võta ühendust",
+    "intro": "Kui soovid minuga ühendust võtta, võid kasutada järgmisi kontaktandmeid:",
+    "emailLabel": "E-post:",
+    "phoneLabel": "Telefon:",
+    "locationLabel": "Asukoht:",
+    "locationValue": "Tartu, Eesti",
+    "imageAlt": "Kontakti illustratsioon"
+  },
+  "footer": {
+    "rights": "Kõik õigused kaitstud"
+  },
+  "projectsPage": {
+    "heading": "Projektid",
+    "cards": {
+      "internhub": {
+        "title": "InternHub (EdTech Hack 2024 II koht)",
+        "description": "Platvorm, mis valmistab kutseõppe õpilasi ette eelseisvaks praktikaks.",
+        "imageAlt": "InternHubi kuvatõmmis"
+      },
+      "it-akadeemia": {
+        "title": "VOCO IT-Kool",
+        "description": "VOCO IT-kooli leht, mis loodi arendusmeetodite õppeaine raames.",
+        "imageAlt": "VOCO IT-Kooli kuvatõmmis"
+      },
+      "anyhouseradio": {
+        "title": "Any House Radio",
+        "description": "House-muusika raadiosaate ametlik veebileht, mida juhib DJ/produtsent Eurlexa.",
+        "imageAlt": "Any House Radio kuvatõmmis"
+      },
+      "furniture": {
+        "title": "Mööbliäpp",
+        "description": "Lihtne Facebook Marketplace'i sarnane rakendus mööbli müümiseks.",
+        "imageAlt": "Mööbliäpi kuvatõmmis"
+      },
+      "thousandstock": {
+        "title": "ThousandStock",
+        "description": "Dividendiaktsiate analüüsi ja infohalduse platvorm parema investeerimisotsuse tegemiseks.",
+        "imageAlt": "ThousandStocki kuvatõmmis"
+      },
+      "callassistant": {
+        "title": "Call Assistant (lauaarvuti prototüüp)",
+        "description": "Kõnetuvastusega ülesannete haldamise rakendus kiirete märkmete jaoks.",
+        "imageAlt": "Call Assistanti kuvatõmmis"
+      },
+      "youtube": {
+        "title": "YouTube mp4 to Wav",
+        "description": "YouTube'i video WAV-helifailiks allalaadija (loodud õppeotstarbel).",
+        "imageAlt": "YouTube mp4 to Wav kuvatõmmis"
+      },
+      "carsearch": {
+        "title": "Autode otsingutööriist",
+        "description": "Auto24 otsingumootori koopia PHP õppeaine jaoks.",
+        "imageAlt": "Autode otsingutööriista kuvatõmmis"
+      }
+    }
+  },
+  "popup": {
+    "usedStackLabel": "Kasutatud tehnoloogiad:",
+    "visitProject": "Külasta projekti lehte",
+    "notHosted": "Kahjuks see projekt ei ole hostitud :(",
+    "privateRepository": "Privaatne hoidla",
+    "githubAlt": "GitHub",
+    "projects": {
+      "internhub": {
+        "name": "InternHub",
+        "description1": "Platvorm, mis ühendab praktikante ettevõtetega ja valmistab neid ette eelseisvaks praktikaks. Platvorm sisaldab praktikakohtade sobitamist, tehisintellektil põhinevat intervjuusimulaatorit ja ettevalmistusülesandeid, mis aitavad mõista, milline on tegelik töö ettevõttes.",
+        "description2": "InternHubi idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi tehisintellektil põhineva intervjuusimulaatori arendamise ja teiste frontend-komponentide arendamise toetamise eest."
+      },
+      "it-akadeemia": {
+        "name": "VOCO IT-Kooli leht",
+        "description1": "IT-Akadeemia on Eesti kutsekool, mis pakub kutseõpet ja koolitust mitmes valdkonnas.",
+        "description2": "Projekt loodi frontend-oskuste harjutamiseks ja IT-Akadeemiale lihtsa veebilehe loomiseks."
+      },
+      "anyhouseradio": {
+        "name": "Any House Radio",
+        "description1": "House-muusika raadiosaate ametlik veebileht, mida juhib DJ/produtsent Eurlexa.",
+        "description2": "Veebileht loodi Any House Radio uusimate episoodide, remiksiväljaannete ja uudiste jagamiseks. Any House Radio on väikese underground-hõnguga house-saade, mis pakub kuulajatele tunni pikkusi miksiepisoode ja remiksiväljaandeid neile, kes soovivad kuulata energilist, kuid mõnusat house-muusikat."
+      },
+      "furniture": {
+        "name": "Mööbliäpp",
+        "description1": "Moodne mööbli e-poe rakendus, mis võimaldab kasutajatel sirvida ja osta mööblit.",
+        "description2": "Rakendus sisaldab otsingufunktsionaalsust, toodete filtreerimist, ostukorvi haldamist ja kasutajate autentimist. Kasutajaliides on loodud moodsa disaini ja UX-põhimõtete järgi."
+      },
+      "thousandstock": {
+        "name": "ThousandStock",
+        "description1": "ThousandStock on dividendiaktsiatele suunatud aktsiate haldus- ja jälgimisplatvorm.",
+        "description2": "Platvormi idee on automaatselt jälgida parimaid aktsiaid, mis maksavad enim dividenditulu. Platvorm võimaldab ka haldada aktsiate kohta käivat infot ja artikleid ning sellel on tark töölaud."
+      },
+      "callassistant": {
+        "name": "Call Assistent",
+        "description1": "Call Assistent on kiire märkmehaldusrakendus, mis võimaldab kasutajal salvestada oma ülesandeid rakendusse.",
+        "description2": "Rakendusel on kõnetuvastustehnoloogia, mis muudab ülesannete lisamise palju kiiremaks."
+      },
+      "youtube": {
+        "name": "YouTube mp4 to Wav",
+        "description1": "YouTube'i video WAV-helifailiks allalaadija, mis on loodud õppeotstarbel.",
+        "description2": "Seda lihtsat veebirakendust loodi kiiremaks, lihtsamaks ja kvaliteetsemaks autoriõigusvabaks muusika allalaadimiseks. Rakendus salvestab allalaadimiste ajaloo, mis võimaldab laulu uuesti alla laadida, kui see on kadunud või on muu põhjus seda taas alla laadida."
+      },
+      "carsearch": {
+        "name": "Car search database",
+        "description1": "Autode otsinguandmebaas, mille otsingu loogika on peaaegu identne Auto24 autode otsingumootoriga.",
+        "description2": "Selle autode otsinguandmebaasi veebilahenduse loomine oli mõeldud PHP keele kasutamise harjutamiseks veebiprojektides. See andis mulle parema arusaamise PHP kasutamisest serveripoolsete probleemide lahendamisel."
+      }
+    }
+  }
+}

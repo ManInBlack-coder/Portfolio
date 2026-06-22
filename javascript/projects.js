@@ -1,14 +1,23 @@
+let lastOpenedProjectId = null;
+
 function openPopup(projectId) {
+    const dict = window.i18n && window.i18n.dict;
+    if (!dict) return; // i18n not ready yet; will re-render via onLanguageChange once it is
+
+    lastOpenedProjectId = projectId;
+
     const popup = document.getElementById('popup');
     const details = document.getElementById('popup-details');
-    //*idk kirjutasin midagi 
-    //idk 
-    //idk
+
+    const t = window.i18n.t;
+    const textData = t(`popup.projects.${projectId}`);
+    if (!textData) return;
+
     // Default project data
-    let projectName = '';
+    let projectName = textData.name;
     let projectImage = '';
-    let projectDescription1 = '';
-    let projectDescription2 = '';
+    let projectDescription1 = textData.description1;
+    let projectDescription2 = textData.description2;
     let projectLink = '';
     let githubLink = '';
     let linkText = '';
@@ -36,94 +45,70 @@ function openPopup(projectId) {
     // Assign project-specific values based on projectId
     if (projectId === 'internhub') {
         Private = 'true';
-        projectName = 'InternHub';
         projectImage = 'images/Internhub.webp';
-        projectDescription1 = 'A platform that connects intern with companies and prepares them for upcoming internship. Platform includes internships matching, artificial intelligence powered interview simulator and preparation tasks that are helping to understand how working really is in companies .';
         usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon} ${supabase_icon} ${jest_icon}  `
-        projectDescription2 = 'InternHub startup was founded by me and my classmates since we won II place at EdTech Hackaton 2024. By myself in this project now I am responsible of platforms AI powered interview simulator developement and supporting other frontend components developement.';
         projectLink = 'https://internhub.arendusekoobas.ee/';
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'it-akadeemia') {
         Private = 'false';
-        projectName = 'VOCO IT-Kooli leht';
         projectImage = 'images/itkool.webp';
-        projectDescription1 = 'IT-Akadeemia is Estonian vocational school that offers vocational education and training in various fields.';
-        projectDescription2 = 'This project was created for practicing my frontend skills and creating a simple website for IT-Akadeemia.';
         usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon}`
         projectLink = 'https://itakadeemia.kalleriit.ee';
         githubLink = 'https://github.com/ManInBlack-coder/IT-Akadeemia-Koduleht-KSK'; // Example GitHub link
         githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
-    
+
     } else if (projectId === 'anyhouseradio') {
         Private = 'false';
-        projectName = 'Any House Radio';
         projectImage = 'images/anyhouseradio.webp','images/Tstock.webp';
-        projectDescription1 = 'Official website of house music radio podcast show that is hosted by DJ/Producer Eurlexa.';
-        projectDescription2 = 'Website was created for sharing latest episodes, remix releases and news of Any House Radio. Any House Radio is With little underground subtone radio podcast that offers around hour long mix episodes and remix releases to people who want hear energetic and cosily house tunes.';
         usedStack = `${nodejs_icon} ${javascript_icon} ${css_icon} ${html_icon}`
         projectLink = 'https://anyhouseradio.com';
         githubLink = 'https://github.com/ManInBlack-coder/any_house_radio'; // Example GitHub link
         githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
-   
+
     } else if (projectId === 'furniture') {
         Private = 'false';
-        projectName = 'Furniture App';
         projectImage = 'images/furniture.webp';
-        projectDescription1 = 'Moodne mööbli e-poe rakendus, mis võimaldab kasutajatel sirvida ja osta mööblit.';
-        projectDescription2 = 'Rakendus sisaldab otsingu funktsionaalsust, toodete filtreerimist, ostukorvi haldamist ja kasutajate autentimist. Kasutajaliides on loodud kasutades modernset disaini ja UX põhimõtteid.';
         usedStack = `${react_icon} ${typescript_icon}  ${supabase_icon} ${java_icon}`
         projectLink = '#';
         githubLink = 'https://github.com/ManInBlack-coder/phone-app';
         githubLogo = 'images/githublogo.webp';
-        
+
     } else if (projectId === 'thousandstock') {
         Private = 'true';
-        projectName = 'ThousandStock';
         projectImage = 'images/Tstock.webp';
-        projectDescription1 = 'ThousandStock is dividend shares oriented stock managament and monitoring platform.';
-        projectDescription2 = 'This Platforms idea is to monitore automatically best stocks that are paying most dividend money. Platform also let\'s manage information, articles of stocks and has smart dashboard.';
         usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${jest_icon}  ${css_icon} ${py_icon} ${mysql_icon} ${nodejs_icon}`
         projectLink = '#';
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'callassistant') {
         Private = 'true';
-        projectName = 'Call Assistent';
         projectImage = 'images/Callast.webp';
-        projectDescription1 = 'Call Assistent is fast notes managament application that let\'s user record his/her tasks to app.';
-        projectDescription2 = 'The app has speech recognition technology that makes tasks adding usage more faster.';
         usedStack = `${react_icon} ${typescript_icon} ${javascript_icon} ${css_icon} ${mysql_icon} ${nodejs_icon} `
         projectLink = '#';
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'youtube') {
         Private = 'true';
-        projectName = 'YouTube mp4 to Wav';
         projectImage = 'images/YOUTUBE.webp';
-        projectDescription1 = 'Youtube video to WAV audio downloader that is created for educational purposes';
-        projectDescription2 = 'This simple web app was created for faster, easier and with more quality no copyright sound music downloading. It saves download history that allows download again song when it\'s gone missing or something else has happened that gave reason to download it again.';
         usedStack = ` ${nodejs_icon} ${javascript_icon} ${css_icon} ${html_icon}  `
         projectLink = '#';
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'carsearch') {
         Private = 'false';
-        projectName = 'Car search database';
         projectImage = 'images/auto24.webp';
-        projectDescription1 = 'Car Search Database that search logic is almost identical with Auto24 car searching engine.';
-        projectDescription2 = 'This car search database web solution was created for practising php language usage in web projects. That gave me better understanding of using php for serverside problem solutions.';
         usedStack = `${javascript_icon}  ${php_icon} ${html_icon} ${css_icon} ${nodejs_icon} `
         projectLink = '#';
         githubLink = 'https://github.com/ManInBlack-coder/auto24_PHP'; // Example GitHub link
         githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
-    } 
+    }
 
     // Display private repository message if no GitHub link
     if (!githubLink) {
-        privateRepoText = '<p style="font-size: 1.2rem; font-style: italic; color: #888;">Private Repository</p>';
+        privateRepoText = `<p style="font-size: 1.2rem; font-style: italic; color: #888;">${t('popup.privateRepository')}</p>`;
     }
 
     if (projectLink === '#') {
-        linkText = 'Sorry, this project is not hosted :(';
+        linkText = t('popup.notHosted');
     } else {
-        linkText = "Visit the project page";
+        linkText = t('popup.visitProject');
     }
 
     // Function to check if project has vertical image
@@ -158,7 +143,7 @@ function openPopup(projectId) {
 
 
 <h3 class="used-stack-container" style="font-size: 1.1rem; line-height: 1.6; display: flex; align-items: center;">
-    Used Stack: 
+    ${t('popup.usedStackLabel')}
     <span style="margin-left: 5px; max-width: 100%; flex-grow: 1; text-align: left;">${usedStack}</span>
 </h3>
         <a href="${projectLink}" target="_blank" style="color: #ff5500; text-decoration: none; font-size: 1.2rem; font-weight: bold;">${linkText}</a>
@@ -169,7 +154,7 @@ function openPopup(projectId) {
         commonStyle += `
             <div style="margin-top: 20px;">
                 <a href="${githubLink}" target="_blank">
-                    <img src="${githubLogo}" alt="GitHub" style="width: 30px; height: 30px;">
+                    <img src="${githubLogo}" alt="${t('popup.githubAlt')}" style="width: 30px; height: 30px;">
                 </a>
             </div>
         `;
@@ -193,6 +178,16 @@ document.getElementById('popup').addEventListener('click', function(event) {
         closePopup();
     }
 });
+
+// Re-render the open popup's text when the language is switched
+if (window.i18nOnChange) {
+    window.i18nOnChange(function () {
+        const popup = document.getElementById('popup');
+        if (lastOpenedProjectId && popup.style.display === 'flex') {
+            openPopup(lastOpenedProjectId);
+        }
+    });
+}
 
 
 

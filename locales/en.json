@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "aboutMe": "About me",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "heading": "Hello! I am Aleksander",
+    "body": "Ambitious and with an innovative attitude Software development student from Tartu Vocational College",
+    "readMore": "... Read more",
+    "profileAlt": "Profile picture"
+  },
+  "about": {
+    "heading": "About me",
+    "paragraph1": "My name is Aleksander Potašenkov, a full-stack software developer based in Tartu, Estonia. I'm finishing my Software Development studies at Tartu Vocational College while working as a co-founder and developer at Arendusekoobas OÜ.",
+    "paragraph2": "I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.",
+    "photoAlt": "Aleksander's photo"
+  },
+  "hobbies": {
+    "heading": "Hobbies",
+    "boxingTitle": "Boxing",
+    "boxingText": "I've been in boxing sport since 2019. My greatest achievement is my gold medal from national championships of Estonia. Since 2024 I'm doing part-time coaching at my boxing club as an assistant coach.",
+    "musicTitle": "Music & Any House Radio",
+    "musicText": "Since 2023 I've been producing house music, and now I'm currently hosting a radio podcast show Any House Radio."
+  },
+  "experience": {
+    "heading": "Work Experience",
+    "jobs": {
+      "arendusekoobas": {
+        "title": "Full-Stack Developer · Co-founder",
+        "badge": "Current",
+        "company": "Arendusekoobas OÜ",
+        "dates": "2024 — Present",
+        "description": "Since December 2024 — following a 2nd-place finish at the TalTech EdTech Hackathon — I've been building InternKit, Arendusekoobas's recruitment-process-automation platform. My responsibilities include designing and implementing key server- and client-side features, leading client-side UI quality audits and refactors, and building microservices for the monolith app's business logic."
+      },
+      "gotoandplay": {
+        "title": "Full-Stack Developer (Internship)",
+        "company": "GoToAndPlay OÜ",
+        "dates": "2025 — 2026",
+        "description": "A six-month internship at a web development agency, working across four client projects:",
+        "highlights": {
+          "ehl": "Eesti Hambaarstide Liit (Estonian Dental Association) — refactored and updated legacy functionality",
+          "crystalSpace": "Crystal Space — fixed visual bugs on the live production site",
+          "emailSignature": "Internal email-signature tool — built an app for generating custom employee email signatures, with another intern",
+          "avalah": "Avalah — built a client website from scratch, with another new intern"
+        }
+      },
+      "praktikal": {
+        "title": "Full-Stack Developer (Internship)",
+        "company": "Praktikal Education OÜ",
+        "dates": "2024",
+        "description": "A three-month internship — my first time working on a large, established application architecture — where I implemented various client-side visual and functional changes."
+      }
+    }
+  },
+  "achievements": {
+    "heading": "Achievements",
+    "items": {
+      "developerOfYear": {
+        "title": "Developer of the Year",
+        "native": "(Aastategija Tarkvaraarendaja)",
+        "place": "1st place",
+        "meta": "VOCO · April 2025"
+      },
+      "youngMaster": {
+        "title": "Young Master Developer 2026",
+        "native": "(Noormeister Tarkvaraarendaja)",
+        "place": "5th place",
+        "meta": "Ida-Virumaa Vocational Education Centre · February 2026"
+      },
+      "edtechHackathon": {
+        "title": "EdTech Hackathon 2024 — Vocational Education Special",
+        "place": "2nd place (InternKit)",
+        "meta": "TalTech · November 2024"
+      }
+    }
+  },
+  "projectsBanner": {
+    "heading": "Projects",
+    "viewAllButton": "View All Projects",
+    "imageAlts": {
+      "thousandstock": "ThousandStock project preview",
+      "anyhouseradio": "Any House Radio project preview",
+      "internhub": "InternHub project preview",
+      "youtube": "YouTube downloader project preview",
+      "itkool": "VOCO IT School project preview",
+      "callassistant": "Call Assistant project preview"
+    }
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "intro": "If you would like to reach out to me, feel free to use the following contact details:",
+    "emailLabel": "Email:",
+    "phoneLabel": "Phone:",
+    "locationLabel": "Location:",
+    "locationValue": "Tartu, Estonia",
+    "imageAlt": "Contact illustration"
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  },
+  "projectsPage": {
+    "heading": "Projects",
+    "cards": {
+      "internhub": {
+        "title": "InternHub (EdTech Hack 2024 II place)",
+        "description": "A platform that prepares vocational students for their upcoming internship.",
+        "imageAlt": "InternHub screenshot"
+      },
+      "it-akadeemia": {
+        "title": "VOCO IT School",
+        "description": "VOCO IT school page that was created for development methods lesson.",
+        "imageAlt": "VOCO IT School screenshot"
+      },
+      "anyhouseradio": {
+        "title": "Any House Radio",
+        "description": "Official website of House music radio podcast show that is hosted by DJ/Producer Eurlexa.",
+        "imageAlt": "Any House Radio screenshot"
+      },
+      "furniture": {
+        "title": "Furniture App",
+        "description": "Simple Facebook Marketplace clone for selling furniture.",
+        "imageAlt": "Furniture App screenshot"
+      },
+      "thousandstock": {
+        "title": "ThousandStock",
+        "description": "Dividend Stock analysis and information management platform for better investment decisions.",
+        "imageAlt": "ThousandStock screenshot"
+      },
+      "callassistant": {
+        "title": "Call Assistant (Desktop prototype)",
+        "description": "Speech-recognition to-do app for fast task management.",
+        "imageAlt": "Call Assistant screenshot"
+      },
+      "youtube": {
+        "title": "YouTube mp4 to Wav",
+        "description": "YouTube video to WAV audio downloader (created for educational purposes).",
+        "imageAlt": "YouTube mp4 to Wav screenshot"
+      },
+      "carsearch": {
+        "title": "Car Search Tool",
+        "description": "Auto24 search tool clone for PHP lesson.",
+        "imageAlt": "Car Search Tool screenshot"
+      }
+    }
+  },
+  "popup": {
+    "usedStackLabel": "Used Stack:",
+    "visitProject": "Visit the project page",
+    "notHosted": "Sorry, this project is not hosted :(",
+    "privateRepository": "Private Repository",
+    "githubAlt": "GitHub",
+    "projects": {
+      "internhub": {
+        "name": "InternHub",
+        "description1": "A platform that connects interns with companies and prepares them for their upcoming internship. The platform includes internship matching, an AI-powered interview simulator, and preparation tasks that help students understand what working in a company is really like.",
+        "description2": "InternHub was founded by me and my classmates after we won 2nd place at the EdTech Hackathon 2024. On this project, I'm responsible for developing the platform's AI-powered interview simulator and supporting the development of other frontend components."
+      },
+      "it-akadeemia": {
+        "name": "VOCO IT-Kooli leht",
+        "description1": "IT-Akadeemia is an Estonian vocational school that offers vocational education and training in various fields.",
+        "description2": "This project was created for practicing my frontend skills and building a simple website for IT-Akadeemia."
+      },
+      "anyhouseradio": {
+        "name": "Any House Radio",
+        "description1": "Official website of the house music radio podcast show hosted by DJ/Producer Eurlexa.",
+        "description2": "The website was created for sharing the latest episodes, remix releases, and news from Any House Radio. Any House Radio is a small underground-leaning house podcast that offers roughly hour-long mix episodes and remix releases to people who want to hear energetic yet cosy house tunes."
+      },
+      "furniture": {
+        "name": "Furniture App",
+        "description1": "A modern furniture e-commerce app that lets users browse and buy furniture.",
+        "description2": "The app includes search functionality, product filtering, shopping cart management, and user authentication. The interface was built using modern design and UX principles."
+      },
+      "thousandstock": {
+        "name": "ThousandStock",
+        "description1": "ThousandStock is a dividend-shares-oriented stock management and monitoring platform.",
+        "description2": "The platform's idea is to automatically monitor the best stocks that pay the most dividend income. It also lets you manage information and articles about stocks, and has a smart dashboard."
+      },
+      "callassistant": {
+        "name": "Call Assistent",
+        "description1": "Call Assistent is a fast note-management application that lets users record their tasks into the app.",
+        "description2": "The app has speech-recognition technology that makes adding tasks much faster."
+      },
+      "youtube": {
+        "name": "YouTube mp4 to Wav",
+        "description1": "A YouTube video to WAV audio downloader created for educational purposes.",
+        "description2": "This simple web app was created for faster, easier, and higher-quality no-copyright music downloading. It saves download history, which allows you to download a song again if it has gone missing or something else happened that warranted downloading it again."
+      },
+      "carsearch": {
+        "name": "Car search database",
+        "description1": "A car search database whose search logic is almost identical to the Auto24 car-search engine.",
+        "description2": "This car search database web solution was created for practicing PHP usage in web projects. It gave me a better understanding of using PHP for server-side problem solving."
+      }
+    }
+  }
+}
