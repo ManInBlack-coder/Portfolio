@@ -130,8 +130,8 @@
     "projects": {
       "internkit": {
         "name": "InternKit",
-        "description1": "Platvorm, mis ühendab praktikante ettevõtetega ja valmistab neid ette eelseisvaks praktikaks. Platvorm sisaldab praktikakohtade sobitamist, tehisintellektil põhinevat intervjuusimulaatorit ja ettevalmistusülesandeid, mis aitavad mõista, milline on tegelik töö ettevõttes.",
-        "description2": "InternKiti idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi tehisintellektil põhineva intervjuusimulaatori arendamise ja teiste frontend-komponentide arendamise toetamise eest."
+        "description1": "Platvorm, mis automatiseerib firmade värbamisprotsessi — ilma et peaksid loovutama kontrolli kandidaatide valiku üle.",
+        "description2": "InternKiti idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi serveri ja kliendipoolsete lahenduste disainimise ja loomise eest."
       },
       "stockbot": {
         "name": "StockBot",
