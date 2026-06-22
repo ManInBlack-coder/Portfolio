@@ -51,7 +51,7 @@ function openPopup(projectId) {
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'stockbot') {
         Private = 'true';
-        projectImage = '';
+        projectImage = 'images/Stockbot.wepb';
         usedStack = '';
         projectLink = '#';
         githubLink = '';
