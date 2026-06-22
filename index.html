@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/banner_button.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/experience.css">
 
 
     
@@ -33,6 +34,8 @@
 
         <li><a href="index.html#about_myself">About me</a></li>
 
+        <li><a href="index.html#experience">Experience</a></li>
+
         <li><a href="#contact_me">Contact</a></li>
 
     </ul>
@@ -44,7 +47,7 @@
 <!-- Introduction content -->
 <a>
 
-    <div  id="about" class="fade-in">
+    <div  id="about" class="fade-in page-section">
         <a href="index.html#about_myself" id="intro">
             <div id="self_intro_txt">
                 <div class="text-container">
@@ -62,39 +65,7 @@
 
 
 
-<div  class="projects-banner fade-in" >
-    <!-- Grid layout for 2x3 images -->
-    <div id="prjct-bnnr" class="projects-grid">
-      <div class="project-item">
-        <img class="project-image" src="images/Tstock.webp" alt="Project 1">
-      </div>
-      <div class="project-item">
-        <img class="project-image" src="images/anyhouseradio.webp" alt="Project 2">
-      </div>
-      <div class="project-item">
-        <img class="project-image" src="images/Internhub.webp" alt="Project 3">
-      </div>
-      <div class="project-item">
-        <img class="project-image" src="images/YOUTUBE.webp" alt="Project 4">
-      </div>
-      <div class="project-item">
-        <img class="project-image" src="images/itkool.webp" alt="Project 5">
-      </div>
-      <div class="project-item">
-        <img class="project-image" src="images/Callast.webp" alt="Project 6">
-      </div>
-    </div>
-  <!-- View All Projects Button --><div>
- 
-    <div id="projects-title">
-        <h1>Projects</h1>
-      </div>   
-  </div>
-<a href="projects.html" class="view-all-button-container">
-    <button class="view-all-button">View All Projects</button>
-  </a>
-  
-  </div>
+
   
   
 
@@ -106,14 +77,14 @@
 
    <!--<div id="Ghost_div"></div>--> 
 <!-- About Myself Section -->
- <div id="about_me_backgr" class="fade-in">
+ <div id="about_me_backgr" class="fade-in page-section">
 
     <div id="about_myself">
         <div id="about_myself_text" onclick="toggleText()">
          
             <div id="mainText">
                 <h2>About me</h2>
-                <p>My name is Aleksander Potašenkov and I am 18 years old. Currently, my studies are taking place at Tartu Vocational College as a Software Developer student.</p>
+                <p>My name is Aleksander Potašenkov, a full-stack software developer based in Tartu, Estonia. I'm finishing my Software Development studies at Tartu Vocational College while working as a co-founder and developer at Arendusekoobas OÜ.</p>
 
                 <p>I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.</p>
 
@@ -158,8 +129,134 @@
 
 </div>
 
+<!-- Work Experience Section -->
+<div id="experience" class="fade-in page-section">
+    <h2>Work Experience</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <h3>Full-Stack Developer · Co-founder</h3>
+                    <span class="timeline-badge">Current</span>
+                </div>
+                <div class="timeline-meta">
+                    <span class="timeline-company">Arendusekoobas OÜ</span>
+                    <span class="timeline-dates">2024 — Present</span>
+                </div>
+                <p class="timeline-description">
+                    Since December 2024 — following a 2nd-place finish at the TalTech EdTech Hackathon — I've been building InternKit, Arendusekoobas's recruitment-process-automation platform. My responsibilities include designing and implementing key server- and client-side features, leading client-side UI quality audits and refactors, and building microservices for the monolith app's business logic.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <h3>Full-Stack Developer (Internship)</h3>
+                </div>
+                <div class="timeline-meta">
+                    <span class="timeline-company">GoToAndPlay OÜ</span>
+                    <span class="timeline-dates">2025 — 2026</span>
+                </div>
+                <p class="timeline-description">
+                    A six-month internship at a web development agency, working across four client projects:
+                </p>
+                <ul class="timeline-highlights">
+                    <li>Eesti Hambaarstide Liit (Estonian Dental Association) — refactored and updated legacy functionality</li>
+                    <li>Crystal Space — fixed visual bugs on the live production site</li>
+                    <li>Internal email-signature tool — built an app for generating custom employee email signatures, with another intern</li>
+                    <li>Avalah — built a client website from scratch, with another new intern</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <h3>Full-Stack Developer (Internship)</h3>
+                </div>
+                <div class="timeline-meta">
+                    <span class="timeline-company">Praktikal Education OÜ</span>
+                    <span class="timeline-dates">2024</span>
+                </div>
+                <p class="timeline-description">
+                    A three-month internship — my first time working on a large, established application architecture — where I implemented various client-side visual and functional changes.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Achievements Section -->
+<div id="achievements" class="fade-in page-section">
+    <h2>Achievements</h2>
+    <div class="achievements-list">
+
+        <div class="achievement-card">
+            <span class="material-symbols-outlined achievement-icon">emoji_events</span>
+            <div class="achievement-title">Developer of the Year <span class="achievement-native">(Aastategija Tarkvaraarendaja)</span></div>
+            <div class="achievement-place">1st place</div>
+            <div class="achievement-meta">VOCO · April 2025</div>
+        </div>
+
+        <div class="achievement-card">
+            <span class="material-symbols-outlined achievement-icon">emoji_events</span>
+            <div class="achievement-title">Young Master Developer 2026 <span class="achievement-native">(Noormeister Tarkvaraarendaja)</span></div>
+            <div class="achievement-place">5th place</div>
+            <div class="achievement-meta">Ida-Virumaa Vocational Education Centre · February 2026</div>
+        </div>
+
+        <div class="achievement-card">
+            <span class="material-symbols-outlined achievement-icon">emoji_events</span>
+            <div class="achievement-title">EdTech Hackathon 2024 — Vocational Education Special</div>
+            <div class="achievement-place">2nd place (InternKit)</div>
+            <div class="achievement-meta">TalTech · November 2024</div>
+        </div>
+
+    </div>
+</div>
+
+<div  class="projects-banner fade-in page-section" >
+    <!-- Grid layout for 2x3 images -->
+    <div id="prjct-bnnr" class="projects-grid">
+      <div class="project-item">
+        <img class="project-image" src="images/Tstock.webp" alt="Project 1">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/anyhouseradio.webp" alt="Project 2">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/Internhub.webp" alt="Project 3">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/YOUTUBE.webp" alt="Project 4">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/itkool.webp" alt="Project 5">
+      </div>
+      <div class="project-item">
+        <img class="project-image" src="images/Callast.webp" alt="Project 6">
+      </div>
+    </div>
+  <!-- View All Projects Button --><div>
+ 
+    <div id="projects-title">
+        <h1>Projects</h1>
+      </div>   
+  </div>
+<a href="projects.html" class="view-all-button-container">
+    <button class="view-all-button">View All Projects</button>
+  </a>
+  
+  </div>
+
 <!-- Contact Me Section -->
-<div id="contact_me" class="fade-in">
+<div id="contact_me" class="fade-in page-section">
    
     <div id="contact_me_text">
         <div id="contact_border">

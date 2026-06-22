@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -19,13 +19,13 @@ html {
 
 /* Iga projekti kast */
 .project-box {
-    background-color: #1e1e1e;
+    background-color: var(--color-surface-dark);
     color: #fff;
-    border: 1px solid #444;
-    border-radius: 10px;
+    border: 1px solid var(--color-border-muted);
+    border-radius: var(--radius-card);
     padding: 20px;
     width: calc(33.33% - 20px); /* Kolm kasti reas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ html {
 /* Hover-efekt */
 .project-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 /* Piltide paigutus iga projektikasti sees */
