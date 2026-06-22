@@ -1,6 +1,0 @@
-Untrack node_modules from git
-
-node_modules was committed before .gitignore existed, so the ignore
-rule had no effect on already-tracked files.
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
