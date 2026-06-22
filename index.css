@@ -1,6 +1,36 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --color-accent: #0d587e;
+    --color-accent-hover: #07374f;
+    --color-accent-light: #215c7a;
+    --color-link-hover: #127aae;
+    --color-surface-dark: #1e1e1e;
+    --color-text-body: #e0e0e0;
+    --color-text-heading: #ffffff;
+    --color-border-muted: #444;
+
+    --radius-card: 12px;
+
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.25);
+
+    --section-gap: 8rem;
+}
+
+/* Konsistentne vahe avalehe konteinerite (sektsioonide) vahel */
+.page-section {
+    margin-top: 0;
+    margin-bottom: var(--section-gap);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-gap: 4rem;
+    }
+}
 
 *,
 *::before,
@@ -8,7 +38,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+
 }
 
 /* Ensure smooth scrolling and prevent horizontal overflow */
@@ -55,15 +85,14 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px; /* Suurem padding parema tasakaalu jaoks */
-    background: linear-gradient(150deg, #0d587e, #07070783);
-    color: #e0e0e0; /* Hele tekstivärv */
+    background: linear-gradient(150deg, var(--color-accent), #07070783);
+    color: var(--color-text-body); /* Hele tekstivärv */
     border-radius: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     max-width: 800px;
-    margin-top: 10%;
-    margin-bottom: 15%;
     border: solid 3px rgb(48, 48, 48);
 
 }
@@ -78,7 +107,7 @@ body::before {
 }
 #contact_me_text:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 
 }
 
@@ -112,7 +141,7 @@ body::before {
 }
 
 #contact_me_text a:hover {
-    color: #127aae; /* Subtiilne sinine hover'i ajal */
+    color: var(--color-link-hover); /* Subtiilne sinine hover'i ajal */
 }
 
 /* Pildi konteiner */
@@ -218,8 +247,6 @@ body::before {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-top: 20%;
-        margin-bottom: 30%;
     }
 
     #contact_me_text {

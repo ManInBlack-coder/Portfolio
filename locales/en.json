@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "aboutMe": "About me",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "heading": "Hello! I am Aleksander",
+    "body": "Ambitious and with an innovative attitude Software development student from Tartu Vocational College",
+    "readMore": "... Read more",
+    "profileAlt": "Profile picture"
+  },
+  "about": {
+    "heading": "About me",
+    "paragraph1": "My name is Aleksander Potašenkov, a full-stack software developer based in Tartu, Estonia. I'm finishing my Software Development studies at Tartu Vocational College while working as a co-founder and developer at Arendusekoobas OÜ.",
+    "paragraph2": "I decided to choose Software development because of my passion to create problem solutions that are improving people's lives. These new challenges are my main reason and motivation for growing my knowledge and skill set in this profession.",
+    "photoAlt": "Aleksander's photo"
+  },
+  "hobbies": {
+    "heading": "Hobbies",
+    "boxingTitle": "Boxing",
+    "boxingText": "I've been in boxing sport since 2019. My greatest achievement is my gold medal from national championships of Estonia. Since 2024 I'm doing part-time coaching at my boxing club as an assistant coach.",
+    "musicTitle": "Music & Any House Radio",
+    "musicText": "Since 2023 I've been producing house music, and now I'm currently hosting a radio podcast show Any House Radio."
+  },
+  "experience": {
+    "heading": "Work Experience",
+    "jobs": {
+      "arendusekoobas": {
+        "title": "Full-Stack Developer · Co-founder",
+        "badge": "Current",
+        "company": "Arendusekoobas OÜ",
+        "dates": "2024 — Present",
+        "description": "Since December 2024 — following a 2nd-place finish at the TalTech EdTech Hackathon — I've been building InternKit, Arendusekoobas's recruitment-process-automation platform. My responsibilities include designing and implementing key server- and client-side features, leading client-side UI quality audits and refactors, and building microservices for the monolith app's business logic."
+      },
+      "gotoandplay": {
+        "title": "Full-Stack Developer (Internship)",
+        "company": "GoToAndPlay OÜ",
+        "dates": "2025 — 2026",
+        "description": "A six-month internship at a web development agency, working across four client projects:",
+        "highlights": {
+          "ehl": "Eesti Hambaarstide Liit (Estonian Dental Association) — refactored and updated legacy functionality",
+          "crystalSpace": "Crystal Space — fixed visual bugs on the live production site",
+          "emailSignature": "Internal email-signature tool — built an app for generating custom employee email signatures, with another intern",
+          "avalah": "Avalah — built a client website from scratch, with another new intern"
+        }
+      },
+      "praktikal": {
+        "title": "Full-Stack Developer (Internship)",
+        "company": "Praktikal Education OÜ",
+        "dates": "2024",
+        "description": "A three-month internship — my first time working on a large, established application architecture — where I implemented various client-side visual and functional changes."
+      }
+    }
+  },
+  "achievements": {
+    "heading": "Achievements",
+    "items": {
+      "developerOfYear": {
+        "title": "Developer of the Year",
+        "native": "(Aastategija Tarkvaraarendaja)",
+        "place": "1st place",
+        "meta": "VOCO · April 2025"
+      },
+      "youngMaster": {
+        "title": "Young Master Developer 2026",
+        "native": "(Noormeister Tarkvaraarendaja)",
+        "place": "5th place",
+        "meta": "Ida-Virumaa Vocational Education Centre · February 2026"
+      },
+      "edtechHackathon": {
+        "title": "EdTech Hackathon 2024 — Vocational Education Special",
+        "place": "2nd place (InternKit)",
+        "meta": "TalTech · November 2024"
+      }
+    }
+  },
+  "projectsBanner": {
+    "heading": "Projects",
+    "viewAllButton": "View All Projects",
+    "imageAlts": {
+      "internkit": "InternKit project preview"
+    }
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "intro": "If you would like to reach out to me, feel free to use the following contact details:",
+    "emailLabel": "Email:",
+    "phoneLabel": "Phone:",
+    "locationLabel": "Location:",
+    "locationValue": "Tartu, Estonia",
+    "imageAlt": "Contact illustration"
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  },
+  "projectsPage": {
+    "heading": "Projects",
+    "cards": {
+      "internkit": {
+        "title": "InternKit",
+        "description": "A platform that prepares vocational students for their upcoming internship.",
+        "imageAlt": "InternKit screenshot"
+      },
+      "stockbot": {
+        "title": "StockBot",
+        "description": "A stock-tracking bot project. Details coming soon."
+      },
+      "golang-api": {
+        "title": "GoLang Base API",
+        "description": "A Go-based base API project. Details coming soon."
+      },
+      "avalah": {
+        "title": "avalah.ee",
+        "description": "A client website built from scratch during my internship at GoToAndPlay OÜ."
+      }
+    }
+  },
+  "popup": {
+    "usedStackLabel": "Used Stack:",
+    "visitProject": "Visit the project page",
+    "notHosted": "Sorry, this project is not hosted :(",
+    "privateRepository": "Private Repository",
+    "githubAlt": "GitHub",
+    "projects": {
+      "internkit": {
+        "name": "InternKit",
+        "description1": "A platform that connects interns with companies and prepares them for their upcoming internship. The platform includes internship matching, an AI-powered interview simulator, and preparation tasks that help students understand what working in a company is really like.",
+        "description2": "InternKit was founded by me and my classmates after we won 2nd place at the EdTech Hackathon 2024. On this project, I'm responsible for developing the platform's AI-powered interview simulator and supporting the development of other frontend components."
+      },
+      "stockbot": {
+        "name": "StockBot",
+        "description1": "A stock-tracking bot project.",
+        "description2": "Details for this project are still being written up — check back soon."
+      },
+      "golang-api": {
+        "name": "GoLang Base API",
+        "description1": "A Go-based base API project.",
+        "description2": "Details for this project are still being written up — check back soon."
+      },
+      "avalah": {
+        "name": "avalah.ee",
+        "description1": "A client website built from scratch during my internship at GoToAndPlay OÜ.",
+        "description2": "Further details about this project are still being written up — check back soon."
+      }
+    }
+  }
+}

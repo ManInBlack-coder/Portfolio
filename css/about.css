@@ -8,9 +8,8 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 10%;
-    
-    margin-top: 15%;
+    /* Vahe fikseeritud headeri (80px) ja esimese konteineri vahel */
+    margin-top: calc(80px + var(--section-gap));
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: none;
 }
@@ -40,12 +39,12 @@
     justify-content: space-between;
     margin: 40px auto;
     padding: 40px;
-    background: linear-gradient(180deg, #215c7a, #111b34);
-    border-radius: 15px;
+    background: linear-gradient(180deg, var(--color-accent-light), #111b34);
+    border-radius: var(--radius-card);
     max-width: 1000px;
     gap: 30px;
     /* border: solid 3px rgb(123, 123, 123); */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-lg);
     
     border: solid 1px rgb(161, 161, 161);
 
@@ -54,7 +53,7 @@
 }
 
 #self_intro_txt:hover {
-    background: linear-gradient(180deg, #215c7a, #111b3445);
+    background: linear-gradient(180deg, var(--color-accent-light), #111b3445);
     transform: scale(1.02);
     border: solid 3px rgb(123, 123, 123);
 }
@@ -89,7 +88,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-sm);
 }
 
 #pilt img {
@@ -103,8 +102,6 @@
 
 
 #about_me_backgr {
-    margin-top: 10%;
-    margin-bottom: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,12 +121,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 60px 30px;
-    background: linear-gradient(180deg, #0d587e, #201e1e);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, var(--color-accent), #201e1e);
+    box-shadow: var(--shadow-md);
     width: 90%;
     max-width: 1000px;
     margin: 8% auto;
-    border-radius: 15px;
+    border-radius: var(--radius-card);
     text-align: center;
     border: solid 3px rgb(48, 48, 48);
 
@@ -151,7 +148,7 @@
 
 #about_myself_text:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 #about_myself_text h2 {
@@ -191,14 +188,14 @@
 #about_myself_image img {
     width: 100%;
     height: auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
 }
 
 #about_myself_image img:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Media Queries */

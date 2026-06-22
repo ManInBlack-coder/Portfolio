@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Portfoolio"
+  },
+  "nav": {
+    "home": "Avaleht",
+    "projects": "Projektid",
+    "aboutMe": "Minust",
+    "experience": "Kogemus",
+    "contact": "Kontakt"
+  },
+  "intro": {
+    "heading": "Tere! Mina olen Aleksander",
+    "body": "Ambitsioonikas ja innovaatilise hoiakuga tarkvaraarenduse õpilane Tartu Kutsehariduskeskusest",
+    "readMore": "... Loe edasi",
+    "profileAlt": "Profiilipilt"
+  },
+  "about": {
+    "heading": "Minust",
+    "paragraph1": "Minu nimi on Aleksander Potašenkov, full-stack tarkvaraarendaja Tartust, Eestist. Lõpetan tarkvaraarenduse õpinguid Tartu Kutsehariduskeskuses, töötades samal ajal kaasasutaja ja arendajana ettevõttes Arendusekoobas OÜ.",
+    "paragraph2": "Valisin tarkvaraarenduse, kuna mind köidab kirg luua probleemilahendusi, mis parandavad inimeste elu. Need uued väljakutsed on minu peamine põhjus ja motivatsioon kasvatada oma teadmisi ja oskusi selles valdkonnas.",
+    "photoAlt": "Aleksandri foto"
+  },
+  "hobbies": {
+    "heading": "Hobid",
+    "boxingTitle": "Poks",
+    "boxingText": "Olen tegelenud poksiga alates 2019. aastast. Minu suurim saavutus on kuldmedal Eesti meistrivõistlustelt. Alates 2024. aastast treenin osalise koormusega oma poksiklubis abitreenerina.",
+    "musicTitle": "Muusika & Any House Radio",
+    "musicText": "Alates 2023. aastast olen tootnud house-muusikat ja praegu juhin raadiosaadet Any House Radio."
+  },
+  "experience": {
+    "heading": "Töökogemus",
+    "jobs": {
+      "arendusekoobas": {
+        "title": "Full-Stack arendaja · Kaasasutaja",
+        "badge": "Praegune",
+        "company": "Arendusekoobas OÜ",
+        "dates": "2024 — Praeguseni",
+        "description": "Alates 2024. aasta detsembrist — pärast TalTechi EdTech Hackathonil saadud 2. kohta — olen arendanud InternKitti, Arendusekoobase värbamisprotsesside automatiseerimise platvormi. Minu vastutusalas on serveri- ja kliendipoolsete põhifunktsioonide kavandamine ja rakendamine, kliendipoolse kasutajaliidese kvaliteediauditite ja refaktoreerimise juhtimine ning monoliitrakenduse äriloogika jaoks mikroteenuste ehitamine."
+      },
+      "gotoandplay": {
+        "title": "Full-Stack arendaja (praktika)",
+        "company": "GoToAndPlay OÜ",
+        "dates": "2025 — 2026",
+        "description": "Kuue kuu pikkune praktika veebiarendusagentuuris, töötades nelja kliendiprojekti kallal:",
+        "highlights": {
+          "ehl": "Eesti Hambaarstide Liit — vana funktsionaalsuse refaktoreerimine ja uuendamine",
+          "crystalSpace": "Crystal Space — visuaalsete vigade parandamine reaalkeskkonnas töötaval lehel",
+          "emailSignature": "Sisemine e-posti allkirja tööriist — rakendus töötajate kohandatud e-posti allkirjade loomiseks, koos teise praktikandiga",
+          "avalah": "Avalah — kliendi veebilehe ehitamine algusest peale, koos teise uue praktikandiga"
+        }
+      },
+      "praktikal": {
+        "title": "Full-Stack arendaja (praktika)",
+        "company": "Praktikal Education OÜ",
+        "dates": "2024",
+        "description": "Kolme kuu pikkune praktika — esimene kord, kui töötasin suure, juba väljakujunenud rakenduse arhitektuuriga — kus tegin mitmesuguseid kliendipoolseid visuaalseid ja funktsionaalseid muudatusi."
+      }
+    }
+  },
+  "achievements": {
+    "heading": "Saavutused",
+    "items": {
+      "developerOfYear": {
+        "title": "Aastategija Tarkvaraarendaja",
+        "native": "",
+        "place": "1. koht",
+        "meta": "VOCO · aprill 2025"
+      },
+      "youngMaster": {
+        "title": "Noormeister Tarkvaraarendaja 2026",
+        "native": "",
+        "place": "5. koht",
+        "meta": "Ida-Virumaa Kutsehariduskeskus · veebruar 2026"
+      },
+      "edtechHackathon": {
+        "title": "EdTech Hackathon 2024 — Kutseõppe eriauhind",
+        "place": "2. koht (InternKit)",
+        "meta": "TalTech · november 2024"
+      }
+    }
+  },
+  "projectsBanner": {
+    "heading": "Projektid",
+    "viewAllButton": "Vaata kõiki projekte",
+    "imageAlts": {
+      "internkit": "InternKit projekti eelvaade"
+    }
+  },
+  "contact": {
+    "heading": "Võta ühendust",
+    "intro": "Kui soovid minuga ühendust võtta, võid kasutada järgmisi kontaktandmeid:",
+    "emailLabel": "E-post:",
+    "phoneLabel": "Telefon:",
+    "locationLabel": "Asukoht:",
+    "locationValue": "Tartu, Eesti",
+    "imageAlt": "Kontakti illustratsioon"
+  },
+  "footer": {
+    "rights": "Kõik õigused kaitstud"
+  },
+  "projectsPage": {
+    "heading": "Projektid",
+    "cards": {
+      "internkit": {
+        "title": "InternKit",
+        "description": "Platvorm, mis valmistab kutseõppe õpilasi ette eelseisvaks praktikaks.",
+        "imageAlt": "InternKiti kuvatõmmis"
+      },
+      "stockbot": {
+        "title": "StockBot",
+        "description": "Aktsiate jälgimise robotprojekt. Täpsem kirjeldus lisandub varsti."
+      },
+      "golang-api": {
+        "title": "GoLang Base API",
+        "description": "Go-põhine baas-API projekt. Täpsem kirjeldus lisandub varsti."
+      },
+      "avalah": {
+        "title": "avalah.ee",
+        "description": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus."
+      }
+    }
+  },
+  "popup": {
+    "usedStackLabel": "Kasutatud tehnoloogiad:",
+    "visitProject": "Külasta projekti lehte",
+    "notHosted": "Kahjuks see projekt ei ole hostitud :(",
+    "privateRepository": "Privaatne hoidla",
+    "githubAlt": "GitHub",
+    "projects": {
+      "internkit": {
+        "name": "InternKit",
+        "description1": "Platvorm, mis ühendab praktikante ettevõtetega ja valmistab neid ette eelseisvaks praktikaks. Platvorm sisaldab praktikakohtade sobitamist, tehisintellektil põhinevat intervjuusimulaatorit ja ettevalmistusülesandeid, mis aitavad mõista, milline on tegelik töö ettevõttes.",
+        "description2": "InternKiti idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi tehisintellektil põhineva intervjuusimulaatori arendamise ja teiste frontend-komponentide arendamise toetamise eest."
+      },
+      "stockbot": {
+        "name": "StockBot",
+        "description1": "Aktsiate jälgimise robotprojekt.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
+      },
+      "golang-api": {
+        "name": "GoLang Base API",
+        "description1": "Go-põhine baas-API projekt.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
+      },
+      "avalah": {
+        "name": "avalah.ee",
+        "description1": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
+      }
+    }
+  }
+}
