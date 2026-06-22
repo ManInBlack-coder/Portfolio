@@ -54,7 +54,7 @@
 .projects-grid {
     display: grid;
     border-radius: 80px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0;
     width: 100%;
@@ -113,6 +113,19 @@
     display: block;
 }
 
+/* Placeholder for projects without a screenshot yet */
+.project-item--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+}
+
+.project-item--placeholder .material-symbols-outlined {
+    font-size: 64px;
+    color: #215c7a;
+}
+
 /* Button container */
 .view-all-button-container {
     position: absolute;
@@ -147,9 +160,9 @@
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    /* Keep 3x2 grid layout but reduce project item size */
+    /* Keep 2x2 grid layout but reduce project item size */
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
         grid-template-rows: repeat(2, 1fr); /* 2 rows */
     }
 

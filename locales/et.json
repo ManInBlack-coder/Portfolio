@@ -84,12 +84,7 @@
     "heading": "Projektid",
     "viewAllButton": "Vaata kõiki projekte",
     "imageAlts": {
-      "thousandstock": "ThousandStock projekti eelvaade",
-      "anyhouseradio": "Any House Radio projekti eelvaade",
-      "internhub": "InternHub projekti eelvaade",
-      "youtube": "YouTube allalaadija projekti eelvaade",
-      "itkool": "VOCO IT-Kooli projekti eelvaade",
-      "callassistant": "Call Assistant projekti eelvaade"
+      "internkit": "InternKit projekti eelvaade"
     }
   },
   "contact": {
@@ -107,45 +102,22 @@
   "projectsPage": {
     "heading": "Projektid",
     "cards": {
-      "internhub": {
-        "title": "InternHub (EdTech Hack 2024 II koht)",
+      "internkit": {
+        "title": "InternKit",
         "description": "Platvorm, mis valmistab kutseõppe õpilasi ette eelseisvaks praktikaks.",
-        "imageAlt": "InternHubi kuvatõmmis"
+        "imageAlt": "InternKiti kuvatõmmis"
       },
-      "it-akadeemia": {
-        "title": "VOCO IT-Kool",
-        "description": "VOCO IT-kooli leht, mis loodi arendusmeetodite õppeaine raames.",
-        "imageAlt": "VOCO IT-Kooli kuvatõmmis"
+      "stockbot": {
+        "title": "StockBot",
+        "description": "Aktsiate jälgimise robotprojekt. Täpsem kirjeldus lisandub varsti."
       },
-      "anyhouseradio": {
-        "title": "Any House Radio",
-        "description": "House-muusika raadiosaate ametlik veebileht, mida juhib DJ/produtsent Eurlexa.",
-        "imageAlt": "Any House Radio kuvatõmmis"
+      "golang-api": {
+        "title": "GoLang Base API",
+        "description": "Go-põhine baas-API projekt. Täpsem kirjeldus lisandub varsti."
       },
-      "furniture": {
-        "title": "Mööbliäpp",
-        "description": "Lihtne Facebook Marketplace'i sarnane rakendus mööbli müümiseks.",
-        "imageAlt": "Mööbliäpi kuvatõmmis"
-      },
-      "thousandstock": {
-        "title": "ThousandStock",
-        "description": "Dividendiaktsiate analüüsi ja infohalduse platvorm parema investeerimisotsuse tegemiseks.",
-        "imageAlt": "ThousandStocki kuvatõmmis"
-      },
-      "callassistant": {
-        "title": "Call Assistant (lauaarvuti prototüüp)",
-        "description": "Kõnetuvastusega ülesannete haldamise rakendus kiirete märkmete jaoks.",
-        "imageAlt": "Call Assistanti kuvatõmmis"
-      },
-      "youtube": {
-        "title": "YouTube mp4 to Wav",
-        "description": "YouTube'i video WAV-helifailiks allalaadija (loodud õppeotstarbel).",
-        "imageAlt": "YouTube mp4 to Wav kuvatõmmis"
-      },
-      "carsearch": {
-        "title": "Autode otsingutööriist",
-        "description": "Auto24 otsingumootori koopia PHP õppeaine jaoks.",
-        "imageAlt": "Autode otsingutööriista kuvatõmmis"
+      "avalah": {
+        "title": "avalah.ee",
+        "description": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus."
       }
     }
   },
@@ -156,45 +128,25 @@
     "privateRepository": "Privaatne hoidla",
     "githubAlt": "GitHub",
     "projects": {
-      "internhub": {
-        "name": "InternHub",
+      "internkit": {
+        "name": "InternKit",
         "description1": "Platvorm, mis ühendab praktikante ettevõtetega ja valmistab neid ette eelseisvaks praktikaks. Platvorm sisaldab praktikakohtade sobitamist, tehisintellektil põhinevat intervjuusimulaatorit ja ettevalmistusülesandeid, mis aitavad mõista, milline on tegelik töö ettevõttes.",
-        "description2": "InternHubi idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi tehisintellektil põhineva intervjuusimulaatori arendamise ja teiste frontend-komponentide arendamise toetamise eest."
+        "description2": "InternKiti idee sündis minu ja klassikaaslaste koostöös pärast 2. koha saavutamist EdTech Hackathonil 2024. Selles projektis vastutan platvormi tehisintellektil põhineva intervjuusimulaatori arendamise ja teiste frontend-komponentide arendamise toetamise eest."
       },
-      "it-akadeemia": {
-        "name": "VOCO IT-Kooli leht",
-        "description1": "IT-Akadeemia on Eesti kutsekool, mis pakub kutseõpet ja koolitust mitmes valdkonnas.",
-        "description2": "Projekt loodi frontend-oskuste harjutamiseks ja IT-Akadeemiale lihtsa veebilehe loomiseks."
+      "stockbot": {
+        "name": "StockBot",
+        "description1": "Aktsiate jälgimise robotprojekt.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
       },
-      "anyhouseradio": {
-        "name": "Any House Radio",
-        "description1": "House-muusika raadiosaate ametlik veebileht, mida juhib DJ/produtsent Eurlexa.",
-        "description2": "Veebileht loodi Any House Radio uusimate episoodide, remiksiväljaannete ja uudiste jagamiseks. Any House Radio on väikese underground-hõnguga house-saade, mis pakub kuulajatele tunni pikkusi miksiepisoode ja remiksiväljaandeid neile, kes soovivad kuulata energilist, kuid mõnusat house-muusikat."
+      "golang-api": {
+        "name": "GoLang Base API",
+        "description1": "Go-põhine baas-API projekt.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
       },
-      "furniture": {
-        "name": "Mööbliäpp",
-        "description1": "Moodne mööbli e-poe rakendus, mis võimaldab kasutajatel sirvida ja osta mööblit.",
-        "description2": "Rakendus sisaldab otsingufunktsionaalsust, toodete filtreerimist, ostukorvi haldamist ja kasutajate autentimist. Kasutajaliides on loodud moodsa disaini ja UX-põhimõtete järgi."
-      },
-      "thousandstock": {
-        "name": "ThousandStock",
-        "description1": "ThousandStock on dividendiaktsiatele suunatud aktsiate haldus- ja jälgimisplatvorm.",
-        "description2": "Platvormi idee on automaatselt jälgida parimaid aktsiaid, mis maksavad enim dividenditulu. Platvorm võimaldab ka haldada aktsiate kohta käivat infot ja artikleid ning sellel on tark töölaud."
-      },
-      "callassistant": {
-        "name": "Call Assistent",
-        "description1": "Call Assistent on kiire märkmehaldusrakendus, mis võimaldab kasutajal salvestada oma ülesandeid rakendusse.",
-        "description2": "Rakendusel on kõnetuvastustehnoloogia, mis muudab ülesannete lisamise palju kiiremaks."
-      },
-      "youtube": {
-        "name": "YouTube mp4 to Wav",
-        "description1": "YouTube'i video WAV-helifailiks allalaadija, mis on loodud õppeotstarbel.",
-        "description2": "Seda lihtsat veebirakendust loodi kiiremaks, lihtsamaks ja kvaliteetsemaks autoriõigusvabaks muusika allalaadimiseks. Rakendus salvestab allalaadimiste ajaloo, mis võimaldab laulu uuesti alla laadida, kui see on kadunud või on muu põhjus seda taas alla laadida."
-      },
-      "carsearch": {
-        "name": "Car search database",
-        "description1": "Autode otsinguandmebaas, mille otsingu loogika on peaaegu identne Auto24 autode otsingumootoriga.",
-        "description2": "Selle autode otsinguandmebaasi veebilahenduse loomine oli mõeldud PHP keele kasutamise harjutamiseks veebiprojektides. See andis mulle parema arusaamise PHP kasutamisest serveripoolsete probleemide lahendamisel."
+      "avalah": {
+        "name": "avalah.ee",
+        "description1": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus.",
+        "description2": "Selle projekti täpsem kirjeldus on veel valmimisel — vaata varsti tagasi."
       }
     }
   }

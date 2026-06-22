@@ -38,66 +38,35 @@ function openPopup(projectId) {
     html_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/html.svg" alt="html Logo" class="stack-icon"'
     jest_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/jestpng.png" alt="html Logo" class="stack-icon"'
     java_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/java.png" alt="java Logo" class="stack-icon"'
-    
+
 
 
 
     // Assign project-specific values based on projectId
-    if (projectId === 'internhub') {
+    if (projectId === 'internkit') {
         Private = 'true';
-        projectImage = 'images/Internhub.webp';
+        projectImage = 'images/internKit.webp';
         usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon} ${supabase_icon} ${jest_icon}  `
-        projectLink = 'https://internhub.arendusekoobas.ee/';
+        projectLink = 'https://app.internkit.ee/';
         githubLink = ''; // No GitHub link for private projects
-    } else if (projectId === 'it-akadeemia') {
-        Private = 'false';
-        projectImage = 'images/itkool.webp';
-        usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon}`
-        projectLink = 'https://itakadeemia.kalleriit.ee';
-        githubLink = 'https://github.com/ManInBlack-coder/IT-Akadeemia-Koduleht-KSK'; // Example GitHub link
-        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
-
-    } else if (projectId === 'anyhouseradio') {
-        Private = 'false';
-        projectImage = 'images/anyhouseradio.webp','images/Tstock.webp';
-        usedStack = `${nodejs_icon} ${javascript_icon} ${css_icon} ${html_icon}`
-        projectLink = 'https://anyhouseradio.com';
-        githubLink = 'https://github.com/ManInBlack-coder/any_house_radio'; // Example GitHub link
-        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
-
-    } else if (projectId === 'furniture') {
-        Private = 'false';
-        projectImage = 'images/furniture.webp';
-        usedStack = `${react_icon} ${typescript_icon}  ${supabase_icon} ${java_icon}`
-        projectLink = '#';
-        githubLink = 'https://github.com/ManInBlack-coder/phone-app';
-        githubLogo = 'images/githublogo.webp';
-
-    } else if (projectId === 'thousandstock') {
+    } else if (projectId === 'stockbot') {
         Private = 'true';
-        projectImage = 'images/Tstock.webp';
-        usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${jest_icon}  ${css_icon} ${py_icon} ${mysql_icon} ${nodejs_icon}`
+        projectImage = '';
+        usedStack = '';
         projectLink = '#';
-        githubLink = ''; // No GitHub link for private projects
-    } else if (projectId === 'callassistant') {
+        githubLink = '';
+    } else if (projectId === 'golang-api') {
         Private = 'true';
-        projectImage = 'images/Callast.webp';
-        usedStack = `${react_icon} ${typescript_icon} ${javascript_icon} ${css_icon} ${mysql_icon} ${nodejs_icon} `
+        projectImage = '';
+        usedStack = '';
         projectLink = '#';
-        githubLink = ''; // No GitHub link for private projects
-    } else if (projectId === 'youtube') {
+        githubLink = '';
+    } else if (projectId === 'avalah') {
         Private = 'true';
-        projectImage = 'images/YOUTUBE.webp';
-        usedStack = ` ${nodejs_icon} ${javascript_icon} ${css_icon} ${html_icon}  `
-        projectLink = '#';
-        githubLink = ''; // No GitHub link for private projects
-    } else if (projectId === 'carsearch') {
-        Private = 'false';
-        projectImage = 'images/auto24.webp';
-        usedStack = `${javascript_icon}  ${php_icon} ${html_icon} ${css_icon} ${nodejs_icon} `
-        projectLink = '#';
-        githubLink = 'https://github.com/ManInBlack-coder/auto24_PHP'; // Example GitHub link
-        githubLogo = 'images/githublogo.webp'; // GitHub logo for public projects
+        projectImage = '';
+        usedStack = '';
+        projectLink = 'https://avalah.ee';
+        githubLink = '';
     }
 
     // Display private repository message if no GitHub link
@@ -112,22 +81,20 @@ function openPopup(projectId) {
     }
 
     // Function to check if project has vertical image
-    const verticalProjects = ['furniture']; // Lisa siia projektide ID-d, kus on vertikaalsed pildid
+    const verticalProjects = []; // Lisa siia projektide ID-d, kus on vertikaalsed pildid
 
-    const imageStyle = verticalProjects.includes(projectId) 
+    const imageStyle = !projectImage
+        ? `<div style="width: 100%; max-width: 1000px; height: 300px; margin: 20px auto; border-radius: 10px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+            <span class="material-symbols-outlined" style="font-size: 64px; color: #215c7a;">code</span>
+           </div>`
+        : verticalProjects.includes(projectId)
         ? `<div style="width: 100%; max-width: 500px; height: 600px; margin: 20px auto; display: flex; justify-content: center; align-items: center; overflow: hidden;">
             <img src="${projectImage}" alt="${projectName}" style="width: 100%; height: 100%; object-fit: contain; max-height: 600px;">
            </div>`
         : `<img src="${projectImage}" alt="${projectName}" style="width: 100%; max-width: 1000px; height: auto; margin: 20px 0; display: block; margin-left: auto; margin-right: auto;">`;
 
-    // Common HTML structure for the popup content
-    let commonStyle = `
-        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">${projectName}</h2>
-        ${imageStyle}
-        <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription1}</p>
-        <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription2}</p>
-
-<style>
+    const usedStackBlock = usedStack
+        ? `<style>
     @media (max-width: 768px) {
         .used-stack-container {
             flex-direction: column; /* Muudab virnastatuks väikestel ekraanidel */
@@ -145,7 +112,16 @@ function openPopup(projectId) {
 <h3 class="used-stack-container" style="font-size: 1.1rem; line-height: 1.6; display: flex; align-items: center;">
     ${t('popup.usedStackLabel')}
     <span style="margin-left: 5px; max-width: 100%; flex-grow: 1; text-align: left;">${usedStack}</span>
-</h3>
+</h3>`
+        : '';
+
+    // Common HTML structure for the popup content
+    let commonStyle = `
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">${projectName}</h2>
+        ${imageStyle}
+        <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription1}</p>
+        <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription2}</p>
+        ${usedStackBlock}
         <a href="${projectLink}" target="_blank" style="color: #ff5500; text-decoration: none; font-size: 1.2rem; font-weight: bold;">${linkText}</a>
         ${privateRepoText}
     `;
