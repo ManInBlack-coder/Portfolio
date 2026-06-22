@@ -130,8 +130,8 @@
     "projects": {
       "internkit": {
         "name": "InternKit",
-        "description1": "A platform that connects interns with companies and prepares them for their upcoming internship. The platform includes internship matching, an AI-powered interview simulator, and preparation tasks that help students understand what working in a company is really like.",
-        "description2": "InternKit was founded by me and my classmates after we won 2nd place at the EdTech Hackathon 2024. On this project, I'm responsible for developing the platform's AI-powered interview simulator and supporting the development of other frontend components."
+        "description1": "A platform that automates companies' recruitment process — without having to give up control over candidate selection.",
+        "description2": "The idea for InternKit was born from a collaboration between me and my classmates after we won 2nd place at the EdTech Hackathon 2024. In this project, I am responsible for designing and creating the platform's server and client-side solutions."
       },
       "stockbot": {
         "name": "StockBot",

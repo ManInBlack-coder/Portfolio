@@ -57,13 +57,13 @@ function openPopup(projectId) {
         githubLink = '';
     } else if (projectId === 'golang-api') {
         Private = 'true';
-        projectImage = '';
+        projectImage = 'images/GoLangApiLayers.webp';
         usedStack = '';
         projectLink = '#';
-        githubLink = '';
+        githubLink = 'https://github.com/ManInBlack-coder/golang-api-base';
     } else if (projectId === 'avalah') {
         Private = 'true';
-        projectImage = '';
+        projectImage = 'images/Avalah.webp';
         usedStack = '';
         projectLink = 'https://avalah.ee';
         githubLink = '';
