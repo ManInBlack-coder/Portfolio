@@ -28,15 +28,15 @@ function openPopup(projectId) {
     typescript_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/typescript.svg" alt="TypeScript Logo" class="stack-icon">'
     javascript_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/javascript.svg" alt="JavaScript Logo" class="stack-icon">'
     css_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/css.svg" alt="CSS Logo" class="stack-icon">'
-    supabase_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/supalogo.png" alt="Supabase Logo" class="stack-icon">'
+    supabase_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/supabase.svg" alt="Supabase Logo" class="stack-icon">'
     mysql_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/mysql.svg" alt="MySQL Logo" class="stack-icon">'
     py_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/python.svg" alt="Python Logo" class="stack-icon">'
     react_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/react.svg" alt="React Logo" class="stack-icon">'
     php_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/php.svg" alt="PHP Logo" class="stack-icon">'
     nodejs_icon = '<img style=" width: 50px; height: 50px;" src="../stack_icons/nodejs.svg" alt="Node.js Logo" class="stack-icon">'
-    tailwind_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/tailwind.png" alt="Tailwind CSS Logo" class="stack-icon">'
+    tailwind_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/tailwind.svg" alt="Tailwind CSS Logo" class="stack-icon">'
     html_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/html.svg" alt="html Logo" class="stack-icon"'
-    jest_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/jestpng.png" alt="html Logo" class="stack-icon"'
+    jest_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/jestpng.svg" alt="Jest Logo" class="stack-icon">'
     java_icon = '<img style=" width: 40px; height: 40px;" src="../stack_icons/java.png" alt="java Logo" class="stack-icon"'
 
 
