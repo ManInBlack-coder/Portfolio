@@ -98,6 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    lazyImages.forEach(img => {
+        if (img.complete && img.naturalWidth > 0) {
+            img.classList.add("img-loaded");
+            return;
+        }
+        img.addEventListener("load", () => img.classList.add("img-loaded"));
+        img.addEventListener("error", () => img.classList.add("img-error"));
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".fade-in");
 
     const options = {
