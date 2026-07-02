@@ -24,7 +24,7 @@ html {
     border: 1px solid var(--color-border-muted);
     border-radius: var(--radius-card);
     padding: 20px;
-    width: calc(33.33% - 20px); /* Kolm kasti reas */
+    width: calc(50% - 20px); /* Kaks kasti reas (2×2 grid) */
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -89,13 +89,6 @@ html {
     font-size: 1em;
     color: #ddd;
     text-align: center;
-}
-
-/* Adjust for medium screens (2x2 layout) */
-@media (max-width: 1024px) {
-    .project-box {
-        width: calc(50% - 20px); /* Two boxes per row */
-    }
 }
 
 /* Adjust for smaller screens (1x1 layout) */

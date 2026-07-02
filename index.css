@@ -26,6 +26,13 @@
     margin-bottom: var(--section-gap);
 }
 
+.h-container {
+    max-width: 1000px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 768px) {
     :root {
         --section-gap: 4rem;
@@ -141,6 +148,18 @@ body::before {
 
 #contact_me_text a:hover {
     color: var(--color-link-hover); /* Subtiilne sinine hover'i ajal */
+}
+
+#github-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#github-link {
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Pildi konteiner */

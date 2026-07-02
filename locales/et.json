@@ -17,7 +17,7 @@
   },
   "about": {
     "heading": "Minust",
-    "paragraph1": "Minu nimi on Aleksander Potašenkov, full-stack tarkvaraarendaja Tartust, Eestist. Lõpetan tarkvaraarenduse õpinguid Tartu Kutsehariduskeskuses, töötades samal ajal kaasasutaja ja arendajana ettevõttes Arendusekoobas OÜ.",
+    "paragraph1": "Minu nimi on Aleksander Potašenkov, full-stack tarkvaraarendaja Tartust, Eestist. Olen lõpetanud tarkvaraarenduse õpinguid Tartu Kutsehariduskeskuses ja töötades samal ajal kaasasutaja ja arendajana ettevõttes Arendusekoobas OÜ.",
     "paragraph2": "Valisin tarkvaraarenduse, kuna mind köidab kirg luua probleemilahendusi, mis parandavad inimeste elu. Need uued väljakutsed on minu peamine põhjus ja motivatsioon kasvatada oma teadmisi ja oskusi selles valdkonnas.",
     "photoAlt": "Aleksandri foto"
   },
@@ -94,6 +94,7 @@
     "phoneLabel": "Telefon:",
     "locationLabel": "Asukoht:",
     "locationValue": "Tartu, Eesti",
+    "githubLabel": "GitHub:",
     "imageAlt": "Kontakti illustratsioon"
   },
   "footer": {
@@ -109,15 +110,18 @@
       },
       "stockbot": {
         "title": "StockBot",
-        "description": "Aktsiate jälgimise robotprojekt. Täpsem kirjeldus lisandub varsti."
+        "description": "Aktsiate jälgimise robotprojekt. Täpsem kirjeldus lisandub varsti.",
+        "imageAlt": "StockBoti kuvatõmmis"
       },
       "golang-api": {
         "title": "GoLang Base API",
-        "description": "Go-põhine baas-API projekt. Täpsem kirjeldus lisandub varsti."
+        "description": "Go-põhine baas-API projekt. Täpsem kirjeldus lisandub varsti.",
+        "imageAlt": "GoLang Base API arhitektuuriskeem"
       },
       "avalah": {
         "title": "avalah.ee",
-        "description": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus."
+        "description": "Kliendi veebileht, mis valmis algusest peale GoToAndPlay OÜ praktika käigus.",
+        "imageAlt": "avalah.ee veebilehe kuvatõmmis"
       }
     }
   },

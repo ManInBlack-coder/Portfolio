@@ -45,15 +45,15 @@ function openPopup(projectId) {
     // Assign project-specific values based on projectId
     if (projectId === 'internkit') {
         Private = 'true';
-        projectImage = 'images/internKit.webp';
+        projectImage = 'images/InternKit.webp';
         usedStack = `${javascript_icon} ${typescript_icon} ${react_icon} ${tailwind_icon} ${supabase_icon} ${jest_icon}  `
         projectLink = 'https://app.internkit.ee/';
         githubLink = ''; // No GitHub link for private projects
     } else if (projectId === 'stockbot') {
         Private = 'true';
-        projectImage = 'images/Stockbot.wepb';
+        projectImage = 'images/Stockbot.webp';
         usedStack = '';
-        projectLink = '#';
+        projectLink = 'https://munad.eu';
         githubLink = '';
     } else if (projectId === 'golang-api') {
         Private = 'true';
@@ -74,11 +74,11 @@ function openPopup(projectId) {
         privateRepoText = `<p style="font-size: 1.2rem; font-style: italic; color: #888;">${t('popup.privateRepository')}</p>`;
     }
 
-    if (projectLink === '#') {
-        linkText = t('popup.notHosted');
-    } else {
-        linkText = t('popup.visitProject');
-    }
+    const isHosted = projectLink && projectLink !== '#';
+    linkText = isHosted ? t('popup.visitProject') : t('popup.notHosted');
+    const linkBlock = isHosted
+        ? `<a href="${projectLink}" target="_blank" style="color: #ff5500; text-decoration: none; font-size: 1.2rem; font-weight: bold;">${linkText}</a>`
+        : `<span style="color: #ff5500; font-size: 1.2rem; font-weight: bold; cursor: default;">${linkText}</span>`;
 
     // Function to check if project has vertical image
     const verticalProjects = []; // Lisa siia projektide ID-d, kus on vertikaalsed pildid
@@ -122,7 +122,7 @@ function openPopup(projectId) {
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription1}</p>
         <p style="font-size: 1.1rem; line-height: 1.6;">${projectDescription2}</p>
         ${usedStackBlock}
-        <a href="${projectLink}" target="_blank" style="color: #ff5500; text-decoration: none; font-size: 1.2rem; font-weight: bold;">${linkText}</a>
+        ${linkBlock}
         ${privateRepoText}
     `;
 

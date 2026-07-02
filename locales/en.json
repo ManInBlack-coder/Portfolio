@@ -94,6 +94,7 @@
     "phoneLabel": "Phone:",
     "locationLabel": "Location:",
     "locationValue": "Tartu, Estonia",
+    "githubLabel": "GitHub:",
     "imageAlt": "Contact illustration"
   },
   "footer": {
@@ -109,15 +110,18 @@
       },
       "stockbot": {
         "title": "StockBot",
-        "description": "A stock-tracking bot project. Details coming soon."
+        "description": "A stock-tracking bot project. Details coming soon.",
+        "imageAlt": "StockBot screenshot"
       },
       "golang-api": {
         "title": "GoLang Base API",
-        "description": "A Go-based base API project. Details coming soon."
+        "description": "A Go-based base API project. Details coming soon.",
+        "imageAlt": "GoLang Base API architecture diagram"
       },
       "avalah": {
         "title": "avalah.ee",
-        "description": "A client website built from scratch during my internship at GoToAndPlay OÜ."
+        "description": "A client website built from scratch during my internship at GoToAndPlay OÜ.",
+        "imageAlt": "avalah.ee website screenshot"
       }
     }
   },
