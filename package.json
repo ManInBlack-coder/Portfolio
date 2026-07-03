@@ -6,6 +6,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "fallow": "^2.104.0",
     "nodemon": "^3.0.1"
   },
   "scripts": {
